@@ -1,16 +1,39 @@
 #body {
   margin: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 .main-nav {
-  height: 10vh;
-  width: 100vw;
+  /* height: 10vh;
+  width: 100vw; */
 }
 
 #main {
-  width: 100vw;
-  height: 90vh;
   background-image: url('../images/background.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
+  height: 90vh;
+  width: 100vw; 
+  border: 2px solid green;
+  /* z-index: 0;   */
+}
+
+#canvas-home {
+  width: 100vw;
+  height: 90vh;
+}
+
+#person1:hover {
+  /* -webkit-filter: drop-shadow(1px 1px 0 blue)
+                  drop-shadow(-1px -1px 0 blue); */
+  filter: drop-shadow(2px 2px 0 blue) 
+          drop-shadow(-2px -2px 0 blue);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.test {
+  border: 5px solid orange
 }
