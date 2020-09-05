@@ -5,18 +5,18 @@
 }
 
 .main-nav {
-  /* height: 10vh;
-  width: 100vw; */
+  height: 10vh;
+  width: 100vw;
 }
 
 #main {
-  background-image: url('../images/background.jpg');
+  /* background-image: url('../images/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 90vh;
   width: 100vw; 
-  border: 2px solid green;
+  border: 2px solid green; */
   /* z-index: 0;   */
 }
 
