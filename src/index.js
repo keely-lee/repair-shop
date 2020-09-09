@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function repair(){
     console.log("CLICKITY CLACK")
 
+    document.getElementById("content").innerHTML =
+      '<object type="text/html" data="paint.html" ></object>';
+
   }
 
 })
