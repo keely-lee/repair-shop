@@ -34,7 +34,7 @@
 .person1 {
   transform: rotate(-90deg);
   height: 40vh;
-  width: 40vw;
+  /* width: 40vw; */
 }
 
 .person1:hover {
