@@ -1,0 +1,11 @@
+/* PAINT CANVAS */
+/* COLOR TOOLBAR */
+#colorToolbar {
+  width: 20vw;
+}
+
+.color-bar {
+  width: 50px;
+  height: 50px; 
+
+}
