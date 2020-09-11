@@ -38,21 +38,18 @@
 }
 
 .person1:hover {
-  /* -webkit-filter: drop-shadow(1px 1px 0 blue)
-                  drop-shadow(-1px -1px 0 blue); */
+  -webkit-filter: drop-shadow(1px 1px 0 blue)
+                  drop-shadow(-1px -1px 0 blue);
   filter: drop-shadow(2px 2px 0 blue) 
           drop-shadow(-2px -2px 0 blue);
   cursor: pointer;
 }
 
-.test {
-  border: 5px solid #ffa500;
+
+
+
+
+#paint-obj {
+  width: 100vw;
+  height: 100vh;
 }
-
-
-
-
-
-
-
-

@@ -3,74 +3,61 @@
   <head>
       <meta charset="UTF-8">
       <link rel="stylesheet" href="./src/styles/paint.css">
-
   </head>
+
   <body id="body2">
+    <div id="body2-wrapper">
+      <section id="color-container">
+        <div id="colorToolbar" style="border: 1px solid black;">
+          <div class="color-bar red" style="background:red;"></div>
+          <div class="color-bar pink" style="background:pink;"></div>
+          <div class="color-bar fuchsia" style="background:fuchsia;"></div>
+          <div class="color-bar orange" style="background:orange;"></div>
+          <div class="color-bar yellow" style="background:yellow;"></div>
+          <div class="color-bar lime" style="background:lime;"></div>
+          <div class="color-bar green" style="background:green;"></div>
+          <div class="color-bar blue" style="background:blue;"></div>
+          <div class="color-bar purple" style="background:purple;"></div>
+          <div class="color-bar black" style="background:black; border: 1px dashed white;"></div>
+          <div class="color-bar white" style="background:white;"></div>
+          <hr />
 
-    <div id="tester">
-      <h2>TEST TEST TEST</h2>
+          <!-- <div id="fill" style="width:50px; height:50px; float:left;">
+            <img src="fill.png" width="50" height="50" /></div>
+          <div style="clear: both;"></div>
+          <div id="cat" style="width:50px; height:50px; float:left;">
+            <img id="catImg" src="cat.png" width="50" height="50" /></div>
+          <div style="clear: both;"></div>
+          <div id="dog" style="width:50px; height:50px; float:left;">
+            <img id="dogImg" src="dog.png" width="50" height="50" /></div>
+          <div style="clear: both;"></div>
+          <div id="dragonfly" style="width:50px; height:50px; float:left;">
+            <img id="dragonFlyImg" src="fly.png" width="50" height="50" /></div>
+          <div style="clear: both;"></div>
+          <div id="ladybug" style="width:50px; height:50px; float:left;">
+            <img id="ladyBugImg" src="bug.png" width="50" height="50" /></div>
+          <div style="clear: both;"></div>
+          <div id="heart" style="width:50px; height:50px; float:left;">
+            <img id="heartImg" src="heart.png" width="50" height="50" /></div>
+          <div style="clear: both;"></div>
+          <div id="save" style="width:50px; height:50px; float:left;">Save</div>
+          <div style="clear: both;"></div> -->
 
+      </section>
 
-  <div id="container" style="padding:5px 0px 0px 0px;">
-    <div id="colorToolbar" style="border: 1px solid black; float: left;">
-      <div class="color-bar red" style="background:red; float:left;"></div>
-      <div style="clear: both;"></div>
-      <div class="color-bar pink" style="background:pink; float:left;"></div>
-      <div style="clear: both;"></div>
-      <div class="color-bar fuchsia" style="background:fuchsia; float:left;"></div>
-      <div style="clear: both;"></div>
-      <div class="color-bar orange" style="background:orange; float:left;"></div>
-      <div style="clear: both;"></div>
-      <div class="color-bar yellow" style="background:yellow; float:left;"></div>
-      <div style="clear: both;"></div>
-      <div class="color-bar lime" style="background:lime; float:left;"></div>
-      <div style="clear: both;"></div>
-      <div class="color-bar green" style="background:green; float:left;"></div>
-      <div style="clear: both;"></div>
-      <div class="color-bar blue" style="background:blue; float:left;"></div>
-      <div style="clear: both;"></div>
-      <div class="color-bar purple" style="background:purple; float:left;"></div>
-      <div style="clear: both;"></div>
-      <div class="color-bar black" style="background:black; float:left; border: 1px dashed white;"></div>
-      <div style="clear: both;"></div>
-      <div class="color-bar white" style="background:white; float:left;"></div>
-      <div style="clear: both;"></div>
-      <hr />
+      <div id="canvasDiv" style="float: left;">
+        <canvas id="imageView">
+          <!-- <p>Unfortunately, your browser is currently unsupported by our web
+            application. We are sorry for the inconvenience. Please use one of the
+            supported browsers listed below, or draw the image you want using an
+            offline tool.</p>
+          <p>Supported browsers: <a href="http://www.opera.com">Opera</a>, <a href="http://www.mozilla.com">Firefox</a>,
+            <a href="http://www.apple.com/safari">Safari</a>, and <a href="http://www.konqueror.org">Konqueror</a>.</p> -->
+        </canvas>
+      </div>
+      <!-- <div id="stats" style="font-size:8pt; padding-left: 50px; float: left;">0 0</div> -->
 
-      <!-- <div id="fill" style="width:50px; height:50px; float:left;">
-        <img src="fill.png" width="50" height="50" /></div>
-      <div style="clear: both;"></div>
-      <div id="cat" style="width:50px; height:50px; float:left;">
-        <img id="catImg" src="cat.png" width="50" height="50" /></div>
-      <div style="clear: both;"></div>
-      <div id="dog" style="width:50px; height:50px; float:left;">
-        <img id="dogImg" src="dog.png" width="50" height="50" /></div>
-      <div style="clear: both;"></div>
-      <div id="dragonfly" style="width:50px; height:50px; float:left;">
-        <img id="dragonFlyImg" src="fly.png" width="50" height="50" /></div>
-      <div style="clear: both;"></div>
-      <div id="ladybug" style="width:50px; height:50px; float:left;">
-        <img id="ladyBugImg" src="bug.png" width="50" height="50" /></div>
-      <div style="clear: both;"></div>
-      <div id="heart" style="width:50px; height:50px; float:left;">
-        <img id="heartImg" src="heart.png" width="50" height="50" /></div>
-      <div style="clear: both;"></div>
-      <div id="save" style="width:50px; height:50px; float:left;">Save</div>
-      <div style="clear: both;"></div> -->
-
-    </div>
-    <div id="canvasDiv" style="float: left;">
-      <canvas id="imageView">
-        <p>Unfortunately, your browser is currently unsupported by our web
-          application. We are sorry for the inconvenience. Please use one of the
-          supported browsers listed below, or draw the image you want using an
-          offline tool.</p>
-        <p>Supported browsers: <a href="http://www.opera.com">Opera</a>, <a href="http://www.mozilla.com">Firefox</a>,
-          <a href="http://www.apple.com/safari">Safari</a>, and <a href="http://www.konqueror.org">Konqueror</a>.</p>
-      </canvas>
-    </div>
-    <!-- <div id="stats" style="font-size:8pt; padding-left: 50px; float: left;">0 0</div> -->
-  </div>
+  </div> 
 </body>
 
 

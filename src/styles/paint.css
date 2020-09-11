@@ -1,11 +1,18 @@
 /* PAINT CANVAS */
 /* COLOR TOOLBAR */
+/* #paint {
+  width: 100vw;
+} */
+
+/* #color-container {
+  width: 100vw;
+} */
+
 #colorToolbar {
   width: 20vw;
 }
 
 .color-bar {
-  width: 50px;
+  width: 100px;
   height: 50px; 
-
 }
