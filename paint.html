@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
       <meta charset="UTF-8">
+      <script src="src/scripts/paint.js"></script>
       <link rel="stylesheet" href="./src/styles/paint.css">
   </head>
 
@@ -9,18 +10,17 @@
     <div id="body2-wrapper">
       <section id="color-container">
         <div id="colorToolbar" style="border: 1px solid black;">
-          <div class="color-bar red" style="background:red;"></div>
-          <div class="color-bar pink" style="background:pink;"></div>
-          <div class="color-bar fuchsia" style="background:fuchsia;"></div>
-          <div class="color-bar orange" style="background:orange;"></div>
-          <div class="color-bar yellow" style="background:yellow;"></div>
-          <div class="color-bar lime" style="background:lime;"></div>
-          <div class="color-bar green" style="background:green;"></div>
-          <div class="color-bar blue" style="background:blue;"></div>
-          <div class="color-bar purple" style="background:purple;"></div>
-          <div class="color-bar black" style="background:black; border: 1px dashed white;"></div>
-          <div class="color-bar white" style="background:white;"></div>
-          <hr />
+          <div class="color-bar" id="red" style="background:red;"></div>
+          <div class="color-bar" id="pink" style="background:pink;"></div>
+          <div class="color-bar" id="fuchsia" style="background:fuchsia;"></div>
+          <div class="color-bar" id="orange" style="background:orange;"></div>
+          <div class="color-bar" id="yellow" style="background:yellow;"></div>
+          <div class="color-bar" id="lime" style="background:lime;"></div>
+          <div class="color-bar" id="green" style="background:green;"></div>
+          <div class="color-bar" id="blue" style="background:blue;"></div>
+          <div class="color-bar" id="purple" style="background:purple;"></div>
+          <div class="color-bar" id="black" style="background:black;"></div>
+          <div class="color-bar" id="white" style="background:white;"></div>
 
           <!-- <div id="fill" style="width:50px; height:50px; float:left;">
             <img src="fill.png" width="50" height="50" /></div>
@@ -42,7 +42,7 @@
           <div style="clear: both;"></div>
           <div id="save" style="width:50px; height:50px; float:left;">Save</div>
           <div style="clear: both;"></div> -->
-
+        </div>
       </section>
 
       <div id="canvasDiv" style="float: left;">
@@ -57,11 +57,6 @@
       </div>
       <!-- <div id="stats" style="font-size:8pt; padding-left: 50px; float: left;">0 0</div> -->
 
-  </div> 
-</body>
-
-
-
-    </div>
+    </div> 
   </body>
 </html>
