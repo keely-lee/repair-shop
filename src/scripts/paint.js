@@ -1,34 +1,110 @@
 document.addEventListener("DOMContentLoaded", () => {
   //variables
   let currColor = "black";
+  //-- eventually create something for line stroke
+  //-- eventually add something for stamp
   const canvas = document.getElementById("paintCanvas");
   const ctx = canvas.getContext("2d");
 
+  let prevX = 0;
+  let currX = 0;
+  let prevY = 0;
+  let currY = 0;
+  let flag = false;
+  let dot_flag = false;
 
-
-
-  //add event listener here
-  const colorsDivs = document.getElementsByClassName("color-bar");
-  console.log("YAY IN SECOND JS");
-  console.log(colorsDivs);
-  console.log("colorsDivs");
-
-  for (let i = 0; i < colorsDivs.length; i++){
-    colorsDivs.item(i).addEventListener("click", (e) => chooseColor(e))
-  }
 
   document.getElementById(currColor).classList.add("currColor")
 
+
+
+  //add event listeners
+  const colorsDivs = document.getElementsByClassName("color-bar");
+  for (let i = 0; i < colorsDivs.length; i++){
+    colorsDivs.item(i).addEventListener("click", (e) => chooseColor(e))
+  }
+  
+  canvas.addEventListener("mousemove", (e) => findxy('move', e)); //may need {}
+  canvas.addEventListener("mousedown", (e) => findxy('down', e));
+  canvas.addEventListener("mouseup", (e) => findxy('up', e));
+  canvas.addEventListener("mouseout", (e) => findxy('out', e)); //removes mousedown on out!!
+
+
+
+
+  //functions  
   function chooseColor(e){
     if (e.target.id === currColor) return; 
 
     document.getElementById(currColor).classList.remove("currColor")
     currColor = e.target.id;
     document.getElementById(currColor).classList.add("currColor")
-
-    console.log(e)
-    console.log("IM IN CHOOSE COLOR")
+    //eventually add some type of border to show currColor selected
   }
+
+  function findxy(res, e) {
+
+    //switch instead of multiple ifs? ------------
+    //     if (res == 'down') {
+    //         prevX = currX;
+    //         prevY = currY;
+    //         currX = e.clientX - canvas.offsetLeft;
+    //         currY = e.clientY - canvas.offsetTop;
+    
+    //         flag = true;
+    //         dot_flag = true;
+    //         if (dot_flag) {
+    //             ctx.beginPath();
+    //             ctx.fillStyle = x;
+    //             ctx.fillRect(currX, currY, 2, 2);
+    //             ctx.closePath();
+    //             dot_flag = false;
+    //         }
+    //     }
+    //     if (res == 'up' || res == "out") {
+    //         flag = false;
+    //     }
+    //     if (res == 'move') {
+    //         if (flag) {
+    //             prevX = currX;
+    //             prevY = currY;
+    //             currX = e.clientX - canvas.offsetLeft;
+    //             currY = e.clientY - canvas.offsetTop;
+    //             draw();
+    //         }
+    //     }
+  }
+
+    function draw() {
+      ctx.beginPath();
+      ctx.moveTo(prevX, prevY);
+      ctx.lineTo(currX, currY);
+      ctx.strokeStyle = currColor;
+      ctx.lineWidth = 2;  //eventually change deafult to 2, can be adjusted by user
+      ctx.stroke();
+      ctx.closePath();
+    }
+
+    //function stamp(){}
+
+    function clearAll() {
+      const clearCanvas = confirm("Are you sure you want to erase everything?");
+      if (clearCanvas) {
+        // ctx.clearRect(0, 0, w, h);
+        // document.getElementById("canvasimg").style.display = "none"; //////
+      }
+    }
+
+    //triggers a temporary PNG save, need to figure out how to utilize local storage
+    function save() {
+      // document.getElementById("canvasimg").style.border = "2px solid";
+      // const savedImage = canvas.toDataURL();
+      // document.getElementById("canvasimg").src = savedImage;
+      
+      // document.getElementById("canvasimg").style.display = "inline"; 
+          //--- this is prob the line of code that saves it next to the current
+    }
+    
 })
 
 
@@ -40,42 +116,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	canvas.width  = window.innerWidth - 75;
 	canvas.height = window.innerHeight - 75;
 
-
-
-function onColorClick(color) {
-	// Start a new path to begin drawing in a new color.
-	context.closePath();
-	context.beginPath();
-	
-	// Select the new color.
-	context.strokeStyle = color;
-	
-	// Highlight selected color.
-	var borderColor = 'white';
-	if (color == 'white' || color == 'yellow') {
-		borderColor = 'black';
-	}
-	
-	$('#' + lastColor).css("border", "0px dashed white");
-	$('#' + color).css("border", "1px dashed " + borderColor);
-	
-	// Store color so we can un-highlight it next time around.
-	lastColor = color;
-}
-
-
-var started = false;
-var canvas, context;
-var stampId = '';
-var lastColor = 'black';
-var lastStampId = '';
+  var stampId = '';
+  var lastStampId = '';
 
 function init() {
-
-  
-	//$('#container').get(0).addEventListener('mousemove', onMouseMove, false);
-	canvas.addEventListener('mousemove', onMouseMove, false);
-	canvas.addEventListener('click', onClick, false);
 	
 	// Add events for toolbar buttons.
 	$('#cat').get(0).addEventListener('click', function(e) { onStamp(e.target.id); }, false);
