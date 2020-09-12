@@ -1,12 +1,17 @@
 /* PAINT CANVAS */
 /* COLOR TOOLBAR */
-/* #paint {
-  width: 100vw;
-} */
+#body2-wrapper {
+  display: flex;
+}
 
-/* #color-container {
-  width: 100vw;
-} */
+#canvasDiv {
+  width: 70vw;
+}
+
+#paintCanvas {
+  width: 100%;
+  border: 1px solid blue;
+}
 
 #colorToolbar {
   width: 20vw;

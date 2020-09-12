@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
+  //variables
+  let currColor = "black";
+  const canvas = document.getElementById("paintCanvas");
+  const ctx = canvas.getContext("2d");
+
+
+
+
   //add event listener here
   const colorsDivs = document.getElementsByClassName("color-bar");
   console.log("YAY IN SECOND JS");
@@ -9,8 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
     colorsDivs.item(i).addEventListener("click", (e) => chooseColor(e))
   }
 
+  document.getElementById(currColor).classList.add("currColor")
+
   function chooseColor(e){
-    console.log(e.target.id)
+    if (e.target.id === currColor) return; 
+
+    document.getElementById(currColor).classList.remove("currColor")
+    currColor = e.target.id;
+    document.getElementById(currColor).classList.add("currColor")
+
+    console.log(e)
     console.log("IM IN CHOOSE COLOR")
   }
 })
@@ -19,6 +35,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /*
+	
+	// Auto-adjust canvas size to fit window.
+	canvas.width  = window.innerWidth - 75;
+	canvas.height = window.innerHeight - 75;
+
+
+
+function onColorClick(color) {
+	// Start a new path to begin drawing in a new color.
+	context.closePath();
+	context.beginPath();
+	
+	// Select the new color.
+	context.strokeStyle = color;
+	
+	// Highlight selected color.
+	var borderColor = 'white';
+	if (color == 'white' || color == 'yellow') {
+		borderColor = 'black';
+	}
+	
+	$('#' + lastColor).css("border", "0px dashed white");
+	$('#' + color).css("border", "1px dashed " + borderColor);
+	
+	// Store color so we can un-highlight it next time around.
+	lastColor = color;
+}
 
 
 var started = false;
@@ -28,12 +71,7 @@ var lastColor = 'black';
 var lastStampId = '';
 
 function init() {
-	canvas = $('#imageView').get(0);
-	context = canvas.getContext('2d');
-	
-	// Auto-adjust canvas size to fit window.
-	canvas.width  = window.innerWidth - 75;
-	canvas.height = window.innerHeight - 75;
+
   
 	//$('#container').get(0).addEventListener('mousemove', onMouseMove, false);
 	canvas.addEventListener('mousemove', onMouseMove, false);
@@ -82,27 +120,6 @@ function onClick(e) {
 	if (stampId.length > 0) {
 		context.drawImage($(stampId).get(0), e.pageX - 90, e.pageY - 60, 80, 80);
 	}
-}
-
-function onColorClick(color) {
-	// Start a new path to begin drawing in a new color.
-	context.closePath();
-	context.beginPath();
-	
-	// Select the new color.
-	context.strokeStyle = color;
-	
-	// Highlight selected color.
-	var borderColor = 'white';
-	if (color == 'white' || color == 'yellow') {
-		borderColor = 'black';
-	}
-	
-	$('#' + lastColor).css("border", "0px dashed white");
-	$('#' + color).css("border", "1px dashed " + borderColor);
-	
-	// Store color so we can un-highlight it next time around.
-	lastColor = color;
 }
 
 function onFill() {
