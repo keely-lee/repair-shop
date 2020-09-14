@@ -1,10 +1,16 @@
+//notes
+//change cursor to paint brush??
+//add an eraser paint?? 
+
 document.addEventListener("DOMContentLoaded", () => {
   //variables
   let currColor = "black";
-  //-- eventually create something for line stroke
+  let strokeWidth = 2; //-- eventually create something for line stroke
   //-- eventually add something for stamp
   const canvas = document.getElementById("paintCanvas");
   const ctx = canvas.getContext("2d");
+  const w = canvas.width;
+  const h = canvas.height;
 
   let prevX = 0;
   let currX = 0;
@@ -24,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     colorsDivs.item(i).addEventListener("click", (e) => chooseColor(e))
   }
   
-  canvas.addEventListener("mousemove", (e) => findxy('move', e)); //may need {}
+  // canvas.addEventListener("mousemove", (e) => findxy('move', e)); //may need {}
   canvas.addEventListener("mousedown", (e) => findxy('down', e));
   canvas.addEventListener("mouseup", (e) => findxy('up', e));
   canvas.addEventListener("mouseout", (e) => findxy('out', e)); //removes mousedown on out!!
@@ -43,6 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function findxy(res, e) {
+
+    console.log(res)
+    console.log(e)
 
     //switch instead of multiple ifs? ------------
     //     if (res == 'down') {
@@ -80,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ctx.moveTo(prevX, prevY);
       ctx.lineTo(currX, currY);
       ctx.strokeStyle = currColor;
-      ctx.lineWidth = 2;  //eventually change deafult to 2, can be adjusted by user
+      ctx.lineWidth = strokeWidth;
       ctx.stroke();
       ctx.closePath();
     }
@@ -90,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function clearAll() {
       const clearCanvas = confirm("Are you sure you want to erase everything?");
       if (clearCanvas) {
-        // ctx.clearRect(0, 0, w, h);
+        ctx.clearRect(0, 0, w, h);
         // document.getElementById("canvasimg").style.display = "none"; //////
       }
     }
@@ -100,12 +109,16 @@ document.addEventListener("DOMContentLoaded", () => {
       // document.getElementById("canvasimg").style.border = "2px solid";
       // const savedImage = canvas.toDataURL();
       // document.getElementById("canvasimg").src = savedImage;
-      
+
       // document.getElementById("canvasimg").style.display = "inline"; 
           //--- this is prob the line of code that saves it next to the current
     }
     
 })
+
+
+
+
 
 
 
