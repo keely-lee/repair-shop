@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     colorsDivs.item(i).addEventListener("click", (e) => chooseColor(e))
   }
   
-  // canvas.addEventListener("mousemove", (e) => findxy('move', e)); //may need {}
+  canvas.addEventListener("mousemove", (e) => findxy('move', e)); //may need {}
   canvas.addEventListener("mousedown", (e) => findxy('down', e));
   canvas.addEventListener("mouseup", (e) => findxy('up', e));
   canvas.addEventListener("mouseout", (e) => findxy('out', e)); //removes mousedown on out!!
@@ -52,36 +52,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log(res)
     console.log(e)
+    console.log(currColor)
 
     //switch instead of multiple ifs? ------------
-    //     if (res == 'down') {
-    //         prevX = currX;
-    //         prevY = currY;
-    //         currX = e.clientX - canvas.offsetLeft;
-    //         currY = e.clientY - canvas.offsetTop;
-    
-    //         flag = true;
-    //         dot_flag = true;
-    //         if (dot_flag) {
-    //             ctx.beginPath();
-    //             ctx.fillStyle = x;
-    //             ctx.fillRect(currX, currY, 2, 2);
-    //             ctx.closePath();
-    //             dot_flag = false;
-    //         }
-    //     }
-    //     if (res == 'up' || res == "out") {
-    //         flag = false;
-    //     }
-    //     if (res == 'move') {
-    //         if (flag) {
-    //             prevX = currX;
-    //             prevY = currY;
-    //             currX = e.clientX - canvas.offsetLeft;
-    //             currY = e.clientY - canvas.offsetTop;
-    //             draw();
-    //         }
-    //     }
+    if (res == 'down') {
+      prevX = currX;
+      prevY = currY;
+      currX = e.clientX - canvas.offsetLeft;
+      currY = e.clientY - canvas.offsetTop;
+
+      flag = true;
+      dot_flag = true;
+      if (dot_flag) {
+          ctx.beginPath();
+          ctx.fillStyle = currColor;
+          ctx.fillRect(currX, currY, 2, 2);
+          ctx.closePath();
+          dot_flag = false;
+      }
+    }
+    if (res == 'up' || res == "out") {
+      flag = false;
+    }
+    if (res == 'move') {
+      if (flag) {
+          prevX = currX;
+          prevY = currY;
+          currX = e.clientX - canvas.offsetLeft;
+          currY = e.clientY - canvas.offsetTop;
+          draw();
+      }
+    }
   }
 
     function draw() {
