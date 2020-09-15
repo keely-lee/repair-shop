@@ -11,6 +11,8 @@
 #paintCanvas {
   width: 100%;
   border: 1px solid blue;
+  position: sticky;
+  top: 0;
 }
 
 #colorToolbar {

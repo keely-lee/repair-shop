@@ -46,8 +46,11 @@
 }
 
 
-
-
+#paint {
+  position: absolute;
+  top: 10vh;
+  background-color: white;
+}
 
 #paint-obj {
   width: 100vw;
