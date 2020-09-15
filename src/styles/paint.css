@@ -6,13 +6,19 @@
 
 #canvasDiv {
   width: 70vw;
+  height: 90vh;
+  /* cursor: url('../images/Brush-icon.png'), auto;	 */
+
 }
 
 #paintCanvas {
   width: 100%;
+  height: 100%;
   border: 1px solid blue;
   position: sticky;
   top: 0;
+
+  cursor: url('../images/Brush-icon.png'), auto;	
 }
 
 #colorToolbar {
