@@ -16,4 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("paint").innerHTML = '<object id="paint-obj" type="text/html" data="paint.html" ></object>';
   }
 
+  function bug(){
+    console.log("BUGGITY BUG BUG")
+    // document.getElementById("comp-bug").innerHTML = 
+  }
+
 })
