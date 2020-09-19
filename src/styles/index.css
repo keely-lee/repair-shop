@@ -36,12 +36,18 @@
 }
 
 
-#paint {
+
+
+
+/* ACTIVITIES SECTION */
+/* activity main div */
+#activity-comp { 
   position: absolute;
   top: 10vh;
   background-color: white;
 }
 
+/* paint canvas */
 #paint-obj {
   width: 100vw;
   height: 100vh;

@@ -1,8 +1,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const home = document.getElementById("home-button");
+  const activityDiv = document.getElementById("activity-comp");
+
   home.addEventListener("click", () => {
-    document.getElementById("paint").innerHTML = "";
+    document.getElementById("comp-paint").innerHTML = "";
   })
 
   // const introVid = document.getElementsByClassName("startVid")[0];
@@ -13,7 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function repair(){
     console.log("CLICKITY CLACK")
-    document.getElementById("paint").innerHTML = '<object id="paint-obj" type="text/html" data="paint.html" ></object>';
+    activityDiv.innerHTML = '<object id="paint-obj" type="text/html" data="paint.html" ></object>';
+    // document.getElementById("comp-paint").innerHTML = '<object id="paint-obj" type="text/html" data="paint.html" ></object>';
   }
 
   function bug(){
