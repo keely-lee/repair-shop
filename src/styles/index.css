@@ -44,6 +44,8 @@
 #activity-comp { 
   position: absolute;
   top: 10vh;
+  max-height: 90vh;
+  width: 100vw;
   background-color: white;
 }
 
@@ -51,4 +53,11 @@
 #paint-obj {
   width: 100vw;
   height: 100vh;
+}
+
+/* BUG DIV */
+#bug-obj {
+  display: block;
+  margin: auto;
+  border: 1px solid red;
 }

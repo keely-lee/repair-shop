@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // introVid.onended = () => introVid.addAttribute
 
   const per1 = document.getElementsByClassName("person1")[0];
-  per1.addEventListener("click", paint)
+  per1.addEventListener("click", bug);
 
 
 
@@ -26,8 +26,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function bug(){
     console.log("BUGGITY BUG BUG")
-    // activityDiv.innerHTML = ''
-    // activityDiv.appendChild('')
+    const mainBug = document.createElement("img");
+    mainBug.src = "src/images/ladybug.png";
+    mainBug.id = "bug-obj";
+
+    mainBug.height = (window.innerHeight * .8);
+    activityDiv.append(mainBug);
+
+
+    // for (let i = 0; i < 4; i++){
+    //   activityDiv.append(ladybug)
+    //   activityDiv.append(beetle)
+    //   activityDiv.append(honeybee)
+    //   console.log("TESTER")
+    // }
   }
 
 })
+
+
+// 2319 x 1329 - big
+// 1199 x 686 - small
+// 1440 x 686 - max
+
+// use 1500 width as marker
+//ladybug - 1280 x 1226
+//bee - 1280 x 808
+//beetle - 1280 x 997
