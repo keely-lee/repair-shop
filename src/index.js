@@ -29,10 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainBug = document.createElement("img");
     mainBug.src = "src/images/ladybug.png";
     mainBug.id = "bug-obj";
-
     mainBug.height = (window.innerHeight * .8);
+    mainBug.width = (window.innerWidth * .7);
     activityDiv.append(mainBug);
 
+    for(let i = 0; i < 6; i++){
+      const textbox = document.createElement("input");
+      textbox.setAttribute("type",  "text");
+      textbox.setAttribute("id", "bugsme-"+i);
+      activityDiv.append(textbox);
+    }
 
     // for (let i = 0; i < 4; i++){
     //   activityDiv.append(ladybug)
