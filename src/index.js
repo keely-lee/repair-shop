@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(window.innerHeight)
 
   home.addEventListener("click", () => {
-    document.getElementById("comp-paint").innerHTML = "";
+    document.getElementById("activity-comp").innerHTML = "";
   })
 
   // const introVid = document.getElementsByClassName("startVid")[0];
@@ -36,16 +36,26 @@ document.addEventListener("DOMContentLoaded", () => {
     for(let i = 0; i < 6; i++){
       const textbox = document.createElement("input");
       textbox.setAttribute("type",  "text");
-      textbox.setAttribute("id", "bugsme-"+i);
+      textbox.setAttribute("class", "bugsme-"+i);
       activityDiv.append(textbox);
     }
 
-    // for (let i = 0; i < 4; i++){
-    //   activityDiv.append(ladybug)
-    //   activityDiv.append(beetle)
-    //   activityDiv.append(honeybee)
-    //   console.log("TESTER")
-    // }
+    let bugLine = "";
+    for(let i = 1; i < 10; i++){
+      const bug = `<img src="src/images/bug${i}.png" class="bug${i}">`;
+      bugLine += bug;
+    }
+    const topRowDiv = document.createElement("div");
+    topRowDiv.setAttribute("class", "topRowBug")
+    topRowDiv.innerHTML = bugLine;
+    activityDiv.append(topRowDiv);
+
+    const bottomRowDiv = document.createElement("div");
+    bottomRowDiv.setAttribute("class", "bottomRowBug");
+    bottomRowDiv.innerHTML = bugLine;
+    activityDiv.append(bottomRowDiv);
+
+    console.log(Math.random())
   }
 
 })

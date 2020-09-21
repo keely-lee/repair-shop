@@ -49,14 +49,46 @@
   background-color: white;
 }
 
+
 /* paint canvas */
 #paint-obj {
   width: 100vw;
   height: 100vh;
 }
 
+
+
 /* BUG DIV */
 #bug-obj {
   display: block;
   margin: auto;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
+
+/* [class*="bugsme-"] { THIS IS THE INPUT TEXT SELECTOR
+} */
+
+.topRowBug > img {
+  position: absolute;
+  top: 0;
+  width: 15vw;
+}
+
+.bottomRowBug > img {
+  position: absolute;
+  bottom: 0;
+  width: 15vw;
+}
+
+
+/* .slide {
+  animation: slide-left-slow 1s;
+  transform: translateX(0px);
+  position: relative;
+}
+
+@keyframes slide-left-slow {
+  from {left: 40px;}
+  to {left: 0px;}
+} */
