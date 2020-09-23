@@ -71,13 +71,11 @@
 
 .topRowBug > img {
   position: absolute;
-  top: 0;
   width: 15vw;
 }
 
 .bottomRowBug > img {
   position: absolute;
-  bottom: 0;
   width: 15vw;
 }
 

@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const home = document.getElementById("home-button");
   const activityDiv = document.getElementById("activity-comp");
 
-  console.log(window.innerWidth)
-  console.log(window.innerHeight)
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
 
   home.addEventListener("click", () => {
     document.getElementById("activity-comp").innerHTML = "";
@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainBug = document.createElement("img");
     mainBug.src = "src/images/ladybug.png";
     mainBug.id = "bug-obj";
-    mainBug.height = (window.innerHeight * .8);
-    mainBug.width = (window.innerWidth * .7);
+    mainBug.height = (windowHeight * .8);
+    mainBug.width = (windowWidth * .7);
     activityDiv.append(mainBug);
 
     for(let i = 0; i < 6; i++){
@@ -65,17 +65,24 @@ document.addEventListener("DOMContentLoaded", () => {
       const bbug = document.getElementsByClassName(`bug${i}`)[1];
       bbug.style.top = Math.random() * 1000 + "px";
       bbug.style.left = Math.random() * 1000 + "px";
-  
-      // bug.style.transition = Math.floor(100 * Math.random()) + 900 + "ms";
     }
+    
+    function move() {
+      const bugs = document.getElementsByClassName("topRowBug")[0].childNodes;
+      let horizontal = 0;
 
-    // function move() {
+      for(let i = 0; i < 9; i++){
+        bugs[i].style.top = "0px";
+        bugs[i].style.left = horizontal + "px";
+        // bug.style.transition = "all 1000ms ease 5ms"
+        bugs[i].style.transition = "all " + Math.floor(100 * Math.random()) + 500 + "ms" + " ease 5ms";
+        horizontal += Math.floor(windowWidth / 9);
+      }
+    } 
 
-    // }
-
-    console.log(Math.random())
 
 
+    window.setTimeout(move, 1000);
   }
 
 })
