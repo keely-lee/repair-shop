@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function bug(){
     console.log("BUGGITY BUG BUG")
+    activityDiv.innerHTML = "";
     const mainBug = document.createElement("img");
     mainBug.src = "src/images/ladybug.png";
     mainBug.id = "bug-obj";
@@ -45,17 +46,36 @@ document.addEventListener("DOMContentLoaded", () => {
       const bug = `<img src="src/images/bug${i}.png" class="bug${i}">`;
       bugLine += bug;
     }
+    
     const topRowDiv = document.createElement("div");
     topRowDiv.setAttribute("class", "topRowBug")
     topRowDiv.innerHTML = bugLine;
     activityDiv.append(topRowDiv);
-
+    
     const bottomRowDiv = document.createElement("div");
     bottomRowDiv.setAttribute("class", "bottomRowBug");
     bottomRowDiv.innerHTML = bugLine;
     activityDiv.append(bottomRowDiv);
+    
+    for(let i = 1; i < 10; i++){
+      const tbug = document.getElementsByClassName(`bug${i}`)[0];
+      tbug.style.top = (Math.random() * 1000) + "px";
+      tbug.style.left = (Math.random() * 1000) + "px";
+
+      const bbug = document.getElementsByClassName(`bug${i}`)[1];
+      bbug.style.top = Math.random() * 1000 + "px";
+      bbug.style.left = Math.random() * 1000 + "px";
+  
+      // bug.style.transition = Math.floor(100 * Math.random()) + 900 + "ms";
+    }
+
+    // function move() {
+
+    // }
 
     console.log(Math.random())
+
+
   }
 
 })
