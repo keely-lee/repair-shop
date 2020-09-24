@@ -2,10 +2,16 @@
   margin: 0;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
-.main-nav {
+#main-nav {
   height: 10vh;
+  width: 100vw;
+}
+
+#main {
+  height: 90vh;
   width: 100vw;
 }
 
@@ -21,19 +27,28 @@
   object-fit: cover;
 }
 
-.person1 {
-  transform: rotate(-90deg);
-  height: 40vh;
-  /* width: 40vw; */
+.green-car {
+  position: relative;
+  height: 36vh;
+  bottom: 40vh;
+  left: 50vw;
 }
 
-.person1:hover {
+.green-car:hover, .tools:hover{
   -webkit-filter: drop-shadow(1px 1px 0 blue)
                   drop-shadow(-1px -1px 0 blue);
   filter: drop-shadow(2px 2px 0 blue) 
           drop-shadow(-2px -2px 0 blue);
   cursor: pointer;
 }
+
+.tools {
+  position: relative;
+  height: 19vh;
+  top: -72vh;
+  left: -40vw;
+}
+
 
 
 

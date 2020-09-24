@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // const introVid = document.getElementsByClassName("startVid")[0];
   // introVid.onended = () => introVid.addAttribute
 
-  const per1 = document.getElementsByClassName("person1")[0];
-  per1.addEventListener("click", bug);
+  const greenCar = document.getElementsByClassName("green-car")[0];
+  greenCar.addEventListener("click", bug);
 
 
 
