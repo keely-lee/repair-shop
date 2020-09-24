@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function bug(){
-    console.log("BUGGITY BUG BUG")
+    console.log("BUGGITY BUG BUG") /////
     activityDiv.innerHTML = "";
     const mainBug = document.createElement("img");
     mainBug.src = "src/images/ladybug.png";
@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mainBug.width = (windowWidth * .7);
     activityDiv.append(mainBug);
 
+    //things that bug me textboxes
     for(let i = 0; i < 6; i++){
       const textbox = document.createElement("input");
       textbox.setAttribute("type",  "text");
@@ -74,13 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
       for(let i = 0; i < 9; i++){
         bugs[i].style.top = "0px";
         bugs[i].style.left = horizontal + "px";
-        // bug.style.transition = "all 1000ms ease 5ms"
-        bugs[i].style.transition = "all " + Math.floor(100 * Math.random()) + 500 + "ms" + " ease 5ms";
+        bugs[i].style.transition = "all " + Math.floor(100 * Math.random()) + 600 + "ms";
+        //  +" ease 5ms";
         horizontal += Math.floor(windowWidth / 9);
       }
     } 
-
-
 
     window.setTimeout(move, 1000);
   }
