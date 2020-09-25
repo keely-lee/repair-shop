@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const w = canvas.width;
   const h = canvas.height;
 
+  console.log(w)
+  console.log(h)
+
   let prevX = 0;
   let currX = 0;
   let prevY = 0;
@@ -19,10 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let flag = false;
   let dot_flag = false;
 
-
   document.getElementById(currColor).classList.add("currColor")
-
-
 
   //add event listeners
   const colorsDivs = document.getElementsByClassName("color-bar");
@@ -45,21 +45,61 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById(currColor).classList.remove("currColor")
     currColor = e.target.id;
     document.getElementById(currColor).classList.add("currColor")
-    //eventually add some type of border to show currColor selected
+
+    //need to remove currColor class if stamp is chosen
   }
 
-  function findxy(res, e) {
 
-    console.log(res)
-    console.log(e)
-    console.log(currColor)
+
+// {/* <script>
+//       {/* function writeMessage(canvas, message) {
+//         var context = canvas.getContext('2d');
+//         context.clearRect(0, 0, canvas.width, canvas.height);
+//         context.font = '18pt Calibri';
+//         context.fillStyle = 'black';
+//         context.fillText(message, 10, 25);
+//       } */}
+      
+//       function getMousePos(canvas, evt) {
+//         var rect = canvas.getBoundingClientRect();
+//         return {
+//           x: evt.clientX - rect.left,
+//           y: evt.clientY - rect.top
+//         };
+//       }
+
+//       canvas.addEventListener('mousemove', function(evt) {
+//         var mousePos = getMousePos(canvas, evt);
+//         var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
+//       }, false);
+//     </script> */}
+
+
+
+  function findxy(res, e) {
+    const rect = canvas.getBoundingClientRect();
+
+    console.log(rect.left)
+    console.log(canvas.offsetLeft)
+    console.log("CANV LEFT")
+    console.log(rect.top)
+    console.log(canvas.offsetTop)
+    console.log("CANV TOP")
+    // console.log(rect);
+    // console.log("RECT")
+
+    // console.log(res)
+    // console.log(e)
+    // console.log(currColor)
 
     //switch instead of multiple ifs? ------------
     if (res == 'down') {
       prevX = currX;
       prevY = currY;
-      currX = e.clientX - canvas.offsetLeft;
-      currY = e.clientY - canvas.offsetTop;
+      // currX = e.clientX - canvas.offsetLeft;
+      // currY = e.clientY - canvas.offsetTop;
+      currX = e.clientX - rect.left;
+      currY = e.clientY - rect.top;
 
       flag = true;
       dot_flag = true;

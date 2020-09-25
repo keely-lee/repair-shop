@@ -27,6 +27,8 @@
   object-fit: cover;
 }
 
+
+/* MAIN CLICK EVENTS */
 .green-car {
   position: relative;
   height: 36vh;
@@ -43,10 +45,11 @@
 }
 
 .tools {
-  position: relative;
+  position: absolute;
   height: 19vh;
-  top: -72vh;
-  left: -40vw;
+  top: 43vh;
+  left: 2vw;
+  transform: rotate(3deg);
 }
 
 

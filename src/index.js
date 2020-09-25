@@ -13,11 +13,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // const introVid = document.getElementsByClassName("startVid")[0];
   // introVid.onended = () => introVid.addAttribute
 
+
+  //EVENT LISTENERS - MAIN PAGE
+  //condense these to one liners later??
   const greenCar = document.getElementsByClassName("green-car")[0];
   greenCar.addEventListener("click", bug);
 
+  const toolSet = document.getElementsByClassName("tools")[0];
+  toolSet.addEventListener("click", paint)
 
 
+
+
+  
+  //ACTIVITIES - REMOVE AND MOVE SOMEWHERE ELSE LATER
   function paint(){
     console.log("CLICKITY CLACK")
     activityDiv.innerHTML = '<object id="paint-obj" type="text/html" data="paint.html" ></object>';
