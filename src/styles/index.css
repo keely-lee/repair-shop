@@ -109,52 +109,6 @@
 }
 
 
-/* paint canvas */
-#paint-obj {
-  width: 100vw;
-  height: 100vh;
-}
-
-
-
-/* what bugs me */
-#bug-obj {
-  display: block;
-  margin: auto;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-}
-
-/* [class*="bugsme-"] { THIS IS THE INPUT TEXT SELECTOR
-} */
-
-.topRowBug > img {
-  position: absolute;
-  width: 10vw;
-}
-
-.bottomRowBug > img {
-  position: absolute;
-  width: 10vw;
-}
-
-
-
-
-/* Stinkin' Thinkin' Gang DIV */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //EVENT LISTENERS - MAIN PAGE
   //condense these to one liners later??
   const greenCar = document.getElementsByClassName("green-car")[0];
-  greenCar.addEventListener("click", bug);
+  greenCar.addEventListener("click", stinkinThinkin);
 
   const toolSet = document.getElementsByClassName("tools")[0];
   toolSet.addEventListener("click", repair)
@@ -132,23 +132,91 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function stinkinThinkin(){
     activityDiv.innerHTML = "";
-    
+    const gangMainDiv = document.createElement("div");
+    gangMainDiv.id = "gangMainDiv";
+    activityDiv.append(gangMainDiv);
+    gangMainDiv.innerHTML = "<h1>THE STINK'N THINK'N GANG</h1><h4>Your Worst Enemies</h4>";
+
+    const gangWrapper = document.createElement("div");
+    gangWrapper.id = "gangWrapper";
+    gangMainDiv.append(gangWrapper);
+
     const iwannitnow = document.createElement("div");
-    activityDiv.append(iwannitnow);
+    iwannitnow.setAttribute("class", "gangDiv-iwannitnow");
+    gangWrapper.append(iwannitnow); 
 
-    //HEADERS HERE
-
-    iwannitnow.setAttribute("class", "gang-iwannitnow");
     const iwannitnowImg = document.createElement("img");
     iwannitnowImg.setAttribute("class", "gangImg-iwannitnow");
-    // iwannitnowImg.src = "src/images/gang-iwannitnow.png";
     iwannitnowImg.setAttribute("src", "src/images/gang-iwannitnow.png");
     iwannitnow.append(iwannitnowImg);
     const iwannitnowTxt = document.createElement("span");
-    iwannitnowTxt.setAttribute("class", "gangP-iwannitnow");
     iwannitnowTxt.innerHTML = "Iwannit Now - The leader of the Stinkin' Thinkin' Gang tries to get you to make bad choices by influencing your wants. His plan is to get you to want things NOW--not waiting and not caring about what you have to do or who might get hurt in the process. Once Iwannit Now gets a good hold on you--Biggs Bigger, Lil Fib and other members of the gang can pretty much get you to do anything, no matter how foolish or hurtful it may be.";
-    
-    
+    iwannitnow.append(iwannitnowTxt);
+
+
+    const biggsBigger = document.createElement("div");
+    biggsBigger.setAttribute("class", "gangDiv-biggsBigger");
+    gangWrapper.append(biggsBigger);
+
+    const biggsBiggerImg = document.createElement("img");
+    biggsBiggerImg.setAttribute("class", "gangImg-biggsBigger");
+    biggsBiggerImg.setAttribute("src", "src/images/gang-biggsbigger.png");
+    biggsBigger.append(biggsBiggerImg);
+    const biggsBiggerTxt = document.createElement("span");
+    biggsBiggerTxt.innerHTML = "Biggs Bigger - He works closely with Iwannit Now. This guy makes things seem more attractive, more important, more valuable, more desirable, more necessary, more urgent and even more frightening than they really are. He tries to get you to blow things so far out of proportion you can no longer properly judge their true value or worth. In doing so, he robs you of your ability to make choices.";
+    biggsBigger.append(biggsBiggerTxt);
+
+
+    const eencyWeency = document.createElement("div");
+    eencyWeency.setAttribute("class", "gangDiv-eencyWeency");
+    gangWrapper.append(eencyWeency);
+
+    const eencyWeencyImg = document.createElement("img");
+    eencyWeencyImg.setAttribute("class", "gangImg-eencyWeency");
+    eencyWeencyImg.setAttribute("src", "src/images/gang-eencyweency.png");
+    eencyWeency.append(eencyWeencyImg);
+    const eencyWeencyTxt = document.createElement("span");
+    eencyWeencyTxt.innerHTML = "Eency Weency Tiny Too - He tries to make you think things are less important than they really are. He'll try to make you think things are less valuable, less necessary, less urgent and less serious than they really are. For example, he will try to convince you that using drugs is no big deal and going to jail isn't really that bad.";
+    eencyWeency.append(eencyWeencyTxt);
+
+
+    const lilFib = document.createElement("div");
+    lilFib.setAttribute("class", "gangDiv-lilFib");
+    gangWrapper.append(lilFib);
+
+    const lilFibImg = document.createElement("img");
+    lilFibImg.setAttribute("class", "gangImg-lilFib");
+    lilFibImg.setAttribute("src", "src/images/gang-lilfib.png");
+    lilFib.append(lilFibImg);
+    const lilFibTxt = document.createElement("span");
+    lilFibTxt.innerHTML = "Lil Fib - She tries to make you believe things that aren't true. She will try to get you to lie to others and others to lie to you so neither of you know what to believe or do. She's at her best when she gets you to lie to yourself. She does this by getting you to justify doing things you know are wrong or to believe things that will hurt you.";
+    lilFib.append(lilFibTxt);
+
+
+    const nameitBlameit = document.createElement("div");
+    nameitBlameit.setAttribute("class", "gangDiv-nameitBlameit");
+    gangWrapper.append(nameitBlameit);
+
+    const nameitBlameitImg = document.createElement("img");
+    nameitBlameitImg.setAttribute("class", "gangImg-nameitBlameit");
+    nameitBlameitImg.setAttribute("src", "src/images/gang-nameblame.png");
+    nameitBlameit.append(nameitBlameitImg);
+    const nameitBlameitTxt = document.createElement("span");
+    nameitBlameitTxt.innerHTML = "Nameit Blameit - Tries to get you to blame other people or other things for your own behavior. For example, if you hurt someone else, he will try to get you to blame the other person for getting you angry. Nameit Blameit will also try to get you to put labels on people or ideas and make you believe that if you know the name, you know the person or understand the idea. If you let him, he will make it nearly impossible for you to think clearly and take responsibility for your own life.";
+    nameitBlameit.append(nameitBlameitTxt);
+
+
+    const judgeBFore = document.createElement("div");
+    judgeBFore.setAttribute("class", "gangDiv-judgeBFore");
+    gangWrapper.append(judgeBFore);
+
+    const judgeBForeImg = document.createElement("img");
+    judgeBForeImg.setAttribute("class", "gangImg-judgeBFore");
+    judgeBForeImg.setAttribute("src", "src/images/gang-judgebfore.png");
+    judgeBFore.append(judgeBForeImg);
+    const judgeBForeTxt = document.createElement("span");
+    judgeBForeTxt.innerHTML = "Judge B. Fore - Works closely with Nameit Blameit. He tries to get you to judge the worth of things before you know how much about them. He also gets you to assume the worst is going to happen in every situation causing you to give up or worse, not try at all. For example, 'I always fail math. Why bother studying at all!'";
+    judgeBFore.append(judgeBForeTxt);
   }
 
 
