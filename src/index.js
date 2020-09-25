@@ -20,17 +20,48 @@ document.addEventListener("DOMContentLoaded", () => {
   greenCar.addEventListener("click", bug);
 
   const toolSet = document.getElementsByClassName("tools")[0];
-  toolSet.addEventListener("click", paint)
+  toolSet.addEventListener("click", repair)
+
+  const fuel = document.getElementsByClassName("fuel")[0];
+  fuel.addEventListener("click", recharge);
+
+
+
+  //ACTIVITY ICONS
+  const paintBrushIcon = document.createElement("div");
+  paintBrushIcon.innerHTML = '<i class="fas fa-paint-brush icon-paint"></i>';
+  paintBrushIcon.addEventListener("click", paint);
+
+  const bugsMeIcon = document.createElement("div");
+  bugsMeIcon.innerHTML = '<i class="fas fa-bug icon-bug"></i>';
+  bugsMeIcon.addEventListener("click", bug);
+
+
+  //MAIN COMPONENTS
+  function repair(){
+    console.log("I AM IN THE REPAIR FUNCTION")
+    const repairDiv = document.createElement("div");
+    repairDiv.setAttribute("id", "repair-div")
+    activityDiv.append(repairDiv);
+    repairDiv.append(paintBrushIcon);
+  }
+
+  function recharge(){
+    console.log("I AM IN THE RECHARGE FUNCTION");
+    const rechargeDiv = document.createElement("div");
+    rechargeDiv.setAttribute("id", "recharge-div");
+    activityDiv.append(rechargeDiv);
+    rechargeDiv.append(bugsMeIcon);
+    rechargeDiv.append(paintBrushIcon)
+  }
 
 
 
 
-  
   //ACTIVITIES - REMOVE AND MOVE SOMEWHERE ELSE LATER
   function paint(){
     console.log("CLICKITY CLACK")
     activityDiv.innerHTML = '<object id="paint-obj" type="text/html" data="paint.html" ></object>';
-    // document.getElementById("comp-paint").innerHTML = '<object id="paint-obj" type="text/html" data="paint.html" ></object>';
   }
 
   function bug(){
@@ -96,11 +127,13 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
+
+
+
+
+
+
+
 // 2319 x 1329 - big
 // 1199 x 686 - small
 // 1440 x 686 - max
-
-// use 1500 width as marker
-//ladybug - 1280 x 1226
-//bee - 1280 x 808
-//beetle - 1280 x 997

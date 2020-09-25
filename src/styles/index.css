@@ -8,6 +8,21 @@
 #main-nav {
   height: 10vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+#home-button {
+  height: 8vh;
+  border: none;
+  background: transparent;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+#home-button:hover {
+  border: 1px solid orange;
 }
 
 #main {
@@ -29,19 +44,19 @@
 
 
 /* MAIN CLICK EVENTS */
-.green-car {
-  position: relative;
-  height: 36vh;
-  bottom: 40vh;
-  left: 50vw;
-}
-
-.green-car:hover, .tools:hover{
+.green-car:hover, .tools:hover, .fuel:hover {
   -webkit-filter: drop-shadow(1px 1px 0 blue)
                   drop-shadow(-1px -1px 0 blue);
   filter: drop-shadow(2px 2px 0 blue) 
           drop-shadow(-2px -2px 0 blue);
   cursor: pointer;
+}
+
+.green-car {
+  position: relative;
+  height: 36vh;
+  bottom: 40vh;
+  left: 50vw;
 }
 
 .tools {
@@ -52,7 +67,33 @@
   transform: rotate(3deg);
 }
 
+.fuel {
+  position: absolute;
+  height: 18vh;
+  bottom: 2vh;
+  left: 31vw;
+}
 
+
+/* MAIN CLICK DIVS */
+#repair-div {
+  width: 100vw;
+  height: 90vh;
+}
+
+#recharge-div {
+  width: 100vw;
+  height: 90vh;
+}
+
+
+
+/* ACTIVITY ICONS */
+[class*="icon-"] {
+  font-size: 60px;
+  color: lightcoral;
+  cursor: pointer;
+}
 
 
 
