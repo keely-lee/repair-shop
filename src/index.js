@@ -1,13 +1,14 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const home = document.getElementById("home-button");
   const activityDiv = document.getElementById("activity-comp");
+  const tabDiv = document.getElementById("tab-comp");
 
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
 
   home.addEventListener("click", () => {
-    document.getElementById("activity-comp").innerHTML = "";
+    activityDiv.innerHTML = "";
+    tabDiv.innerHTML = "";
   })
 
   // const introVid = document.getElementsByClassName("startVid")[0];
@@ -36,13 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
   bugsMeIcon.innerHTML = '<i class="fas fa-bug icon-bug"></i>';
   bugsMeIcon.addEventListener("click", bug);
 
+  const stinkinGangIcon = document.createElement("div");
+  stinkinGangIcon.innerHTML = '<i class="fas fa-user-ninja icon-gang"></i>';
+  stinkinGangIcon.addEventListener("click", stinkinThinkin)
+
 
   //MAIN COMPONENTS
   function repair(){
     console.log("I AM IN THE REPAIR FUNCTION")
     const repairDiv = document.createElement("div");
-    repairDiv.setAttribute("id", "repair-div")
-    activityDiv.append(repairDiv);
+    repairDiv.setAttribute("id", "repair-div");
+    tabDiv.append(repairDiv);
     repairDiv.append(paintBrushIcon);
   }
 
@@ -50,9 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("I AM IN THE RECHARGE FUNCTION");
     const rechargeDiv = document.createElement("div");
     rechargeDiv.setAttribute("id", "recharge-div");
-    activityDiv.append(rechargeDiv);
+    tabDiv.append(rechargeDiv);
+
     rechargeDiv.append(bugsMeIcon);
-    rechargeDiv.append(paintBrushIcon)
+    rechargeDiv.append(paintBrushIcon);
+    rechargeDiv.append(stinkinGangIcon);
   }
 
 
@@ -60,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //ACTIVITIES - REMOVE AND MOVE SOMEWHERE ELSE LATER
   function paint(){
-    console.log("CLICKITY CLACK")
+    console.log("PAINT FUNCTION ACTIVATED")
     activityDiv.innerHTML = '<object id="paint-obj" type="text/html" data="paint.html" ></object>';
   }
 
@@ -89,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     const topRowDiv = document.createElement("div");
-    topRowDiv.setAttribute("class", "topRowBug")
+    topRowDiv.setAttribute("class", "topRowBug");
     topRowDiv.innerHTML = bugLine;
     activityDiv.append(topRowDiv);
     
@@ -108,15 +115,14 @@ document.addEventListener("DOMContentLoaded", () => {
       bbug.style.left = Math.random() * 1000 + "px";
     }
     
-    function move() {
+    function move(){
       const bugs = document.getElementsByClassName("topRowBug")[0].childNodes;
       let horizontal = 0;
 
       for(let i = 0; i < 9; i++){
         bugs[i].style.top = "0px";
         bugs[i].style.left = horizontal + "px";
-        bugs[i].style.transition = "all " + Math.floor(100 * Math.random()) + 600 + "ms";
-        //  +" ease 5ms";
+        bugs[i].style.transition = "all " + Math.floor(100 * Math.random()) + 600 + "ms"; //  +" ease 5ms";
         horizontal += Math.floor(windowWidth / 9);
       }
     } 
@@ -124,12 +130,33 @@ document.addEventListener("DOMContentLoaded", () => {
     window.setTimeout(move, 1000);
   }
 
+  function stinkinThinkin(){
+    activityDiv.innerHTML = "";
+    
+    const iwannitnow = document.createElement("div");
+    activityDiv.append(iwannitnow);
+
+    //HEADERS HERE
+
+    iwannitnow.setAttribute("class", "gang-iwannitnow");
+    const iwannitnowImg = document.createElement("img");
+    iwannitnowImg.setAttribute("class", "gangImg-iwannitnow");
+    // iwannitnowImg.src = "src/images/gang-iwannitnow.png";
+    iwannitnowImg.setAttribute("src", "src/images/gang-iwannitnow.png");
+    iwannitnow.append(iwannitnowImg);
+    const iwannitnowTxt = document.createElement("span");
+    iwannitnowTxt.setAttribute("class", "gangP-iwannitnow");
+    iwannitnowTxt.innerHTML = "Iwannit Now - The leader of the Stinkin' Thinkin' Gang tries to get you to make bad choices by influencing your wants. His plan is to get you to want things NOW--not waiting and not caring about what you have to do or who might get hurt in the process. Once Iwannit Now gets a good hold on you--Biggs Bigger, Lil Fib and other members of the gang can pretty much get you to do anything, no matter how foolish or hurtful it may be.";
+    
+    
+  }
+
+
+
+
+
+
 })
-
-
-
-
-
 
 
 

@@ -100,7 +100,7 @@
 
 /* ACTIVITIES SECTION */
 /* activity main div */
-#activity-comp { 
+#tab-comp, #activity-comp { 
   position: absolute;
   top: 10vh;
   max-height: 90vh;
@@ -117,7 +117,7 @@
 
 
 
-/* BUG DIV */
+/* what bugs me */
 #bug-obj {
   display: block;
   margin: auto;
@@ -137,6 +137,26 @@
   position: absolute;
   width: 10vw;
 }
+
+
+
+
+/* Stinkin' Thinkin' Gang DIV */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* .slide {
