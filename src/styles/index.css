@@ -95,6 +95,10 @@
   cursor: pointer;
 }
 
+[class*="icon-"]:hover {
+  font-size: 65px;
+}
+
 
 
 
