@@ -143,3 +143,59 @@
   bottom: 0;
   padding-left: 5px;
 }
+
+
+/* SELF CONTROL ACTIVITY */
+.self-control-div {
+  width: 100vw;
+  height: 90vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.self-control-wrapper {
+  width: 80vw;
+  height: 75vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.self-control-div > h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+[class*="self-control-step-"] {
+  width: 17vw;
+  margin: 5px;
+}
+
+[class*="self-control-step-"] > img {
+  width: 150px; /*TEMPORARY*/
+  height: 150px; /*TEMPORARY*/
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+[class*="self-control-step"] > div > h5 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 10px 0px;
+  font-size: 1em;
+  color: red;
+}
+
+[class*="self-control-step"] > div > span {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: blue;
+}
+
+[class*="self-control-step"] > div > ul {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 8px 0px;
+  padding-left: 30px;
+  color: green;
+}
