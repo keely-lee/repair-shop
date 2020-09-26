@@ -215,12 +215,14 @@
 }
 
 .problem-solve-wrapper {
+  margin-left: auto;
+  margin-right: auto;
   /* background-image: url(../../src/images/problem-solve-left.jpeg) no-repeat, url(../../src/images/problem-solve-right.jpeg) no-repeat; */
   /* background-image: url("../../src/images/problem-solve.jpg"); */
   /* background-size: cover;
   background-repeat: no-repeat; */
 }
 
-[class*="problem-solve-step-"] {
+/* [class*="problem-solve-step-"] {
   
-}
+} */
