@@ -57,15 +57,22 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 0px;
   text-align: center;
+  color: green;
 }
 
 [class*="gangDiv-"] > span {
   font-family: Arial, Helvetica, sans-serif;
   font-size: .8em;
+  padding-right: 6px;
 }
 
 [class*="gangImg"] {
-  padding: 3px;
+  padding: 6px;
+  -webkit-filter: drop-shadow(1px 1px 0 green)
+                drop-shadow(-1px -1px 0 green);
+  filter: drop-shadow(2px 2px 0 green) 
+          drop-shadow(-2px -2px 0 green);
+  
 }
 
 .gangImg-iwannitnow {
@@ -77,7 +84,7 @@
 }
 
 .gangImg-eencyWeency {
-  height: 16vh;
+  height: 14vh;
 }
 
 .gangImg-lilFib {
@@ -198,4 +205,22 @@
   margin: 8px 0px;
   padding-left: 30px;
   color: green;
+}
+
+/* Problem Solving Activity */
+.problem-solve-div {
+  width: 100vw;
+  height: 90vh;
+  background-color: rgb(54, 126, 128)
+}
+
+.problem-solve-wrapper {
+  /* background-image: url(../../src/images/problem-solve-left.jpeg) no-repeat, url(../../src/images/problem-solve-right.jpeg) no-repeat; */
+  /* background-image: url("../../src/images/problem-solve.jpg"); */
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+[class*="problem-solve-step-"] {
+  
 }

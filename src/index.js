@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //EVENT LISTENERS - MAIN PAGE
   //condense these to one liners later??
   const greenCar = document.getElementsByClassName("green-car")[0];
-  greenCar.addEventListener("click", selfControl);
+  greenCar.addEventListener("click", problemSolving);
 
   const toolSet = document.getElementsByClassName("tools")[0];
   toolSet.addEventListener("click", repair)
@@ -49,10 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
   selfControlIcon.innerHTML = '<i class="fas fa-fist-raised icon-self-control"></i>';
   selfControlIcon.addEventListener("click", selfControl);
 
+  const problemSolveIcon = document.createElement("div");
+  problemSolveIcon.innerHTML = '<i class="far fa-lightbulb icon-problem-solve"></i>';
+  problemSolveIcon.addEventListener("click", problemSolving);
+
 
   //MAIN COMPONENTS
   function repair(){
-    console.log("I AM IN THE REPAIR FUNCTION")
     const repairDiv = document.createElement("div");
     repairDiv.setAttribute("id", "repair-div");
     tabDiv.append(repairDiv);
@@ -60,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function recharge(){
-    console.log("I AM IN THE RECHARGE FUNCTION");
     const rechargeDiv = document.createElement("div");
     rechargeDiv.setAttribute("id", "recharge-div");
     tabDiv.append(rechargeDiv);
@@ -70,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rechargeDiv.append(stinkinGangIcon);
     rechargeDiv.append(feelingsIcon);
     rechargeDiv.append(selfControlIcon);
+    rechargeDiv.append(problemSolveIcon);
   }
 
 
@@ -77,14 +80,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //ACTIVITIES - REMOVE AND MOVE SOMEWHERE ELSE LATER
   function paint(){
-    console.log("PAINT FUNCTION ACTIVATED")
     activityDiv.innerHTML = '<object id="paint-obj" type="text/html" data="paint.html" ></object>';
   }
 
 
 
   function bug(){
-    console.log("BUGGITY BUG BUG") /////
     activityDiv.innerHTML = "";
     const mainBug = document.createElement("img");
     mainBug.src = "src/images/ladybug.png";
@@ -231,7 +232,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function feelings(){
-    console.log("I AM IN THE FEELINGS FUNC")
     activityDiv.innerHTML = "";
     const feelingsDiv = document.createElement("div");
     feelingsDiv.className = "feelingsDiv"
@@ -266,7 +266,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   function selfControl(){
-    console.log("I AM IN THE SELF CONTROL FUNC");
     activityDiv.innerHTML = "";
     const selfControlDiv = document.createElement("div");
     selfControlDiv.innerHTML = "<h1>FOUR STEPS TO SELF-CONTROL</h1>";
@@ -354,6 +353,29 @@ document.addEventListener("DOMContentLoaded", () => {
             stepFourDiv.append(stepFourUL);
   }
 
+
+
+  function problemSolving(){
+    activityDiv.innerHTML = "";
+    const problemSolvingDiv = document.createElement("div");
+    problemSolvingDiv.className = "problem-solve-div";
+    problemSolvingDiv.innerHTML = "<h1>Problem Solving:</h1>"
+    activityDiv.append(problemSolvingDiv);
+
+    // USE SVG TO CREATE LITTLE PROBLEM SOLVING MAZE / start -> finish? / race track / circle
+
+    const problemSolvingWrapper = document.createElement("div");
+    problemSolvingWrapper.className = "problem-solve-wrapper";
+    problemSolvingDiv.append(problemSolvingWrapper);
+      const stepOne = "<p class='problem-solve-step-one'>Step 1: What happened?</p>";
+      const stepTwo = "<p class='problem-solve-step-two'>Step 2: Why do you think it occurred?</p>";
+      const stepThree = "<p class='problem-solve-step-three'>Step 3: My role in the situation?</p>";
+      const stepFour = "<p class='problem-solve-step-four'>Step 4: How can I hold myself accountable to reduce how often this occurs?</p>";
+
+    problemSolvingWrapper.innerHTML = stepOne + stepTwo + stepThree + stepFour;
+
+
+  }
 
 
 
