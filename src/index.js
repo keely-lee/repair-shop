@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  //ACTIVITY ICONS
+  //ACTIVITY ICONS === should these be buttons?
   const paintBrushIcon = document.createElement("div");
   paintBrushIcon.innerHTML = '<i class="fas fa-paint-brush icon-paint"></i>';
   paintBrushIcon.addEventListener("click", paint);
@@ -44,6 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const feelingsIcon = document.createElement("div");
   feelingsIcon.innerHTML = '<i class="far fa-meh icon-feelings"></i>';
   feelingsIcon.addEventListener("click", feelings);
+
+  const selfControlIcon = document.createElement("div");
+  selfControlIcon.innerHTML = '<i class="fas fa-fist-raised icon-self-control"></i>';
+  selfControlIcon.addEventListener("click", selfControl);
 
 
   //MAIN COMPONENTS
@@ -65,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rechargeDiv.append(paintBrushIcon);
     rechargeDiv.append(stinkinGangIcon);
     rechargeDiv.append(feelingsIcon);
+    rechargeDiv.append(selfControlIcon);
   }
 
 
