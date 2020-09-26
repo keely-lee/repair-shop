@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //EVENT LISTENERS - MAIN PAGE
   //condense these to one liners later??
   const greenCar = document.getElementsByClassName("green-car")[0];
-  greenCar.addEventListener("click", stinkinThinkin);
+  greenCar.addEventListener("click", feelings);
 
   const toolSet = document.getElementsByClassName("tools")[0];
   toolSet.addEventListener("click", repair)
@@ -219,8 +219,31 @@ document.addEventListener("DOMContentLoaded", () => {
     judgeBFore.append(judgeBForeTxt);
   }
 
+  function feelings(){
+    console.log("I AM IN THE FEELINGS FUNC")
+    activityDiv.innerHTML = "";
+    const feelingsDiv = document.createElement("div");
+    feelingsDiv.className = "feelingsDiv"
+    activityDiv.append(feelingsDiv);
 
-  
+    const feelingsWrapper = document.createElement("div");
+    feelingsWrapper.className = "feelings-wrapper"
+    feelingsDiv.append(feelingsWrapper);
+
+    const emotions = ["angry", "annoyed", "apathetic", "ashamed", "awe", "bored", "calm", "confident", "confused", "disgust", "disobedient", "distracted", "embarrassed", "excited", "focused", "friendly", "grief", "guilt", "happy", "hungry", "hyper", "invisible", "jealous", "lonely", "love", "on-edge", "overwhelmed", "proud", "resilient", "sad", "scared", "secretive", "sick", "silly", "skeptical", "sleepy", "strong", "surprised", "worn-out", "worried"];
+
+    for(let i = 0; i < emotions.length; i++){
+      const face = document.createElement("img");
+      face.src = `src/images/emotions-img/${emotions[i]}.png`;
+      feelingsWrapper.append(face);
+    }
+
+    const therapistAid = document.createElement("p");
+    therapistAid.innerHTML = "© 2016 Therapist Aid LLC | Provided by TherapistAid.com";
+    feelingsDiv.append(therapistAid);
+
+  }
+
 
 
 
