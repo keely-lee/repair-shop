@@ -231,18 +231,19 @@
 .assertive-comm-div {
   width: 100vw;
   height: 90vh;
-  margin: auto;
-  background-image: url('../../src/images/assertive-comm.jpg');
-  background-size: 100%;
+  display: flex;
+  border-top: 2px solid rgb(7, 63, 203);
 }
 
 .assertive-comm-wrapper {
-  width: 80vw;
   margin: auto;
-  border: 5px; 
-  background-color: white;
-  opacity: 30%;
-  border-radius: 10%;
+  /* border: 5px;  */
+  /* border-radius: 10%; */
+}
+
+#assert-comm-img {
+  width: 50vw;
+  object-fit: cover;
 }
 
 .assertive-comm-wrapper > h1 {
@@ -261,17 +262,17 @@
   font-size: 14px;
 }
 
-[class*="assertive-comm"] p {
+/* [class*="assertive-comm"] p {
   color: red;
-}
+} */
 
 [class*="assertive-comm"] span {
-  color: blue;
+  /* color: blue; */
   vertical-align: bottom;
 }
 
 [class*="assert-comm-txt"], [class*="assertive-comm-txt"] {
-  border-bottom: 2px solid lightskyblue;
+  border-bottom: 2px solid rgb(21, 82, 213);
   height: 20px;
   border-top: none;
   border-left: none;

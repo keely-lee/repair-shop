@@ -387,6 +387,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const assertCommDiv = document.createElement("div");
     assertCommDiv.className = "assertive-comm-div";
     activityDiv.append(assertCommDiv);
+
+    const sideImg = document.createElement("img");
+    sideImg.src = "src/images/assert-comm.jpg";
+    sideImg.id = "assert-comm-img";
+    assertCommDiv.append(sideImg);
     
     const assertCommWrapper = document.createElement("div");
     assertCommWrapper.className = "assertive-comm-wrapper";
