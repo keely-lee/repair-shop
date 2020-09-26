@@ -39,7 +39,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const stinkinGangIcon = document.createElement("div");
   stinkinGangIcon.innerHTML = '<i class="fas fa-user-ninja icon-gang"></i>';
-  stinkinGangIcon.addEventListener("click", stinkinThinkin)
+  stinkinGangIcon.addEventListener("click", stinkinThinkin);
+
+  const feelingsIcon = document.createElement("div");
+  feelingsIcon.innerHTML = '<i class="far fa-meh icon-feelings"></i>';
+  feelingsIcon.addEventListener("click", feelings);
 
 
   //MAIN COMPONENTS
@@ -60,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rechargeDiv.append(bugsMeIcon);
     rechargeDiv.append(paintBrushIcon);
     rechargeDiv.append(stinkinGangIcon);
+    rechargeDiv.append(feelingsIcon);
   }
 
 
@@ -238,11 +243,25 @@ document.addEventListener("DOMContentLoaded", () => {
       feelingsWrapper.append(face);
     }
 
+    const bodyWrapper = document.createElement("div");
+    bodyWrapper.className = "feelings-body";
+    feelingsDiv.append(bodyWrapper);
+    bodyWrapper.innerHTML = "<h2>Today I Feel...</h2>"
+
+    const bodyImg = document.createElement("img");
+    bodyImg.src = "src/images/emotions-img/body.png";
+    bodyWrapper.append(bodyImg);
+
     const therapistAid = document.createElement("p");
     therapistAid.innerHTML = "© 2016 Therapist Aid LLC | Provided by TherapistAid.com";
     feelingsDiv.append(therapistAid);
 
   }
+
+  function selfControl(){
+
+  }
+
 
 
 
