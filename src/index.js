@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //EVENT LISTENERS - MAIN PAGE
   //condense these to one liners later??
   const greenCar = document.getElementsByClassName("green-car")[0];
-  greenCar.addEventListener("click", problemSolving);
+  greenCar.addEventListener("click", assertiveCommunication);
 
   const toolSet = document.getElementsByClassName("tools")[0];
   toolSet.addEventListener("click", repair)
@@ -373,6 +373,41 @@ document.addEventListener("DOMContentLoaded", () => {
       const stepFour = "<p class='problem-solve-step-four'>Step 4: How can I hold myself accountable to reduce how often this occurs?</p>";
 
     problemSolvingWrapper.innerHTML = stepOne + stepTwo + stepThree + stepFour;
+  }
+
+  function assertiveCommunication(){
+    activityDiv.innerHTML = "";
+    const assertCommDiv = document.createElement("div");
+    assertCommDiv.className = "assertive-comm-div";
+
+    activityDiv.append(assertCommDiv);
+
+    const assertCommWrapper = document.createElement("div");
+    assertCommWrapper.className = "assertive-comm-wrapper";
+    assertCommDiv.append(assertCommWrapper);
+
+    const assert1 = "<span class='assertive-comm-1'>I don't like it when you</span>";
+    const assert1txt = "<input type='text' class='assertive-comm-1txt'/>";
+    const assert2 = "<span class='assertive-comm-2'>It makes me feel</span>";
+    const assert2txt = "<input type='text' class='assertive-comm-2txt'/>";
+    const assert3 = "<span class='assertive-comm-3'>Please don't do that.</span>";
+    assertCommWrapper.innerHTML = assert1 + assert1txt + assert2 + assert2txt + assert3;
+
+    const communication = ["I feel", "When", "Can you please", "Then we can/I can", "I feel", "Because", "I would like", "I feel", "When", "Because", "What I want or need is"];
+
+    for (let i = 0; i < communication.length; i++){
+      const text = document.createElement("span");
+      text.innerHTML = communication[i];
+      text.className = `assert-comm-${i}`;
+      assertCommWrapper.append(text);
+
+      const input = document.createElement("input");
+      input.type = "text";
+      input.className = `assert-comm-${i}txt`;
+      assertCommWrapper.append(input);
+    }
+
+    
 
 
   }
