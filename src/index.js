@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //EVENT LISTENERS - MAIN PAGE
   //condense these to one liners later??
   const greenCar = document.getElementsByClassName("green-car")[0];
-  greenCar.addEventListener("click", assertiveCommunication);
+  greenCar.addEventListener("click", problemSolving);
 
   const toolSet = document.getElementsByClassName("tools")[0];
   toolSet.addEventListener("click", repair)
@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stepOne.className = "self-control-step-one";
       selfControlWrapper.append(stepOne);
         const stepOneImg = document.createElement("img");
-        stepOneImg.src = "src/images/tools.png";
+        stepOneImg.src = "src/images/control-stop.png";
         stepOne.append(stepOneImg);
         stepOneDiv = document.createElement("div");
         stepOneDiv.innerHTML = "<h5>Step 1: Stop and Calm Down</h5>";
@@ -304,7 +304,8 @@ document.addEventListener("DOMContentLoaded", () => {
         stepTwo.className = "self-control-step-two";
         selfControlWrapper.append(stepTwo);
         const stepTwoImg = document.createElement("img");
-        stepTwoImg.src = "";
+        stepTwoImg.src =
+          "src/images/control-think.png";
         stepTwo.append(stepTwoImg);
         stepTwoDiv = document.createElement("div");
         stepTwoDiv.innerHTML = "<h5>Step 2: THINK</h5>";
@@ -322,7 +323,7 @@ document.addEventListener("DOMContentLoaded", () => {
         stepThree.className = "self-control-step-three";
         selfControlWrapper.append(stepThree);
           const stepThreeImg = document.createElement("img");
-          stepThreeImg.src = "";
+          stepThreeImg.src = "src/images/control-talk.png";
           stepThree.append(stepThreeImg);
           stepThreeDiv = document.createElement("div");
           stepThreeDiv.innerHTML = "<h5>Step 3: Talk</h5>";
@@ -341,7 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
           stepFour.className = "self-control-step-four";
           selfControlWrapper.append(stepFour);
             const stepFourImg = document.createElement("img");
-            stepFourImg.src = "";
+            stepFourImg.src = "src/images/control-good.png";
             stepFour.append(stepFourImg);
             stepFourDiv = document.createElement("div");
             stepFourDiv.innerHTML = "<h5>Step 4: Feel GOOD Again</h5>";
@@ -366,6 +367,16 @@ document.addEventListener("DOMContentLoaded", () => {
     problemSolvingDiv.className = "problem-solve-div";
     problemSolvingDiv.innerHTML = "<h1>Problem Solving:</h1>"
     activityDiv.append(problemSolvingDiv);
+
+    const imgLeft = document.createElement("img");
+      imgLeft.src = "../../src/images/problem-solve-left.jpeg";
+      imgLeft.id = "problem-solve-left";
+    problemSolvingDiv.append(imgLeft);
+    const imgRight = document.createElement("img");
+      imgRight.src = "../../src/images/problem-solve-right.jpeg";
+      imgRight.id = "problem-solve-right";
+    problemSolvingDiv.append(imgRight);
+
 
     // USE SVG TO CREATE LITTLE PROBLEM SOLVING MAZE / start -> finish? / race track / circle
 

@@ -32,6 +32,7 @@
 /* Stinkin' Thinkin' Gang DIV */
 #gangMainDiv {
   height: 90vh;
+  border-top: 2px solid green;
 }
 
 #gangWrapper {
@@ -158,6 +159,9 @@
   height: 90vh;
   margin-left: auto;
   margin-right: auto;
+  border-top: 3px solid rgb(153, 143, 199);
+  /* border-top: 3px solid rgb(137, 84, 188); */
+  background-color: #CCCCCC;
 }
 
 .self-control-wrapper {
@@ -169,11 +173,13 @@
   justify-content: space-between;
 }
 
+
 .self-control-div > h1 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 50px;
   text-align: center;
   margin-top: 20px;
+  color: rgb(40, 38, 44);
 }
 
 [class*="self-control-step-"] {
@@ -182,45 +188,60 @@
 }
 
 [class*="self-control-step-"] > img {
-  width: 150px; /*TEMPORARY*/
-  height: 150px; /*TEMPORARY*/
-  /* margin-left: auto;
-  margin-right: auto; */
+  max-width: 16vw; 
+  max-height: 30vh; 
+}
+
+.self-control-step-three > img {
+  padding-top: 5vw;
 }
 
 [class*="self-control-step"] > div > h5 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   margin: 10px 0px;
   font-size: 1em;
-  color: red;
+  color: rgb(40, 38, 44);
 }
 
 [class*="self-control-step"] > div > span {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: blue;
+  color: #538584;
+  /* color: #8A8956; */
 }
 
 [class*="self-control-step"] > div > ul {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 8px 0px;
   padding-left: 30px;
-  color: green;
+  color: rgb(40, 38, 44);
 }
 
 /* Problem Solving Activity */
 .problem-solve-div {
   width: 100vw;
   height: 90vh;
-  background-color: rgb(54, 126, 128)
+  background-color: rgb(54, 126, 128);
 }
 
 .problem-solve-wrapper {
   margin-left: auto;
   margin-right: auto;
-  /* background-image: url(../../src/images/problem-solve-left.jpeg) no-repeat, url(../../src/images/problem-solve-right.jpeg) no-repeat; */
-  /* background-image: url("../../src/images/problem-solve.jpg"); */
-  /* background-size: cover;
-  background-repeat: no-repeat; */
+  z-index: 2;
+  position: absolute;
+}
+
+#problem-solve-left {
+  width: 30vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#problem-solve-right {
+  width: 30vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /* [class*="problem-solve-step-"] {
