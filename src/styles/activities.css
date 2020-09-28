@@ -85,7 +85,7 @@
 }
 
 .gangImg-eencyWeency {
-  height: 14vh;
+  height: 13vh;
 }
 
 .gangImg-lilFib {
@@ -220,18 +220,19 @@
 .problem-solve-div {
   width: 100vw;
   height: 90vh;
-  background-color: rgb(54, 126, 128);
+  background-color: rgb(1, 128, 129);
 }
 
 .problem-solve-wrapper {
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: -20vw;
+  left: 50vw;
   z-index: 2;
   position: absolute;
+  width: 40vw;
 }
 
 #problem-solve-left {
-  width: 30vw;
+  width: 25vw;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -244,8 +245,25 @@
   right: 0;
 }
 
-/* [class*="problem-solve-step-"] {
-} */
+.problem-solve-div > h1 {
+  font-family: 'Slabo 27px', serif;
+  font-size: 3em;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 5px;
+  margin: 0;
+  color: #3d405b;
+  text-decoration: underline;
+}
+
+[class*="problem-solve-step-"] {
+  font-family: 'Slabo 27px', serif;
+  font-size: 1.4em;
+  color: whitesmoke;
+  /* color: #f2cc8f; */
+  margin-top:30px;
+  margin-bottom:30px;
+}
 
 
 /* Assertive Communication Activity */

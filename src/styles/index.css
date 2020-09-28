@@ -62,9 +62,9 @@
 .tools {
   position: absolute;
   height: 19vh;
-  top: 43vh;
+  top: 44vh;
   left: 2vw;
-  transform: rotate(3deg);
+  transform: rotate(5deg);
 }
 
 .fuel {
