@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //EVENT LISTENERS - MAIN PAGE
   //condense these to one liners later??
   const greenCar = document.getElementsByClassName("green-car")[0];
-  greenCar.addEventListener("click", problemSolving);
+  greenCar.addEventListener("click", iCanControl);
 
   const toolSet = document.getElementsByClassName("tools")[0];
   toolSet.addEventListener("click", repair)
@@ -437,6 +437,21 @@ document.addEventListener("DOMContentLoaded", () => {
     assertCommWrapper.append(assertComEndDiv);
   }
   
+
+
+  function iCanControl(){
+    activityDiv.innerHTML = "";
+    const iCanControlDiv = document.createElement("div");
+    iCanControlDiv.id = "ican-control-div";
+    activityDiv.append(iCanControlDiv);
+
+    const iCanControlWrapper = document.createElement("div");
+    iCanControlDiv.append(iCanControlWrapper);
+
+    const cantControl = document.createElement("div");
+    const canControl = document.createElement("div");
+
+  }
 
 
 
