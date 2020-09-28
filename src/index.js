@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //EVENT LISTENERS - MAIN PAGE
   //condense these to one liners later??
   const greenCar = document.getElementsByClassName("green-car")[0];
-  greenCar.addEventListener("click", iCanControl);
+  greenCar.addEventListener("click", bug);
 
   const toolSet = document.getElementsByClassName("tools")[0];
   toolSet.addEventListener("click", repair)
@@ -92,12 +92,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function bug(){
     activityDiv.innerHTML = "";
+    const bugDiv = document.createElement("div");
+    bugDiv.id = "bug-div";
+    bugDiv.innerHTML = "<h1>Things That Bug Me</h1>";
+    activityDiv.append(bugDiv);
+
     const mainBug = document.createElement("img");
     mainBug.src = "src/images/ladybug.png";
     mainBug.id = "bug-obj";
-    mainBug.height = (windowHeight * .8);
-    mainBug.width = (windowWidth * .7);
-    activityDiv.append(mainBug);
+    mainBug.height = (windowHeight * .7);
+    mainBug.width = (windowWidth * .6);
+    bugDiv.append(mainBug);
 
     //things that bug me textboxes
     for(let i = 0; i < 6; i++){
@@ -137,14 +142,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function move(){
       const bugs = document.getElementsByClassName("topRowBug")[0].childNodes;
+      const bbugs = document.getElementsByClassName("bottomRowBug")[0].childNodes;
       let horizontal = 0;
 
+      console.log(bbugs)
+      console.log("bbugs")
+
       for(let i = 0; i < 9; i++){
-        bugs[i].style.top = "0px";
+        bugs[i].style.top = "-12px";
         bugs[i].style.left = horizontal + "px";
         bugs[i].style.transition = "all " + Math.floor(100 * Math.random()) + 600 + "ms"; //  +" ease 5ms";
+        
+        const j = (i * -1) + 8;
+        bbugs[j].style.top = "82vh";
+        bbugs[j].style.left = horizontal + "px";
+        bbugs[j].style.transition = "all " + Math.floor(100 * Math.random()) + 600 + "ms";
+
         horizontal += Math.floor(windowWidth / 9);
       }
+
     } 
 
     window.setTimeout(move, 1000);

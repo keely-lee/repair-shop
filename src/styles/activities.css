@@ -7,6 +7,17 @@
 
 
 /* what bugs me */
+#bug-div {
+  width: 100vw;
+  height: 90vh;
+}
+
+#bug-div > h1 {
+  text-align: center;
+  padding-top: 10px;
+  margin: 0;
+}
+
 #bug-obj {
   display: block;
   margin: auto;
@@ -19,12 +30,12 @@
 
 .topRowBug > img {
   position: absolute;
-  width: 10vw;
+  width: 7vw;
 }
 
 .bottomRowBug > img {
   position: absolute;
-  width: 10vw;
+  width: 7vw;
 }
 
 
