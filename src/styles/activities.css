@@ -349,3 +349,11 @@
 .assert-comm-txt4, .assert-comm-txt7 {
   margin-top: 16px;
 }
+
+
+/* I Can Control Activity */
+#ican-control-div {
+  width: 100vw;
+  height: 90vh;
+}
+

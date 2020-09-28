@@ -447,9 +447,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const iCanControlWrapper = document.createElement("div");
     iCanControlDiv.append(iCanControlWrapper);
+    iCanControlWrapper.id = "ican-control-wrapper";
 
     const cantControl = document.createElement("div");
+      cantControl.className = "cant-control-div";
+      iCanControlWrapper.append(cantControl);
+      
     const canControl = document.createElement("div");
+      canControl.className = "can-control-div";
+      iCanControlWrapper.append(canControl);
 
   }
 
