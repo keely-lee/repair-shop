@@ -23,6 +23,8 @@
   margin: auto;
   padding-top: 5vh;
   padding-bottom: 5vh;
+  height: 70vh;
+  width: 60vw;
 }
 
 /* [class*="bugsme-"] { THIS IS THE INPUT TEXT SELECTOR

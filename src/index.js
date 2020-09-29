@@ -91,79 +91,93 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   function bug(){
+    let currTab = 0;
+
     activityDiv.innerHTML = "";
     const bugDiv = document.createElement("div");
-    bugDiv.id = "bug-div";
-    bugDiv.innerHTML = "<h1>Things That Bug Me</h1>";
+      bugDiv.id = "bug-div";
     activityDiv.append(bugDiv);
 
-    const mainBug = document.createElement("img");
-    mainBug.src = "src/images/ladybug.png";
-    mainBug.id = "bug-obj";
-    mainBug.height = (windowHeight * .7);
-    mainBug.width = (windowWidth * .6);
-    bugDiv.append(mainBug);
 
-    //things that bug me textboxes
-    for(let i = 0; i < 6; i++){
-      const textbox = document.createElement("input");
-      textbox.setAttribute("type",  "text");
-      textbox.setAttribute("class", "bugsme-"+i);
-      activityDiv.append(textbox);
-    }
+    switch (currTab){
+      case currTab === 1:
 
-    let bugLine = "";
-    for(let i = 1; i < 10; i++){
-      const bug = `<img src="src/images/bug${i}.png" class="bug${i}">`;
-      bugLine += bug;
-    }
-    
-    const topRowDiv = document.createElement("div");
-    topRowDiv.setAttribute("class", "topRowBug");
-    topRowDiv.innerHTML = bugLine;
-    activityDiv.append(topRowDiv);
-    
-    const bottomRowDiv = document.createElement("div");
-    bottomRowDiv.setAttribute("class", "bottomRowBug");
-    bottomRowDiv.innerHTML = bugLine;
-    activityDiv.append(bottomRowDiv);
-    
-    for(let i = 1; i < 10; i++){
-      const tbug = document.getElementsByClassName(`bug${i}`)[0];
-      tbug.style.top = (Math.random() * 1000) + "px";
-      tbug.style.left = (Math.random() * 1000) + "px";
+        break;
+      case currTab === 2:
 
-      const bbug = document.getElementsByClassName(`bug${i}`)[1];
-      bbug.style.top = Math.random() * 1000 + "px";
-      bbug.style.left = Math.random() * 1000 + "px";
-    }
-    
+        break;
+      case currTab === 3:
 
+        break;
+      default:
+        bugDiv.innerHTML = "<h1>Things That Bug Me</h1>";
 
-    function move(){
-      const bugs = document.getElementsByClassName("topRowBug")[0].childNodes;
-      const bbugs = document.getElementsByClassName("bottomRowBug")[0].childNodes;
-      let horizontal = 0;
+        const mainBug = document.createElement("img");
+        mainBug.src = "src/images/ladybug.png";
+        mainBug.id = "bug-obj";
+        // mainBug.height = (windowHeight * .7);
+        // mainBug.width = (windowWidth * .6);
+        bugDiv.append(mainBug);
 
-      console.log(bbugs)
-      console.log("bbugs")
+        //things that bug me textboxes
+        for(let i = 0; i < 6; i++){
+          const textbox = document.createElement("input");
+          textbox.setAttribute("type",  "text");
+          textbox.setAttribute("class", "bugsme-"+i);
+          activityDiv.append(textbox);
+        }
 
-      for(let i = 0; i < 9; i++){
-        bugs[i].style.top = "-12px";
-        bugs[i].style.left = horizontal + "px";
-        bugs[i].style.transition = "all " + Math.floor(100 * Math.random()) + 600 + "ms"; //  +" ease 5ms";
+        let bugLine = "";
+        for(let i = 1; i < 10; i++){
+          const bug = `<img src="src/images/bug${i}.png" class="bug${i}">`;
+          bugLine += bug;
+        }
         
-        const j = (i * -1) + 8;
-        bbugs[j].style.top = "82vh";
-        bbugs[j].style.left = horizontal + "px";
-        bbugs[j].style.transition = "all " + Math.floor(100 * Math.random()) + 600 + "ms";
+        const topRowDiv = document.createElement("div");
+        topRowDiv.setAttribute("class", "topRowBug");
+        topRowDiv.innerHTML = bugLine;
+        activityDiv.append(topRowDiv);
+        
+        const bottomRowDiv = document.createElement("div");
+        bottomRowDiv.setAttribute("class", "bottomRowBug");
+        bottomRowDiv.innerHTML = bugLine;
+        activityDiv.append(bottomRowDiv);
+        
+        for(let i = 1; i < 10; i++){
+          const tbug = document.getElementsByClassName(`bug${i}`)[0];
+          tbug.style.top = (Math.random() * 1000) + "px";
+          tbug.style.left = (Math.random() * 1000) + "px";
 
-        horizontal += Math.floor(windowWidth / 9);
-      }
+          const bbug = document.getElementsByClassName(`bug${i}`)[1];
+          bbug.style.top = Math.random() * 1000 + "px";
+          bbug.style.left = Math.random() * 1000 + "px";
+        }
+        
+        function move(){
+          const bugs = document.getElementsByClassName("topRowBug")[0].childNodes;
+          const bbugs = document.getElementsByClassName("bottomRowBug")[0].childNodes;
+          let horizontal = 0;
 
-    } 
+          for(let i = 0; i < 9; i++){
+            bugs[i].style.top = "-12px";
+            bugs[i].style.left = horizontal + "px";
+            bugs[i].style.transition = "all " + Math.floor(100 * Math.random()) + 600 + "ms"; //  +" ease 5ms";
+            
+            const j = (i * -1) + 8;
+            bbugs[j].style.top = "82vh";
+            bbugs[j].style.left = horizontal + "px";
+            bbugs[j].style.transition = "all " + Math.floor(100 * Math.random()) + 600 + "ms";
 
-    window.setTimeout(move, 1000);
+            horizontal += Math.floor(windowWidth / 9);
+          }
+        } 
+        window.setTimeout(move, 1000);
+    }
+    
+    const rightArrow = document.createElement("button");
+    rightArrow.innerHTML = "next";
+    rightArrow.addEventListener("click", currTab++);
+
   }
 
 
