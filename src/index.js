@@ -176,7 +176,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const rightArrow = document.createElement("button");
     rightArrow.innerHTML = "next";
-    rightArrow.addEventListener("click", currTab++);
+    rightArrow.addEventListener("click", () => currTab++);
+    bugDiv.append(rightArrow);
 
   }
 
