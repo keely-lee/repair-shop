@@ -97,26 +97,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const bugDiv = document.createElement("div");
       bugDiv.id = "bug-div";
     activityDiv.append(bugDiv);
+    const mainBug = document.createElement("img"); // for first two bug images
 
-
+    console.log(currTab)
     switch (currTab){
-      case currTab === 1:
+      case 1:
+        bugDiv.innerHTML = "<h1>Things I Do That Bug Others</h1>";
+
+        mainBug.src = mainBug.src = "src/images/honeybee.png";
+        mainBug.id = "bug-obj";
+        bugDiv.append(mainBug);
 
         break;
-      case currTab === 2:
+      case 2:
 
         break;
-      case currTab === 3:
+      case 3:
 
         break;
       default:
         bugDiv.innerHTML = "<h1>Things That Bug Me</h1>";
-
-        const mainBug = document.createElement("img");
         mainBug.src = "src/images/ladybug.png";
         mainBug.id = "bug-obj";
-        // mainBug.height = (windowHeight * .7);
-        // mainBug.width = (windowWidth * .6);
         bugDiv.append(mainBug);
 
         //things that bug me textboxes
@@ -176,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const rightArrow = document.createElement("button");
     rightArrow.innerHTML = "next";
-    rightArrow.addEventListener("click", () => currTab++);
+    rightArrow.addEventListener("click", () => {console.log("IM NEXT"); currTab += 1; console.log(currTab)}); //NOT REFRESHING !!!! DUH
     bugDiv.append(rightArrow);
 
   }
