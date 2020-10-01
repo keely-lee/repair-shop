@@ -81,6 +81,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+  //TAB SWAP
+  // function tabNext(next){
+
+  // }
+
 
 
   //ACTIVITIES - REMOVE AND MOVE SOMEWHERE ELSE LATER
@@ -90,16 +95,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  function bug(){
-    let currTab = 0;
-
+  function bug(e, currTab = 0){
+    console.log(currTab)
     activityDiv.innerHTML = "";
     const bugDiv = document.createElement("div");
       bugDiv.id = "bug-div";
     activityDiv.append(bugDiv);
     const mainBug = document.createElement("img"); // for first two bug images
 
-    console.log(currTab)
+    // console.log(currTab)
     switch (currTab){
       case 1:
         bugDiv.innerHTML = "<h1>Things I Do That Bug Others</h1>";
@@ -176,10 +180,15 @@ document.addEventListener("DOMContentLoaded", () => {
         window.setTimeout(move, 1000);
     }
     
-    const rightArrow = document.createElement("button");
-    rightArrow.innerHTML = "next";
-    rightArrow.addEventListener("click", () => {console.log("IM NEXT"); currTab += 1; console.log(currTab)}); //NOT REFRESHING !!!! DUH
-    bugDiv.append(rightArrow);
+    console.log(currTab)
+    console.log("currTab")
+    if (currTab < 3) {
+      console.log("CREATE RIGHT ARROW")
+      const rightArrow = document.createElement("button");
+      rightArrow.innerHTML = "next";
+      rightArrow.addEventListener("click", () => { return bug("e", currTab += 1) }); 
+      bugDiv.append(rightArrow);
+    }
 
   }
 
