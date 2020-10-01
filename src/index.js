@@ -107,10 +107,16 @@ document.addEventListener("DOMContentLoaded", () => {
     switch (currTab){
       case 1:
         bugDiv.innerHTML = "<h1>Things I Do That Bug Others</h1>";
-
         mainBug.src = mainBug.src = "src/images/honeybee.png";
         mainBug.id = "bug-obj";
         bugDiv.append(mainBug);
+
+        for (let i = 0; i < 6; i++) {
+          const textbox = document.createElement("input");
+          textbox.setAttribute("type", "text");
+          textbox.setAttribute("class", "ibug-" + i);
+          bugDiv.append(textbox);
+        }
 
         break;
       case 2:
@@ -130,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const textbox = document.createElement("input");
           textbox.setAttribute("type",  "text");
           textbox.setAttribute("class", "bugsme-"+i);
-          activityDiv.append(textbox);
+          bugDiv.append(textbox);
         }
 
         let bugLine = "";
@@ -142,12 +148,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const topRowDiv = document.createElement("div");
         topRowDiv.setAttribute("class", "topRowBug");
         topRowDiv.innerHTML = bugLine;
-        activityDiv.append(topRowDiv);
+        bugDiv.append(topRowDiv);
         
         const bottomRowDiv = document.createElement("div");
         bottomRowDiv.setAttribute("class", "bottomRowBug");
         bottomRowDiv.innerHTML = bugLine;
-        activityDiv.append(bottomRowDiv);
+        bugDiv.append(bottomRowDiv);
         
         for(let i = 1; i < 10; i++){
           const tbug = document.getElementsByClassName(`bug${i}`)[0];
@@ -180,10 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.setTimeout(move, 1000);
     }
     
-    console.log(currTab)
-    console.log("currTab")
     if (currTab < 3) {
-      console.log("CREATE RIGHT ARROW")
       const rightArrow = document.createElement("button");
       rightArrow.innerHTML = "next";
       rightArrow.addEventListener("click", () => { return bug("e", currTab += 1) }); 

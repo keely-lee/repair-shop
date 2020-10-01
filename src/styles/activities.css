@@ -27,9 +27,6 @@
   width: 60vw;
 }
 
-/* [class*="bugsme-"] { THIS IS THE INPUT TEXT SELECTOR
-} */
-
 .topRowBug > img {
   position: absolute;
   width: 7vw;
@@ -39,6 +36,28 @@
   position: absolute;
   width: 7vw;
 }
+
+[class*="bugsme-"], [class*="ibug-"] {
+  position: absolute;
+  height: 20px;
+  width: 200px;
+}
+
+  /* bugs tab one */
+.bugsme-0 { left: 5vw; top: 25vh; }
+.bugsme-1 { left: 5vw; top: 50vh; }
+.bugsme-2 { left: 5vw; bottom: 13vh; }
+.bugsme-3 { right: 5vw; top: 25vh; }
+.bugsme-4 { right: 5vw; top: 50vh; }
+.bugsme-5 { right: 5vw; bottom: 13vh; }
+
+  /* bugs tab two */
+.ibug-0 { left: 5vw; top: 25vh; }
+.ibug-1 { left: 5vw; top: 50vh; }
+.ibug-2 { left: 5vw; bottom: 13vh; }
+.ibug-3 { right: 5vw; top: 25vh; }
+.ibug-4 { right: 5vw; top: 50vh; }
+.ibug-5 { right: 5vw; bottom: 13vh; }
 
 
 
