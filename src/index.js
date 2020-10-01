@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const home = document.getElementById("home-button");
+  const navBar = document.getElementById("main-nav");
   const activityDiv = document.getElementById("activity-comp");
   const tabDiv = document.getElementById("tab-comp");
 
@@ -96,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   function bug(e, currTab = 0){
+
     console.log(currTab)
     activityDiv.innerHTML = "";
     const bugDiv = document.createElement("div");
@@ -104,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainBug = document.createElement("img"); // for first two bug images
 
     // console.log(currTab)
-    switch (currTab){
+    switch (currTab) {
       case 1:
         bugDiv.innerHTML = "<h1>Things I Do That Bug Others</h1>";
         mainBug.src = mainBug.src = "src/images/honeybee.png";
@@ -117,12 +119,13 @@ document.addEventListener("DOMContentLoaded", () => {
           textbox.setAttribute("class", "ibug-" + i);
           bugDiv.append(textbox);
         }
-
         break;
       case 2:
+        bugDiv.innerHTML = "<h1>When Something Bugs Me, I Can Say</h1>";
 
         break;
       case 3:
+        bugDiv.innerHTML = "<h1>Scenarios</h1>";
 
         break;
       default:
@@ -132,57 +135,65 @@ document.addEventListener("DOMContentLoaded", () => {
         bugDiv.append(mainBug);
 
         //things that bug me textboxes
-        for(let i = 0; i < 6; i++){
+        for (let i = 0; i < 6; i++) {
           const textbox = document.createElement("input");
-          textbox.setAttribute("type",  "text");
-          textbox.setAttribute("class", "bugsme-"+i);
+          textbox.setAttribute("type", "text");
+          textbox.setAttribute("class", "bugsme-" + i);
           bugDiv.append(textbox);
         }
 
         let bugLine = "";
-        for(let i = 1; i < 10; i++){
+        for (let i = 1; i < 10; i++) {
           const bug = `<img src="src/images/bug${i}.png" class="bug${i}">`;
           bugLine += bug;
         }
-        
+
         const topRowDiv = document.createElement("div");
         topRowDiv.setAttribute("class", "topRowBug");
         topRowDiv.innerHTML = bugLine;
         bugDiv.append(topRowDiv);
-        
+
         const bottomRowDiv = document.createElement("div");
         bottomRowDiv.setAttribute("class", "bottomRowBug");
         bottomRowDiv.innerHTML = bugLine;
         bugDiv.append(bottomRowDiv);
-        
-        for(let i = 1; i < 10; i++){
+
+        for (let i = 1; i < 10; i++) {
           const tbug = document.getElementsByClassName(`bug${i}`)[0];
-          tbug.style.top = (Math.random() * 1000) + "px";
-          tbug.style.left = (Math.random() * 1000) + "px";
+          tbug.style.top = Math.random() * windowHeight + "px";
+          tbug.style.left = Math.random() * windowWidth + "px";
 
           const bbug = document.getElementsByClassName(`bug${i}`)[1];
-          bbug.style.top = Math.random() * 1000 + "px";
-          bbug.style.left = Math.random() * 1000 + "px";
+          bbug.style.bottom = Math.random() * windowHeight + "px";
+          bbug.style.left = Math.random() * windowWidth + "px";
         }
-        
-        function move(){
+
+        // 2319 x 1329 - big
+        // 1199 x 686 - small
+        // 1440 x 686 - max
+        // windowWidth
+        // windowHeight
+
+        function move() {
           const bugs = document.getElementsByClassName("topRowBug")[0].childNodes;
           const bbugs = document.getElementsByClassName("bottomRowBug")[0].childNodes;
           let horizontal = 0;
 
-          for(let i = 0; i < 9; i++){
+          for (let i = 0; i < 9; i++) {
             bugs[i].style.top = "-12px";
             bugs[i].style.left = horizontal + "px";
-            bugs[i].style.transition = "all " + Math.floor(100 * Math.random()) + 600 + "ms"; //  +" ease 5ms";
-            
-            const j = (i * -1) + 8;
-            bbugs[j].style.top = "82vh";
+            bugs[i].style.transition =
+              "all " + Math.floor(100 * Math.random()) + 600 + "ms"; //  +" ease 5ms";
+
+            const j = i * -1 + 8;
+            bbugs[j].style.bottom = "-2vh";
             bbugs[j].style.left = horizontal + "px";
-            bbugs[j].style.transition = "all " + Math.floor(100 * Math.random()) + 600 + "ms";
+            bbugs[j].style.transition =
+              "all " + Math.floor(100 * Math.random()) + 600 + "ms";
 
             horizontal += Math.floor(windowWidth / 9);
           }
-        } 
+        }
         window.setTimeout(move, 1000);
     }
     
@@ -190,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const rightArrow = document.createElement("button");
       rightArrow.innerHTML = "next";
       rightArrow.addEventListener("click", () => { return bug("e", currTab += 1) }); 
-      bugDiv.append(rightArrow);
+      navBar.append(rightArrow);
     }
 
   }
