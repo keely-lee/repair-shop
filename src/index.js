@@ -95,15 +95,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   function bug(e, currTab = 0){
-
-    console.log(currTab)
     activityDiv.innerHTML = "";
     const bugDiv = document.createElement("div");
       bugDiv.id = "bug-div";
     activityDiv.append(bugDiv);
     const mainBug = document.createElement("img"); // for first two bug images
 
-    // console.log(currTab)
     switch (currTab) {
       case 1:
         bugDiv.innerHTML = "<h1>Things I Do That Bug Others</h1>";
@@ -409,7 +406,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  function problemSolving(){
+  function problemSolving(e, currTab = 0){
     activityDiv.innerHTML = "";
     const problemSolvingDiv = document.createElement("div");
     problemSolvingDiv.className = "problem-solve-div";
@@ -437,6 +434,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const stepFour = "<p class='problem-solve-step-four'>Step 4: How can I hold myself accountable to reduce how often this occurs?</p>";
 
     problemSolvingWrapper.innerHTML = stepOne + stepTwo + stepThree + stepFour;
+
+
+    (currTab <= 0) ? leftArrow.style.display = "none" : leftArrow.style.display = "block";
+    (currTab >= 3) ? rightArrow.style.display = "none" : rightArrow.style.display = "block";
+
+    leftArrow.addEventListener("click", () => problemSolving("e", currTab -= 1)); 
+    rightArrow.addEventListener("click", () => problemSolving("e", currTab += 1)); 
   }
 
 
