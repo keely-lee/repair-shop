@@ -314,6 +314,10 @@
   padding: 10px;
 }
 
+[class*="assert-sec-"] > h3 {
+  margin-top: 0;
+}
+
 [class*="assert-sec-"] > p {
   position: relative;
   font-size: 12px;
@@ -363,7 +367,7 @@
 
 [class*="assert-sec-"] > img {
   max-width: 25vw;
-  max-height: 40vh;
+  max-height: 30vh;
   margin-left: auto;
   margin-right: auto;
 }
@@ -376,6 +380,17 @@
     margin-left: 5px;
     margin-right: 5px;
   }
+
+  .assertive-comm-wrapper > p {
+    position: absolute;
+  }
+
+  #ac-tab-2-sc-0 { top: 20px; left: 10px; }
+  #ac-tab-2-sc-1 { top: 40px; left: 10px; }
+  #ac-tab-2-sc-2 { top: 60px; left: 10px; }
+  #ac-tab-2-sc-3 { top: 80px; left: 10px; }
+  #ac-tab-2-sc-4 { top: 100px; left: 10px; }
+  #ac-tab-2-sc-5 { top: 120px; left: 10px; }
 
 
 /* [class*="assertive-comm-"] {

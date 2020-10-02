@@ -480,6 +480,8 @@ document.addEventListener("DOMContentLoaded", () => {
       case 1: 
         assertCommDiv.innerHTML = "<h1>Different Ways People Communicate</h1>";
         assertCommDiv.append(assertCommWrapper);
+        assertCommWrapper.addEventListener("dragover", (event) => event.preventDefault(), false);
+        assertCommWrapper.addEventListener("drop", (event) => drop(event), false);
 
         assertCommWrapper.append(section1);
           section1.classList.add("tab-2");
@@ -496,17 +498,21 @@ document.addEventListener("DOMContentLoaded", () => {
           section3.addEventListener("dragover", (event) => event.preventDefault(), false);
           section3.addEventListener("drop", (event) => drop(event), false);
 
-        //Temporary for list of scenarios. Eventually use a loop to add all attributes. Position absolute.
-        const scenarioOne = document.createElement("p");
-        assertCommWrapper.append(scenarioOne); 
-          scenarioOne.id = "assert-comm-tab-2-scenario-one";
-          scenarioOne.innerHTML = "I am scenario one"
-          scenarioOne.draggable = "true";
-          scenarioOne.addEventListener("dragstart", (event) => drag(event), false);
-
+        //NEED TO CHECK DETAILS - DRAGOVER HEADER CAUSES P TO BECOME HEADER
+        const scenarios = ["scenario one", "scenario two", "scenario three", "scenario four", "scenario five", "scenario six"];
+        for (let i = 0; i < scenarios.length; i++){
+          const scenario = document.createElement("p");
+          assertCommWrapper.append(scenario); 
+            scenario.id = `ac-tab-2-sc-${i}`;
+            scenario.innerHTML = scenarios[i]
+            scenario.draggable = "true";
+            scenario.addEventListener("dragstart", (event) => drag(event), false);
+        }
         break;
       case 2: 
         assertCommDiv.innerHTML = "<h1>What Are Some Ways We Can Assertively Communicate With Others</h1>";
+        assertCommDiv.append(assertCommWrapper);
+
         
         break;
       case 3:
