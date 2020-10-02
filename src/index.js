@@ -454,9 +454,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const assertCommWrapper = document.createElement("div");
     assertCommWrapper.className = "assertive-comm-wrapper";
     
+    const section1 = document.createElement("section");
+      section1.className = "assert-sec-1";
+      section1.innerHTML = "<h3>Passive</h3>";    
+    const section2 = document.createElement("section");
+      section2.className = "assert-sec-2";
+      section2.innerHTML = "<h3>Aggressive</h3>";
+    const section3 = document.createElement("section");
+      section3.className = "assert-sec-3";
+      section3.innerHTML = "<h3>Assertive</h3>";
+
+
     switch (currTab) {
       case 1: 
         assertCommDiv.innerHTML = "<h1>Different Ways People Communicate</h1>";
+        assertCommDiv.append(assertCommWrapper);
+
+        assertCommWrapper.append(section1);
+          section1.classList.add("tab-2");
+          
+        assertCommWrapper.append(section2);
+          section2.classList.add("tab-2");
+          
+        assertCommWrapper.append(section3);
+          section3.classList.add("tab-2");
+
+
         break;
       case 2: 
         assertCommDiv.innerHTML = "<h1>What Are Some Ways We Can Assertively Communicate With Others</h1>";
@@ -468,10 +491,7 @@ document.addEventListener("DOMContentLoaded", () => {
         assertCommDiv.innerHTML = "<h1>Assertive Communication</h1>"; 
         assertCommDiv.append(assertCommWrapper);
 
-        const section1 = document.createElement("section");
         assertCommWrapper.append(section1);
-          section1.className = "assert-sec-1";
-          section1.innerHTML = "<h3>Passive</h3>";
           const passiveTxt = document.createElement("p");
           passiveTxt.innerHTML = "HERE IS THE PASSIVE TEXT SCENARIO";
           section1.append(passiveTxt);
@@ -479,10 +499,7 @@ document.addEventListener("DOMContentLoaded", () => {
           passiveImg.src = "src/images/assert-comm-passive2.png";
           section1.append(passiveImg);
           
-        const section2 = document.createElement("section");
         assertCommWrapper.append(section2);
-          section2.className = "assert-sec-2";
-          section2.innerHTML = "<h3>Aggressive</h3>";
           const aggressiveTxt = document.createElement("p");
           aggressiveTxt.innerHTML = "HERE IS THE AGGRESSIVE TEXT SCENARIO";
           section2.append(aggressiveTxt);
@@ -490,15 +507,12 @@ document.addEventListener("DOMContentLoaded", () => {
           aggressiveImg.src = "src/images/assert-comm-aggressive.png";
           section2.append(aggressiveImg);
           
-        const section3 = document.createElement("section");
         assertCommWrapper.append(section3);
-          section3.className = "assert-sec-3";
-          section3.innerHTML = "<h3>Assertive</h3>";
           const assertiveTxt = document.createElement("p");
           assertiveTxt.innerHTML = "HERE IS THE ASSERTIVE TEXT SCENARIO";
           section3.append(assertiveTxt);
           const assertiveImg = document.createElement("img");
-          assertiveImg.src = "src/images/assert-comm-assertive.png";
+          assertiveImg.src = "src/images/assert-comm-assertive2.png";
           section3.append(assertiveImg);
           
     }

@@ -292,10 +292,10 @@
 }
 
 .assertive-comm-wrapper {
+  width: 90vw;
   margin: auto;
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: space-evenly;
 }
 
 .assertive-comm-div > h1 {
@@ -311,8 +311,6 @@
   width: 30vw;
   font-family: 'Barlow', sans-serif;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   padding: 10px;
 }
 
@@ -331,8 +329,32 @@
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 4px;
 }
+
+/* [class*="assert-sec-"] > p:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 30px;
+  top: 100px;
+  border: 25px solid;
+  border-color: #666 transparent transparent #666;
+}
+
+[class*="assert-sec-"] > p:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 38px;
+  top: 100px;
+  border: 15px solid;
+  border-color: #fff transparent transparent #fff;
+} */
 
 .assert-sec-2 {
   border-left: 1px solid gray;
@@ -340,11 +362,16 @@
 }
 
 [class*="assert-sec-"] > img {
-  max-width: 30vw;
+  max-width: 25vw;
   max-height: 40vh;
   margin-left: auto;
   margin-right: auto;
 }
+
+  /* TAB 2 of assertive communication activity */
+  [class*="assert-sec-"].tab-2 {
+    border: 1px solid gray;
+  }
 
 
 /* [class*="assertive-comm-"] {
@@ -405,6 +432,10 @@
 .assert-comm-txt4, .assert-comm-txt7 {
   margin-top: 16px;
 } */
+
+
+
+
 
 
 /* I Can Control Activity */
