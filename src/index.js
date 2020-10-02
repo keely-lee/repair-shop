@@ -464,6 +464,17 @@ document.addEventListener("DOMContentLoaded", () => {
       section3.className = "assert-sec-3";
       section3.innerHTML = "<h3>Assertive</h3>";
 
+    //Drag & Drop Functions
+    function drag(event) {
+      event.dataTransfer.setData("text", event.target.id);
+    }
+
+    function drop(event) {
+      event.preventDefault();
+      const data = event.dataTransfer.getData("text");
+      event.target.append(document.getElementById(data));
+    }
+
 
     switch (currTab) {
       case 1: 
@@ -472,13 +483,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
         assertCommWrapper.append(section1);
           section1.classList.add("tab-2");
+          section1.addEventListener("dragover", (event) => event.preventDefault(), false);
+          section1.addEventListener("drop", (event) => drop(event), false);
           
         assertCommWrapper.append(section2);
           section2.classList.add("tab-2");
+          section2.addEventListener("dragover", (event) => event.preventDefault(), false);
+          section2.addEventListener("drop", (event) => drop(event), false);
           
         assertCommWrapper.append(section3);
           section3.classList.add("tab-2");
+          section3.addEventListener("dragover", (event) => event.preventDefault(), false);
+          section3.addEventListener("drop", (event) => drop(event), false);
 
+        //Temporary for list of scenarios. Eventually use a loop to add all attributes. Position absolute.
+        const scenarioOne = document.createElement("p");
+        assertCommWrapper.append(scenarioOne); 
+          scenarioOne.id = "assert-comm-tab-2-scenario-one";
+          scenarioOne.innerHTML = "I am scenario one"
+          scenarioOne.draggable = "true";
+          scenarioOne.addEventListener("dragstart", (event) => drag(event), false);
 
         break;
       case 2: 

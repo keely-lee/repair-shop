@@ -371,6 +371,10 @@
   /* TAB 2 of assertive communication activity */
   [class*="assert-sec-"].tab-2 {
     border: 1px solid gray;
+    width: 20vw;
+    height: 70vh;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
 
