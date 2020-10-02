@@ -6,7 +6,7 @@
 
 
 
-/* what bugs me */
+/* What Bugs Me */
 #bug-div {
   width: 100vw;
   height: 90vh;
@@ -27,12 +27,7 @@
   width: 60vw;
 }
 
-.topRowBug > img {
-  position: absolute;
-  width: 7vw;
-}
-
-.bottomRowBug > img {
+.topRowBug > img, .bottomRowBug > img {
   position: absolute;
   width: 7vw;
 }
@@ -43,21 +38,12 @@
   width: 200px;
 }
 
-  /* bugs tab one */
-.bugsme-0 { left: 5vw; top: 25vh; }
-.bugsme-1 { left: 5vw; top: 50vh; }
-.bugsme-2 { left: 5vw; bottom: 13vh; }
-.bugsme-3 { right: 5vw; top: 25vh; }
-.bugsme-4 { right: 5vw; top: 50vh; }
-.bugsme-5 { right: 5vw; bottom: 13vh; }
-
-  /* bugs tab two */
-.ibug-0 { left: 5vw; top: 25vh; }
-.ibug-1 { left: 5vw; top: 50vh; }
-.ibug-2 { left: 5vw; bottom: 13vh; }
-.ibug-3 { right: 5vw; top: 25vh; }
-.ibug-4 { right: 5vw; top: 50vh; }
-.ibug-5 { right: 5vw; bottom: 13vh; }
+.bugsme-0, .ibug-0 { left: 5vw; top: 25vh; }
+.bugsme-1, .ibug-1 { left: 5vw; top: 50vh; }
+.bugsme-2, .ibug-2 { left: 5vw; bottom: 13vh; }
+.bugsme-3, .ibug-3 { right: 5vw; top: 25vh; }
+.bugsme-4, .ibug-4 { right: 5vw; top: 50vh; }
+.bugsme-5, .ibug-5 { right: 5vw; bottom: 13vh; }
 
 
 
@@ -302,47 +288,58 @@
 .assertive-comm-div {
   width: 100vw;
   height: 90vh;
-  display: flex;
   border-top: 2px solid rgb(7, 63, 203);
 }
 
 .assertive-comm-wrapper {
   margin: auto;
-  /* border: 5px;  */
-  /* border-radius: 10%; */
+  display: flex;
 }
 
-#assert-comm-img {
-  width: 50vw;
-  object-fit: cover;
-}
-
-.assertive-comm-wrapper > h1 {
+.assertive-comm-div > h1 {
   font-family: 'Barlow', sans-serif;
   text-decoration: underline;
   font-weight: bold;
   text-align: center;
   font-size: 20px;
+}
+
+[class*="assert-sec-"] {
+  width: 31vw;
+  font-family: 'Barlow', sans-serif;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[class*="assert-sec-"] > img {
+  max-width: 30vw;
+  max-height: 40vh;
   margin-left: auto;
   margin-right: auto;
 }
 
 
-[class*="assertive-comm-"] {
+/* [class*="assertive-comm-"] {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 14px;
-}
+} */
+
+/* #assert-comm-img {
+  width: 50vw;
+  object-fit: cover;
+} */
 
 /* [class*="assertive-comm"] p {
   color: red;
 } */
 
-[class*="assertive-comm"] span {
-  /* color: blue; */
+/* [class*="assertive-comm"] span {
+  color: blue;
   vertical-align: bottom;
-}
+} */
 
-[class*="assert-comm-txt"], [class*="assertive-comm-txt"] {
+/* [class*="assert-comm-txt"], [class*="assertive-comm-txt"] {
   border-bottom: 2px solid rgb(21, 82, 213);
   height: 20px;
   border-top: none;
@@ -380,7 +377,7 @@
 
 .assert-comm-txt4, .assert-comm-txt7 {
   margin-top: 16px;
-}
+} */
 
 
 /* I Can Control Activity */

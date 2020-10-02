@@ -1,15 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
   const home = document.getElementById("home-button");
-  const navBar = document.getElementById("main-nav");
   const activityDiv = document.getElementById("activity-comp");
   const tabDiv = document.getElementById("tab-comp");
 
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
+  const leftArrow = document.getElementById("left-arrow");
+  const rightArrow = document.getElementById("right-arrow");
 
+  //HOME RESETS
   home.addEventListener("click", () => {
     activityDiv.innerHTML = "";
     tabDiv.innerHTML = "";
+    document.getElementById("left-arrow").style.display = "none";
+    document.getElementById("right-arrow").style.display = "none";
   })
 
   // const introVid = document.getElementsByClassName("startVid")[0];
@@ -80,12 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
     rechargeDiv.append(problemSolveIcon);
     rechargeDiv.append(assertiveCommIcon);
   }
-
-
-  //TAB SWAP
-  // function tabNext(next){
-
-  // }
 
 
 
@@ -168,12 +166,6 @@ document.addEventListener("DOMContentLoaded", () => {
           bbug.style.left = Math.random() * windowWidth + "px";
         }
 
-        // 2319 x 1329 - big
-        // 1199 x 686 - small
-        // 1440 x 686 - max
-        // windowWidth
-        // windowHeight
-
         function move() {
           const bugs = document.getElementsByClassName("topRowBug")[0].childNodes;
           const bbugs = document.getElementsByClassName("bottomRowBug")[0].childNodes;
@@ -197,12 +189,12 @@ document.addEventListener("DOMContentLoaded", () => {
         window.setTimeout(move, 1000);
     }
     
-    if (currTab < 3) {
-      const rightArrow = document.createElement("button");
-      rightArrow.innerHTML = "next";
-      rightArrow.addEventListener("click", () => { return bug("e", currTab += 1) }); 
-      navBar.append(rightArrow);
-    }
+    //Tabs
+    (currTab <= 0) ? leftArrow.style.display = "none" : leftArrow.style.display = "block";
+    (currTab >= 3) ? rightArrow.style.display = "none" : rightArrow.style.display = "block";
+
+    leftArrow.addEventListener("click", () => bug("e", currTab -= 1)); 
+    rightArrow.addEventListener("click", () => bug("e", currTab += 1)); 
 
   }
 
@@ -449,22 +441,79 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   
-  function assertiveCommunication(){
+  function assertiveCommunication(e, currTab = 0){
     activityDiv.innerHTML = "";
     const assertCommDiv = document.createElement("div");
     assertCommDiv.className = "assertive-comm-div";
     activityDiv.append(assertCommDiv);
+    
+    const assertCommWrapper = document.createElement("div");
+    assertCommWrapper.className = "assertive-comm-wrapper";
+    
+    switch (currTab) {
+      case 1: 
+        break;
+      case 2: 
+        break;
+      case 3:
+        break;
+      default:
+        assertCommDiv.innerHTML = "<h1>Assertive Communication</h1>"; 
+        assertCommDiv.append(assertCommWrapper);
 
+        const section1 = document.createElement("section");
+        assertCommWrapper.append(section1);
+          section1.className = "assert-sec-1";
+          section1.innerHTML = "<h3>Passive</h3>";
+          const passiveTxt = document.createElement("p");
+          passiveTxt.innerHTML = "HERE IS THE PASSIVE TEXT SCENARIO";
+          section1.append(passiveTxt);
+          const passiveImg = document.createElement("img");
+          passiveImg.src = "src/images/assert-comm-passive2.png";
+          section1.append(passiveImg);
+          
+        const section2 = document.createElement("section");
+        assertCommWrapper.append(section2);
+          section2.className = "assert-sec-2";
+          section2.innerHTML = "<h3>Aggressive</h3>";
+          const aggressiveTxt = document.createElement("p");
+          aggressiveTxt.innerHTML = "HERE IS THE AGGRESSIVE TEXT SCENARIO";
+          section2.append(aggressiveTxt);
+          const aggressiveImg = document.createElement("img");
+          aggressiveImg.src = "src/images/assert-comm-aggressive.png";
+          section2.append(aggressiveImg);
+          
+        const section3 = document.createElement("section");
+        assertCommWrapper.append(section3);
+          section3.className = "assert-sec-3";
+          section3.innerHTML = "<h3>Assertive</h3>";
+          const assertiveTxt = document.createElement("p");
+          assertiveTxt.innerHTML = "HERE IS THE ASSERTIVE TEXT SCENARIO";
+          section3.append(assertiveTxt);
+          const assertiveImg = document.createElement("img");
+          assertiveImg.src = "src/images/assert-comm-assertive.png";
+          section3.append(assertiveImg);
+          
+
+          
+    }
+
+        
+    //Tabs
+    (currTab <= 0) ? leftArrow.style.display = "none" : leftArrow.style.display = "block";
+    (currTab >= 3) ? rightArrow.style.display = "none" : rightArrow.style.display = "block";
+
+    leftArrow.addEventListener("click", () => assertiveCommunication("e", currTab -= 1)); 
+    rightArrow.addEventListener("click", () => assertiveCommunication("e", currTab += 1)); 
+
+
+    /*
     const sideImg = document.createElement("img");
     sideImg.src = "src/images/assert-comm.jpg";
     sideImg.id = "assert-comm-img";
     assertCommDiv.append(sideImg);
+
     
-    const assertCommWrapper = document.createElement("div");
-    assertCommWrapper.className = "assertive-comm-wrapper";
-    assertCommDiv.append(assertCommWrapper);
-    
-    const assertHeader = "<h1>Assertive Communication</h1>"
     const assert1 = "<span class='assertive-comm-1'>I don't like it when you</span>";
     const assert1txt = "<input type='text' class='assertive-comm-txt1'/></br>";
     const assert2 = "<span class='assertive-comm-2'>It makes me feel</span>";
@@ -491,6 +540,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const assertComEndDiv = document.createElement("div");
     assertComEndDiv.innerHTML = assertComEnd;
     assertCommWrapper.append(assertComEndDiv);
+
+    */
+
   }
   
 
