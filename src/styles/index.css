@@ -25,6 +25,10 @@
   border: 1px solid orange;
 }
 
+#nav-buttons {
+  width: 100%;
+}
+
 #main {
   height: 90vh;
   width: 100vw;

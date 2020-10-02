@@ -452,8 +452,11 @@ document.addEventListener("DOMContentLoaded", () => {
     
     switch (currTab) {
       case 1: 
+        assertCommDiv.innerHTML = "<h1>Different Ways People Communicate</h1>";
         break;
       case 2: 
+        assertCommDiv.innerHTML = "<h1>What Are Some Ways We Can Assertively Communicate With Others</h1>";
+        
         break;
       case 3:
         break;
@@ -494,12 +497,8 @@ document.addEventListener("DOMContentLoaded", () => {
           assertiveImg.src = "src/images/assert-comm-assertive.png";
           section3.append(assertiveImg);
           
-
-          
     }
 
-        
-    //Tabs
     (currTab <= 0) ? leftArrow.style.display = "none" : leftArrow.style.display = "block";
     (currTab >= 3) ? rightArrow.style.display = "none" : rightArrow.style.display = "block";
 

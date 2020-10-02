@@ -294,6 +294,8 @@
 .assertive-comm-wrapper {
   margin: auto;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .assertive-comm-div > h1 {
@@ -301,15 +303,40 @@
   text-decoration: underline;
   font-weight: bold;
   text-align: center;
-  font-size: 20px;
+  font-size: 30px;
+  padding-bottom: 10px;
 }
 
 [class*="assert-sec-"] {
-  width: 31vw;
+  width: 30vw;
   font-family: 'Barlow', sans-serif;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px;
+}
+
+[class*="assert-sec-"] > p {
+  position: relative;
+  font-size: 12px;
+  width: 20vw;
+  min-height: 80px;
+  border: 4px solid gray;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px;
+}
+
+.assert-sec-2 {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
 }
 
 [class*="assert-sec-"] > img {
