@@ -127,14 +127,11 @@
 
 .feelings-body {
   width: 30vw;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
   padding-right: 10px;
 }
 
 .feelings-body > h2 {
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   font-family: fantasy;
   font-size: 30px;
   font-weight: bold;
@@ -149,6 +146,8 @@
   width: 15vw;
   height: 15vw;
   border: 1px solid gray;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feelings-wrapper {

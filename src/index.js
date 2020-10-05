@@ -310,10 +310,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bodyImg = document.createElement("img");
     bodyImg.src = "src/images/emotions-img/lego-body.png";
     bodyWrapper.append(bodyImg);
-
-    // const therapistAid = document.createElement("p");
-    // therapistAid.innerHTML = "© 2016 Therapist Aid LLC | Provided by TherapistAid.com";
-    // feelingsDiv.append(therapistAid);
+    
   }
 
 
