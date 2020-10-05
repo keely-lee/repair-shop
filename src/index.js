@@ -291,11 +291,11 @@ document.addEventListener("DOMContentLoaded", () => {
     feelingsWrapper.className = "feelings-wrapper"
     feelingsDiv.append(feelingsWrapper);
 
-    const emotions = ["angry", "annoyed", "apathetic", "ashamed", "awe", "bored", "calm", "confident", "confused", "disgust", "disobedient", "distracted", "embarrassed", "excited", "focused", "friendly", "grief", "guilt", "happy", "hungry", "hyper", "invisible", "jealous", "lonely", "love", "on-edge", "overwhelmed", "proud", "resilient", "sad", "scared", "secretive", "sick", "silly", "skeptical", "sleepy", "strong", "surprised", "worn-out", "worried"];
+    const emotions = ["happy", "excited", "sad", "surprised", "scared", "angry", "tired", "frustrated", "embarrassed", "shy", "worried", "blank"];
 
     for(let i = 0; i < emotions.length; i++){
       const face = document.createElement("img");
-      face.src = `src/images/emotions-img/${emotions[i]}.png`;
+      face.src = `src/images/emotions-img/lego-${emotions[i]}.png`;
       feelingsWrapper.append(face);
     }
 
@@ -305,12 +305,12 @@ document.addEventListener("DOMContentLoaded", () => {
     bodyWrapper.innerHTML = "<h2>Today I Feel...</h2>"
 
     const bodyImg = document.createElement("img");
-    bodyImg.src = "src/images/emotions-img/body.png";
+    bodyImg.src = "src/images/emotions-img/lego-body.png";
     bodyWrapper.append(bodyImg);
 
-    const therapistAid = document.createElement("p");
-    therapistAid.innerHTML = "© 2016 Therapist Aid LLC | Provided by TherapistAid.com";
-    feelingsDiv.append(therapistAid);
+    // const therapistAid = document.createElement("p");
+    // therapistAid.innerHTML = "© 2016 Therapist Aid LLC | Provided by TherapistAid.com";
+    // feelingsDiv.append(therapistAid);
   }
 
 
@@ -475,7 +475,6 @@ document.addEventListener("DOMContentLoaded", () => {
       event.target.append(document.getElementById(data));
     }
 
-
     switch (currTab) {
       case 1: 
         assertCommDiv.innerHTML = "<h1>Different Ways People Communicate</h1>";
@@ -512,11 +511,39 @@ document.addEventListener("DOMContentLoaded", () => {
       case 2: 
         assertCommDiv.innerHTML = "<h1>What Are Some Ways We Can Assertively Communicate With Others</h1>";
         assertCommDiv.append(assertCommWrapper);
+        assertCommWrapper.classList.add("tab-3")
 
-        
+          const assert1 = "<span class='ac-tab3-1'>I don't like it when you</span>";
+          const assert1txt = "<input type='text' class='ac-tab3-txt1'/></br>";
+          const assert2 = "<span class='ac-tab3-2'>It makes me feel</span>";
+          const assert2txt = "<input type='text' class='ac-tab3-txt2'/></br>";
+          const assert3 = "<p class='ac-tab3-3'>Please don't do that.</p>";
+          assertCommWrapper.innerHTML = assert1 + assert1txt + assert2 + assert2txt + assert3;
+
+          const communication = ["I feel", "When", "Can you please", "Then we can/I can", "I feel", "Because", "I would like", "I feel", "When", "Because", "What I want or need is"];
+
+          for (let i = 0; i < communication.length; i++){
+            const text = document.createElement("span");
+            text.innerHTML = communication[i];
+            text.className = `ac-tab3-sec2-${i}`;
+            assertCommWrapper.append(text);
+
+            const input = document.createElement("input");
+            input.type = "text";
+            input.className = `ac-tab3-sec2-txt${i}`;
+            assertCommWrapper.append(input);
+            assertCommWrapper.append(document.createElement("br"));
+          }
+
+          const assertComEnd = "<p class='ac-tab3-end1'>Examples:</p><p class='ac-tab3-end2'> - 'Leave me alone!'</p><p class='ac-tab3-end3'> - 'I' statement response: 'I feel frustrated and annoyed when I am reminded over and over to do my homework.'</p>";
+          const assertComEndDiv = document.createElement("div");
+          assertComEndDiv.innerHTML = assertComEnd;
+          assertCommWrapper.append(assertComEndDiv);
         break;
-      case 3:
-        break;
+      // case 3:
+      //   assertCommDiv.innerHTML = "<h1>TAB FOUR NOT DETERMINED YET</h1>";
+      //   assertCommDiv.append(assertCommWrapper);
+      //   break;
       default:
         assertCommDiv.innerHTML = "<h1>Assertive Communication</h1>"; 
         assertCommDiv.append(assertCommWrapper);
@@ -544,7 +571,6 @@ document.addEventListener("DOMContentLoaded", () => {
           const assertiveImg = document.createElement("img");
           assertiveImg.src = "src/images/assert-comm-assertive2.png";
           section3.append(assertiveImg);
-          
     }
 
     (currTab <= 0) ? leftArrow.style.display = "none" : leftArrow.style.display = "block";
@@ -552,44 +578,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     leftArrow.addEventListener("click", () => assertiveCommunication("e", currTab -= 1)); 
     rightArrow.addEventListener("click", () => assertiveCommunication("e", currTab += 1)); 
-
-
-    /*
-    const sideImg = document.createElement("img");
-    sideImg.src = "src/images/assert-comm.jpg";
-    sideImg.id = "assert-comm-img";
-    assertCommDiv.append(sideImg);
-
-    
-    const assert1 = "<span class='assertive-comm-1'>I don't like it when you</span>";
-    const assert1txt = "<input type='text' class='assertive-comm-txt1'/></br>";
-    const assert2 = "<span class='assertive-comm-2'>It makes me feel</span>";
-    const assert2txt = "<input type='text' class='assertive-comm-txt2'/></br>";
-    const assert3 = "<p class='assertive-comm-3'>Please don't do that.</p>";
-    assertCommWrapper.innerHTML = assertHeader + assert1 + assert1txt + assert2 + assert2txt + assert3;
-
-    const communication = ["I feel", "When", "Can you please", "Then we can/I can", "I feel", "Because", "I would like", "I feel", "When", "Because", "What I want or need is"];
-
-    for (let i = 0; i < communication.length; i++){
-      const text = document.createElement("span");
-      text.innerHTML = communication[i];
-      text.className = `assert-comm-${i}`;
-      assertCommWrapper.append(text);
-
-      const input = document.createElement("input");
-      input.type = "text";
-      input.className = `assert-comm-txt${i}`;
-      assertCommWrapper.append(input);
-      assertCommWrapper.append(document.createElement("br"));
-    }
-
-    const assertComEnd = "<p class='assert-end1'>Examples:</p><p class='assert-end2'> - 'Leave me alone!'</p><p class='assert-end3'> - 'I' statement response: 'I feel frustrated and annoyed when I am reminded over and over to do my homework.'</p>";
-    const assertComEndDiv = document.createElement("div");
-    assertComEndDiv.innerHTML = assertComEnd;
-    assertCommWrapper.append(assertComEndDiv);
-
-    */
-
   }
   
 

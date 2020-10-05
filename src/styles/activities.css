@@ -392,67 +392,65 @@
   #ac-tab-2-sc-4 { top: 100px; left: 10px; }
   #ac-tab-2-sc-5 { top: 120px; left: 10px; }
 
+    /* TAB 3 of assertive communication activity */
+    [class*="ac-tab3-"] {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 14px;
+    }
 
-/* [class*="assertive-comm-"] {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 14px;
-} */
+    .assertive-comm-wrapper.tab-3 {
+      display: block;
+    }
 
-/* #assert-comm-img {
-  width: 50vw;
-  object-fit: cover;
-} */
+    [class*="assertive-comm"].tab-3 p {
+      color: red;
+    }
 
-/* [class*="assertive-comm"] p {
-  color: red;
-} */
+    [class*="ac-tab3-"] span {
+      color: blue;
+      vertical-align: bottom;
+    }
 
-/* [class*="assertive-comm"] span {
-  color: blue;
-  vertical-align: bottom;
-} */
+    [class*="ac-tab3-txt"], [class*="ac-tab3-sec2-txt"] {
+      border-bottom: 2px solid rgb(21, 82, 213);
+      height: 20px;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      min-width: 400px;
+      margin-left: 10px;
+      margin-top: 3px;
+      margin-bottom: 3px;
+    }
 
-/* [class*="assert-comm-txt"], [class*="assertive-comm-txt"] {
-  border-bottom: 2px solid rgb(21, 82, 213);
-  height: 20px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  min-width: 400px;
-  margin-left: 10px;
-  margin-top: 3px;
-  margin-bottom: 3px;
-}
+    [class*="ac-tab3-txt"]:focus, [class*="ac-tab3-sec2-txt"]:focus {
+      outline: none;
+      border-bottom: 3px solid lightskyblue;
+      background-color: whitesmoke;
+      margin-bottom: 2px;
+    }
 
-[class*="assert-comm-txt"]:focus, [class*="assertive-comm-txt"]:focus {
-  outline: none;
-  border-bottom: 3px solid lightskyblue;
-  background-color: whitesmoke;
-  margin-bottom: 2px;
-}
+    .tab-3 > p {  
+      margin-top: 8px;
+      position: static;
+    }
 
-.assertive-comm-3 {
-  margin-top: 8px;
-}
+    .ac-tab3-end1 {
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
 
-.assert-end1 {
-  margin-top: 20px;
-  margin-bottom: 8px;
-}
+    .ac-tab3-end2 {
+      margin: 0;
+    }
 
-.assert-end2 {
-  margin: 0;
-}
+    .ac-tab3-end3 {
+      margin-top: 5px;
+    }
 
-.assert-end3 {
-  margin-top: 5px;
-}
-
-.assert-comm-txt4, .assert-comm-txt7 {
-  margin-top: 16px;
-} */
-
-
+    .aac-tab3-txt4, .ac-tab3-txt7 {
+      margin-top: 16px;
+    }
 
 
 
