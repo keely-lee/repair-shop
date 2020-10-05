@@ -291,11 +291,14 @@ document.addEventListener("DOMContentLoaded", () => {
     feelingsWrapper.className = "feelings-wrapper"
     feelingsDiv.append(feelingsWrapper);
 
+    let data; //dragged element
+    let currData; //current face, for face switch
     const emotions = ["happy", "excited", "sad", "surprised", "scared", "angry", "tired", "frustrated", "embarrassed", "shy", "worried", "blank"];
 
     for(let i = 0; i < emotions.length; i++){
       const face = document.createElement("img");
       face.src = `src/images/emotions-img/lego-${emotions[i]}.png`;
+      face.addEventListener("dragstart", event => {currData = data; data = event.target}, false);
       feelingsWrapper.append(face);
     }
 
@@ -306,6 +309,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const placeHeadDiv = document.createElement("div");
     bodyWrapper.append(placeHeadDiv);
+      placeHeadDiv.addEventListener("dragover", event => event.preventDefault(), false);
+      placeHeadDiv.addEventListener("drop", (event) => { 
+        event.preventDefault();
+        if (currData) placeHeadDiv.removeChild(placeHeadDiv.lastChild);
+        placeHeadDiv.appendChild(data.cloneNode());
+        
+
+      }, false);
+      
+
 
     const bodyImg = document.createElement("img");
     bodyImg.src = "src/images/emotions-img/lego-body.png";
