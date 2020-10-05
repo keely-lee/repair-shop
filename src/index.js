@@ -304,6 +304,9 @@ document.addEventListener("DOMContentLoaded", () => {
     feelingsDiv.append(bodyWrapper);
     bodyWrapper.innerHTML = "<h2>Today I Feel...</h2>"
 
+    const placeHeadDiv = document.createElement("div");
+    bodyWrapper.append(placeHeadDiv);
+
     const bodyImg = document.createElement("img");
     bodyImg.src = "src/images/emotions-img/lego-body.png";
     bodyWrapper.append(bodyImg);

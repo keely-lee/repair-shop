@@ -126,10 +126,10 @@
 }
 
 .feelings-body {
-  width: 20vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 30vw;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
   padding-right: 10px;
 }
 
@@ -141,34 +141,37 @@
   text-align: center;
 }
 
+.feelings-body > img {
+  width: 27vw;
+}
+
+.feelings-body > div {
+  width: 15vw;
+  height: 15vw;
+  border: 1px solid gray;
+}
 
 .feelings-wrapper {
   display: grid;
   width: 80vw;
   height: 85vh;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   margin: 5px 5px 10px;
-  align-items: end;
+  align-items: center;
+  justify-items: center;
 }
 
 .feelings-wrapper > img {
-  width: 6.5vw;
-  max-height: 14vh;
+  width: 12vw;
 }
 
 .feelings-wrapper > img:hover {
-  width: 7.5vw;
-  max-height: 14vh;
+  cursor: pointer;
+  width: 15vw;
+  max-height: 23vh;
 }
 
-.feelingsDiv > p {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: .6em;
-  position: absolute;
-  bottom: 0;
-  padding-left: 5px;
-}
 
 
 /* SELF CONTROL ACTIVITY */
