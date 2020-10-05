@@ -310,16 +310,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const placeHeadDiv = document.createElement("div");
     bodyWrapper.append(placeHeadDiv);
       placeHeadDiv.addEventListener("dragover", event => event.preventDefault(), false);
+      placeHeadDiv.addEventListener("dragenter", event => event.target.style.background = "gray", false)
       placeHeadDiv.addEventListener("drop", (event) => { 
         event.preventDefault();
         if (currData) placeHeadDiv.removeChild(placeHeadDiv.lastChild);
         placeHeadDiv.appendChild(data.cloneNode());
-        
-
+        event.target.style.background = "";
+        placeHeadDiv.style.background = "";
       }, false);
       
-
-
     const bodyImg = document.createElement("img");
     bodyImg.src = "src/images/emotions-img/lego-body.png";
     bodyWrapper.append(bodyImg);
