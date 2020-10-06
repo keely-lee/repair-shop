@@ -594,24 +594,51 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
 
-  function iCanControl(){
+  function iCanControl(e, currTab = 0){
     activityDiv.innerHTML = "";
     const iCanControlDiv = document.createElement("div");
     iCanControlDiv.id = "ican-control-div";
     activityDiv.append(iCanControlDiv);
 
     const iCanControlWrapper = document.createElement("div");
-    iCanControlDiv.append(iCanControlWrapper);
     iCanControlWrapper.id = "ican-control-wrapper";
+    
+    switch (currTab){
+      case 1:
+        iCanControlDiv.innerHTML = "<h1>Ways to Respond: Inside and Outside Our Control</h1>";
+        iCanControlDiv.append(iCanControlWrapper);
+        
+        break;
+      default:
+        iCanControlDiv.append(iCanControlWrapper);
+    
+        const cantControl = document.createElement("div");
+          cantControl.className = "cant-control-div";
+          cantControl.innerHTML = "<h3>Things OUTSIDE My Control</h3>";
+          iCanControlWrapper.append(cantControl);
+          
+        const canControl = document.createElement("div");
+          canControl.className = "can-control-div";
+          canControl.innerHTML = "<h3>Things I CAN Control</h3>";
+          iCanControlWrapper.append(canControl);
 
-    const cantControl = document.createElement("div");
-      cantControl.className = "cant-control-div";
-      iCanControlWrapper.append(cantControl);
-      
-    const canControl = document.createElement("div");
-      canControl.className = "can-control-div";
-      iCanControlWrapper.append(canControl);
+        const controlItems = ["Other People's Actions", "My Actions", "Other People's Words", "My Words", "Other People's Play", "My Play", "Other People's Behavior", "My Effort", "Other People's Mistakes", "My Mistakes", "Other People's Feelings", "Other People's Ideas", "My Behavior"]
 
+        for (let i = 0; i < controlItems.length; i++) {
+          const item = document.createElement("p");
+          item.innerHTML = controlItems[i];
+          item.className = `control-item-${i}`;
+          iCanControlWrapper.append(item);
+            item.draggable = "true";
+            item.addEventListener("dragstart", () => { /* FUNCTION TO SET TARGET TO VARIABLE*/}, false);
+        }
+    }
+    
+    (currTab <= 0) ? leftArrow.style.display = "none" : leftArrow.style.display = "block";
+    (currTab >= 1) ? rightArrow.style.display = "none" : rightArrow.style.display = "block";
+
+    leftArrow.addEventListener("click", () => iCanControl("e", currTab -= 1)); 
+    rightArrow.addEventListener("click", () => iCanControl("e", currTab += 1)); 
   }
 
 

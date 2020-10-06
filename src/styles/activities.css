@@ -131,7 +131,7 @@
 }
 
 .feelings-body > h2 {
-  /* padding-bottom: 30px; */
+  margin-bottom: 5px;
   font-family: fantasy;
   font-size: 30px;
   font-weight: bold;
@@ -139,20 +139,22 @@
 }
 
 .feelings-body > img {
-  width: 27vw;
+  display: block;
+  max-height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feelings-body > div {
   width: 15vw;
-  height: 15vw;
+  height: 22vh;
   margin-left: auto;
   margin-right: auto;
   display: flex;
 }
 
 .feelings-body > div > img {
-  width: 14vw;
-  height: auto;
+  max-height: 20vh;
   display: inline-block;
   align-self: flex-end;
   margin-left: auto;
