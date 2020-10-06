@@ -474,14 +474,21 @@
   height: 90vh;
 }
 
+#ican-control-wrappper {
+  height: 100%;
+}
+
 .cant-control-div {
   height: 80vh;
   width: 80vh;
   border: 1px solid black;
   background-color: orange;
-  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 50%;
   padding-top: 15px;
+  z-index: 1;
+  vertical-align: middle;
 }
 
 .can-control-div {
@@ -491,6 +498,11 @@
   background-color: teal;
   border-radius: 50%;
   padding-top: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
 }
 
 .cant-control-div > h3 {

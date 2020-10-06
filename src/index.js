@@ -557,10 +557,10 @@ document.addEventListener("DOMContentLoaded", () => {
           assertComEndDiv.innerHTML = assertComEnd;
           assertCommWrapper.append(assertComEndDiv);
         break;
-      // case 3:
-      //   assertCommDiv.innerHTML = "<h1>TAB FOUR NOT DETERMINED YET</h1>";
-      //   assertCommDiv.append(assertCommWrapper);
-      //   break;
+      case 3:
+        assertCommDiv.innerHTML = "<h1>TAB FOUR NOT DETERMINED YET</h1>";
+        assertCommDiv.append(assertCommWrapper);
+        break;
       default:
         assertCommDiv.innerHTML = "<h1>Assertive Communication</h1>"; 
         assertCommDiv.append(assertCommWrapper);
