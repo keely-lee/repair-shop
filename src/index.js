@@ -62,6 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
   assertiveCommIcon.innerHTML = '<i class="far fa-comments icon-assert-comm"></i>';
   assertiveCommIcon.addEventListener("click", assertiveCommunication);
 
+  const iCanControlIcon = document.createElement("div");
+  iCanControlIcon.innerHTML = '<i class="fas fa-gamepad icon-ican-control"></i>';
+  iCanControlIcon.addEventListener("click", iCanControl);
+
 
   //MAIN COMPONENTS
   function repair(){
@@ -83,6 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rechargeDiv.append(selfControlIcon);
     rechargeDiv.append(problemSolveIcon);
     rechargeDiv.append(assertiveCommIcon);
+    rechargeDiv.append(iCanControlIcon);
   }
 
 
