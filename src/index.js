@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //EVENT LISTENERS - MAIN PAGE
   //condense these to one liners later??
   const greenCar = document.getElementsByClassName("green-car")[0];
-  greenCar.addEventListener("click", bug);
+  greenCar.addEventListener("click", iCanControl);
 
   const toolSet = document.getElementsByClassName("tools")[0];
   toolSet.addEventListener("click", repair)
@@ -616,11 +616,17 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
       default:
         iCanControlDiv.append(iCanControlWrapper);
+        let data;
     
         const cantControl = document.createElement("div");
           cantControl.className = "cant-control-div";
           cantControl.innerHTML = "<h3>Things OUTSIDE My Control</h3>";
           iCanControlWrapper.append(cantControl);
+          cantControl.addEventListener("dragover", event => event.preventDefault(), false); //
+          cantControl.addEventListener("drop", event => {
+            event.preventDefault();
+            //CANTCONTROL.APPENDCHILD(DATA)
+          }, false); //
           
         const canControl = document.createElement("div");
           canControl.className = "can-control-div";
@@ -635,7 +641,7 @@ document.addEventListener("DOMContentLoaded", () => {
           item.className = `control-item-${i}`;
           iCanControlWrapper.append(item);
             item.draggable = "true";
-            item.addEventListener("dragstart", () => { /* FUNCTION TO SET TARGET TO VARIABLE*/}, false);
+            item.addEventListener("dragstart", event => data = event.target, false);
         }
     }
     
