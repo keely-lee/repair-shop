@@ -622,18 +622,23 @@ document.addEventListener("DOMContentLoaded", () => {
           cantControl.className = "cant-control-div";
           cantControl.innerHTML = "<h3>Things OUTSIDE My Control</h3>";
           iCanControlWrapper.append(cantControl);
-          cantControl.addEventListener("dragover", event => event.preventDefault(), false); //
+          cantControl.addEventListener("dragover", event => event.preventDefault(), false); 
           cantControl.addEventListener("drop", event => {
             event.preventDefault();
-            //CANTCONTROL.APPENDCHILD(DATA)
-          }, false); //
+            cantControl.appendChild(data);
+          }, false); 
           
         const canControl = document.createElement("div");
           canControl.className = "can-control-div";
           canControl.innerHTML = "<h3>Things I CAN Control</h3>";
           iCanControlWrapper.append(canControl);
-
-        const controlItems = ["Other People's Actions", "My Actions", "Other People's Words", "My Words", "Other People's Play", "My Play", "Other People's Behavior", "My Effort", "Other People's Mistakes", "My Mistakes", "Other People's Feelings", "Other People's Ideas", "My Behavior"]
+          canControl.addEventListener("dragover", event => event.preventDefault(), false); 
+          canControl.addEventListener("drop", event => {
+            event.preventDefault();
+            canControl.appendChild(data);
+          }, false); 
+          
+        const controlItems = ["Other People's Actions", "My Actions", "Other People's Words", "My Words", "Other People's Play", "My Play", "Other People's Behavior", "My Effort", "Other People's Mistakes", "My Mistakes", "Other People's Feelings", "Other People's Ideas", "My Behavior", "scenario1", "scenario2", "scenario3", "scenario4", "scenario5", "scenario6", "scenario7", "scenario8", "scenario9", "scenario10", "scenario11", "scenario12", "scenario13", ]
 
         for (let i = 0; i < controlItems.length; i++) {
           const item = document.createElement("p");
