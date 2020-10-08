@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tabDiv.append(rechargeDiv);
 
     rechargeDiv.append(bugsMeIcon);
-    rechargeDiv.append(paintBrushIcon);
+    // rechargeDiv.append(paintBrushIcon);
     rechargeDiv.append(stinkinGangIcon);
     rechargeDiv.append(feelingsIcon);
     rechargeDiv.append(selfControlIcon);
