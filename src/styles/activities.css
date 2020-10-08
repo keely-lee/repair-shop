@@ -523,8 +523,8 @@
 }
 
 #ican-control-wrapper > p {
-  top: 0;
-  right: 0;
+  /* top: 0; */
+  /* right: 0; */
 } /* CHANGE THIS LATER */
 
 .cant-control-div > p {

@@ -640,14 +640,20 @@ document.addEventListener("DOMContentLoaded", () => {
           
         const controlItems = ["Other People's Actions", "My Actions", "Other People's Words", "My Words", "Other People's Play", "My Play", "Other People's Behavior", "My Effort", "Other People's Mistakes", "My Mistakes", "Other People's Feelings", "Other People's Ideas", "My Behavior", "scenario1", "scenario2", "scenario3", "scenario4", "scenario5", "scenario6", "scenario7", "scenario8", "scenario9", "scenario10", "scenario11", "scenario12", "scenario13", ]
 
+
+        const vertical = 0;
         for (let i = 0; i < controlItems.length; i++) {
           const item = document.createElement("p");
           item.innerHTML = controlItems[i];
           item.className = `control-item-${i}`;
+
+          item.style.top = vertical + "px";
+
           iCanControlWrapper.append(item);
             item.draggable = "true";
             item.addEventListener("dragstart", event => data = event.target, false);
         }
+
     }
     
     (currTab <= 0) ? leftArrow.style.display = "none" : leftArrow.style.display = "block";
