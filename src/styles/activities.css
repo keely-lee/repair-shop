@@ -522,10 +522,8 @@
   cursor: pointer;
 }
 
-#ican-control-wrapper > p {
-  /* top: 0; */
-  /* right: 0; */
-} /* CHANGE THIS LATER */
+#ican-control-wrapper > p:nth-child(odd) { left: 3vw; } 
+#ican-control-wrapper > p:nth-child(even) { right: 3vw; } 
 
 .cant-control-div > p {
   position: relative;

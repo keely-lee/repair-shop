@@ -108,7 +108,7 @@
 
 /* ACTIVITIES SECTION */
 /* activity main div */
-#tab-comp, #activity-comp { 
+#activity-comp { 
   position: absolute;
   top: 10vh;
   max-height: 90vh;
