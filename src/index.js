@@ -91,18 +91,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //car smoke animation
   greenCar.addEventListener("mouseover", () => {
-    const temp = document.createElement("p")
-    temp.innerHTML = "TEST TEST TEST TEST"
-    fuel.append(temp)
-    // const smoke = document.createElement("div");
-    // smoke.id = "smoke";
-    //   smoke.innerHTML = "<span class='smoke0'></span><span class='smoke1'></span><span class='smoke2'></span><span class='smoke3'></span><span class='smoke4'></span><span class='smoke5'></span><span class='smoke6'></span><span class='smoke7'></span><span class='smoke8'></span><span class='smoke9'></span>"
-    
-    // greenCar.appendChild(smoke);
-      console.log("mouseover")
+    const smoke = document.createElement("div");
+    smoke.id = "smoke";
+      smoke.innerHTML = "<span class='smoke0'></span><span class='smoke1'></span><span class='smoke2'></span><span class='smoke3'></span><span class='smoke4'></span><span class='smoke5'></span><span class='smoke6'></span><span class='smoke7'></span><span class='smoke8'></span><span class='smoke9'></span>"
+    greenCar.parentNode.insertBefore(smoke, greenCar.nextSibling);
   });
 
-  greenCar.addEventListener("mouseleave", () => {});
+  greenCar.addEventListener("mouseleave", () => {
+    greenCar.nextSibling.remove();
+  });
 
 
 
