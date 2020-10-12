@@ -104,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
   //ACTIVITIES - REMOVE AND MOVE SOMEWHERE ELSE LATER
   function paint(){
     activityDiv.innerHTML = '<object id="paint-obj" type="text/html" data="paint.html" ></object>';
