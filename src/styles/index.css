@@ -18,15 +18,31 @@
   border: none;
   background: transparent;
   margin-left: 5px;
-  cursor: pointer;
 }
 
 #home-button:hover {
   border: 1px solid orange;
+  cursor: pointer;
 }
 
 #nav-buttons {
   width: 100%;
+  display: flex;
+  margin-left: 10px;
+}
+
+#nav-buttons > button {
+  border: none;
+  background-color: transparent;
+}
+
+#nav-buttons > button:hover {
+  cursor: pointer;
+}
+
+.fa-arrow-alt-circle-left, .fa-arrow-alt-circle-right {
+  color: blue;
+  font-size: 3em;
 }
 
 #main {
@@ -91,10 +107,14 @@
   font-size: 60px;
   color: lightcoral;
   cursor: pointer;
+  /* display: grid; */
+  padding: 5px;
+
 }
 
 [class*="icon-"]:hover {
   font-size: 65px;
+  color: rgb(231, 89, 89)
 }
 
 

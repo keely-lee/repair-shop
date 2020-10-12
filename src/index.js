@@ -174,10 +174,14 @@ document.addEventListener("DOMContentLoaded", () => {
           const tbug = document.getElementsByClassName(`bug${i}`)[0];
           tbug.style.top = Math.random() * windowHeight + "px";
           tbug.style.left = Math.random() * windowWidth + "px";
-
+          
           const bbug = document.getElementsByClassName(`bug${i}`)[1];
           bbug.style.bottom = Math.random() * windowHeight + "px";
           bbug.style.left = Math.random() * windowWidth + "px";
+          
+          console.log(tbug.style.left)
+          console.log("TOP LEFT")
+          // if (tbug.style.left < )
         }
 
         function move() {
@@ -197,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
             bbugs[j].style.transition =
               "all " + Math.floor(100 * Math.random()) + 600 + "ms";
 
-            horizontal += Math.floor(windowWidth / 9);
+            horizontal += (windowWidth / 9);
           }
         }
         window.setTimeout(move, 1000);

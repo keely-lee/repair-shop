@@ -16,6 +16,7 @@
   text-align: center;
   padding-top: 10px;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #bug-obj {
@@ -29,13 +30,21 @@
 
 .topRowBug > img, .bottomRowBug > img {
   position: absolute;
-  width: 7vw;
+  width: 5vw;
 }
 
 [class*="bugsme-"], [class*="ibug-"] {
   position: absolute;
   height: 20px;
-  width: 200px;
+  width: 250px;
+  border: none;
+  border-bottom: 1.5px solid rgb(211, 203, 203);
+  font-size: 1.2em;
+}
+
+[class*="bugsme-"]:focus, [class*="ibug-"]:focus {
+  outline: none;
+  border-bottom: 1.5px solid green;
 }
 
 .bugsme-0, .ibug-0 { left: 5vw; top: 25vh; }
