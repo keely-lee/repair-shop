@@ -143,7 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
           new SpiderController({});
         }
         bugDiv.append(bugScript);
-
         break;
       case 3:
         bugDiv.innerHTML = "<h1>Scenarios</h1>";
@@ -216,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
             bbugs[j].style.transition =
               "all " + Math.floor(100 * Math.random()) + 600 + "ms";
 
-            horizontal += (windowWidth / 9);
+            horizontal += (windowWidth / 8.5);
           }
         }
         window.setTimeout(move, 1000);
@@ -558,7 +557,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         break;
       case 2: 
-        assertCommDiv.innerHTML = "<h1>What Are Some Ways We Can Assertively Communicate With Others</h1>";
+        assertCommDiv.innerHTML = "<h1 class='ac-tab3-hr'>What Are Some Ways We Can Assertively Communicate With Others</h1>";
         assertCommDiv.append(assertCommWrapper);
         assertCommWrapper.classList.add("tab-3")
 
