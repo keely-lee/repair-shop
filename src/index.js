@@ -725,7 +725,7 @@ document.addEventListener("DOMContentLoaded", () => {
     deepBreathingDiv.append(deepBreathingWrapper);
 
     const breatheSecOne = document.createElement("section");
-      breatheSecOne.innerHTML = "<h3>I smell a flower.</h3><p>1 - 2 - 3 - 4 - 5</p>";
+      breatheSecOne.innerHTML = "<div class='deep-breathe-div-one'><span>I smell a flower.</span><span>1 - 2 - 3 - 4 - 5</span></div>";
       const breatheImgOne = document.createElement("img");
       breatheImgOne.src = "src/images/deep-breathe-smell.jpg";
       breatheImgOne.className = "deep-breathe-img-one";
@@ -733,7 +733,7 @@ document.addEventListener("DOMContentLoaded", () => {
       deepBreathingWrapper.append(breatheSecOne);
 
     const breatheSecTwo = document.createElement("section");
-      breatheSecTwo.innerHTML = "<h3>I hold my breath.</h3><p>1 - 2 - 3</p>";
+      breatheSecTwo.innerHTML = "<div class='deep-breathe-div-two'><span>I hold my breath.</span><span>1 - 2 - 3</span></div>";
       const breatheImgTwo = document.createElement("img");
       breatheImgTwo.src = "src/images/deep-breathe-hold.jpg";
       breatheImgTwo.className = "deep-breathe-img-two";
@@ -741,13 +741,21 @@ document.addEventListener("DOMContentLoaded", () => {
       deepBreathingWrapper.append(breatheSecTwo);
 
     const breatheSecThree = document.createElement("section");
-      breatheSecThree.innerHTML = "<h3>I blow bubbles.</h3><p>1 - 2 - 3 - 4 - 5</p>";
+      breatheSecThree.innerHTML = "<div class='deep-breathe-div-three'><span>I blow bubbles.</span><span>1 - 2 - 3 - 4 - 5</span></div>";
       const breatheImgThree = document.createElement("img");
       breatheImgThree.src = "src/images/deep-breathe-blow.jpg";
       breatheImgThree.className = "deep-breathe-img-three";
       breatheSecThree.append(breatheImgThree);
       deepBreathingWrapper.append(breatheSecThree);
 
+
+    function count(){
+      const modal = document.createElement("div");
+      const words = ["Breathe In", "Hold", "Breathe Out"];
+
+
+      
+    }
 
   }
 
