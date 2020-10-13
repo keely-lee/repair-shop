@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //EVENT LISTENERS - MAIN PAGE
   //condense these to one liners later??
   const greenCar = document.getElementsByClassName("green-car")[0];
-  greenCar.addEventListener("click", iCanControl);
+  greenCar.addEventListener("click", deepBreathing);
 
   const toolSet = document.getElementsByClassName("tools")[0];
   toolSet.addEventListener("click", repair)
@@ -64,6 +64,10 @@ document.addEventListener("DOMContentLoaded", () => {
   iCanControlIcon.innerHTML = '<i class="fas fa-gamepad icon-ican-control"></i>';
   iCanControlIcon.addEventListener("click", iCanControl);
 
+  const deepBreathingIcon = document.createElement("div");
+  deepBreathingIcon.innerHTML = '<i class="fas fa-lungs icon-deep-breathing"></i>';
+  deepBreathingIcon.addEventListener("click", deepBreathing);
+
 
   //MAIN COMPONENTS
   function repair(){
@@ -86,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rechargeDiv.append(problemSolveIcon);
     rechargeDiv.append(assertiveCommIcon);
     rechargeDiv.append(iCanControlIcon);
+    rechargeDiv.append(deepBreathingIcon);
   }
 
 
@@ -706,6 +711,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+
+  function deepBreathing(){
+
+  }
 
 })
 
