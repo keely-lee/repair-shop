@@ -135,14 +135,20 @@ document.addEventListener("DOMContentLoaded", () => {
       case 2:
         bugDiv.innerHTML = "<h1>When Something Bugs Me, I Can Say</h1>";
 
-        const bugScript = document.createElement("script");
-        bugScript.type = "text/javascript";
-        bugScript.src = "src/scripts/Auz-Bug-8e27908/bug.js";
-        bugScript.onload = bugScript.onreadystatechange = function(){
-          new BugController({});
-          new SpiderController({});
-        }
-        bugDiv.append(bugScript);
+        // const bugScript = document.createElement("script");
+        // bugScript.type = "text/javascript";
+        // bugScript.src = "src/scripts/Auz-Bug-8e27908/bug.js";
+        // bugScript.onload = bugScript.onreadystatechange = function(){
+        //   new BugController({});
+        //   new SpiderController({});
+        // }
+        // bugDiv.append(bugScript);
+
+        // const credit = document.createElement("span");
+        // credit.innerHTML = "https://auz.github.io/Bug/";
+        // credit.className = "bug-give-credit";
+        // bugDiv.append(credit);
+
         break;
       case 3:
         bugDiv.innerHTML = "<h1>Scenarios</h1>";
@@ -223,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     //Tabs
     (currTab <= 0) ? leftArrow.style.display = "none" : leftArrow.style.display = "block";
-    (currTab >= 3) ? rightArrow.style.display = "none" : rightArrow.style.display = "block";
+    (currTab >= 1) ? rightArrow.style.display = "none" : rightArrow.style.display = "block";
 
     leftArrow.addEventListener("click", () => bug("e", currTab -= 1)); 
     rightArrow.addEventListener("click", () => bug("e", currTab += 1)); 

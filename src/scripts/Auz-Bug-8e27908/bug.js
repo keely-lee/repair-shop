@@ -624,7 +624,8 @@ var Bug = {
         }
         if (!this.inserted) {
             this.inserted = true;
-            document.body.appendChild(this.bug);
+            document.getElementById("activity-comp").appendChild(this.bug);
+            // document.body.appendChild(this.bug);
         }
     },
 
