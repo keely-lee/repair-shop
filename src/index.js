@@ -713,6 +713,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   function deepBreathing(){
+    activityDiv.innerHTML = "";
+    const deepBreathingDiv = document.createElement("div");
+    deepBreathingDiv.id = "deep-breathe-div";
+    activityDiv.append(deepBreathingDiv);
+
+    const deepBreathingWrapper = document.createElement("div");
+    deepBreathingWrapper.id = "deep-breathe-wrapper";
+
+    deepBreathingDiv.innerHTML = "<h1>Let's Practice Deep Breathing</h1>";
+    deepBreathingDiv.append(deepBreathingWrapper);
+
+    const breatheSecOne = document.createElement("section");
+      breatheSecOne.innerHTML = "<h3>I smell a flower.</h3><p>1 - 2 - 3 - 4 - 5</p>";
+      const breatheImgOne = document.createElement("img");
+      breatheImgOne.src = "src/images/deep-breathe-smell.jpg";
+      breatheImgOne.className = "deep-breathe-img-one";
+      breatheSecOne.append(breatheImgOne);
+      deepBreathingWrapper.append(breatheSecOne);
+
+    const breatheSecTwo = document.createElement("section");
+      breatheSecTwo.innerHTML = "<h3>I hold my breath.</h3><p>1 - 2 - 3</p>";
+      const breatheImgTwo = document.createElement("img");
+      breatheImgTwo.src = "src/images/deep-breathe-hold.jpg";
+      breatheImgTwo.className = "deep-breathe-img-two";
+      breatheSecTwo.append(breatheImgTwo);
+      deepBreathingWrapper.append(breatheSecTwo);
+
+    const breatheSecThree = document.createElement("section");
+      breatheSecThree.innerHTML = "<h3>I blow bubbles.</h3><p>1 - 2 - 3 - 4 - 5</p>";
+      const breatheImgThree = document.createElement("img");
+      breatheImgThree.src = "src/images/deep-breathe-blow.jpg";
+      breatheImgThree.className = "deep-breathe-img-three";
+      breatheSecThree.append(breatheImgThree);
+      deepBreathingWrapper.append(breatheSecThree);
+
 
   }
 

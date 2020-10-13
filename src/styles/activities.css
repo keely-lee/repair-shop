@@ -575,3 +575,44 @@
 .can-control-div > p:nth-child(11) { top: -33vh; right: 4vw; color: blue; text-align: right; } 
 .can-control-div > p:nth-child(12) { top: -33vh; right: 4vw; color: yellow; text-align: right; } 
 .can-control-div > p:nth-child(13) { top: -33vh; right: 4vw; color: yellow; text-align: right; } 
+
+
+
+/* Deep Breathing Activity */
+#deep-breathe-div {
+  width: 100vw;
+  height: 90vh;
+}
+
+/* #deep-breathe-wrapper {
+} */
+
+#deep-breathe-div > h1 {
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+}
+
+#deep-breathe-wrapper > section > img {
+  border-radius: 50%;
+  border: 2px solid lightslategray;
+  width: 30vw;
+  position: absolute;
+}
+
+.deep-breathe-img-one {
+  top: 15vh;
+
+}
+
+.deep-breathe-img-two {
+  right: 0;
+  top: 30vh;
+}
+
+.deep-breathe-img-three {
+  top: 45vh;
+}
+
+#deep-breathe-wrapper > section {
+  font-family: 'Fredoka One', cursive;
+}
