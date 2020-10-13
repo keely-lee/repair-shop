@@ -135,6 +135,15 @@ document.addEventListener("DOMContentLoaded", () => {
       case 2:
         bugDiv.innerHTML = "<h1>When Something Bugs Me, I Can Say</h1>";
 
+        const bugScript = document.createElement("script");
+        bugScript.type = "text/javascript";
+        bugScript.src = "src/scripts/Auz-Bug-8e27908/bug.js";
+        bugScript.onload = bugScript.onreadystatechange = function(){
+          new BugController({});
+          new SpiderController({});
+        }
+        bugDiv.append(bugScript);
+
         break;
       case 3:
         bugDiv.innerHTML = "<h1>Scenarios</h1>";
@@ -179,9 +188,15 @@ document.addEventListener("DOMContentLoaded", () => {
           bbug.style.bottom = Math.random() * windowHeight + "px";
           bbug.style.left = Math.random() * windowWidth + "px";
           
-          console.log(tbug.style.left)
-          console.log("TOP LEFT")
-          // if (tbug.style.left < )
+          //flip images for travel direction
+          if (parseInt(tbug.style.left) < (windowWidth * (i-1) / 9 )) {
+            tbug.style.transform = "scaleX(-1)";
+          }
+
+          if (parseInt(bbug.style.left) < (windowWidth * (-i + 9) / 9 )) {
+            bbug.style.transform = "scaleX(-1)";
+          }
+
         }
 
         function move() {
@@ -190,13 +205,13 @@ document.addEventListener("DOMContentLoaded", () => {
           let horizontal = 0;
 
           for (let i = 0; i < 9; i++) {
-            bugs[i].style.top = "-12px";
+            bugs[i].style.top = "-13px";
             bugs[i].style.left = horizontal + "px";
             bugs[i].style.transition =
               "all " + Math.floor(100 * Math.random()) + 600 + "ms"; //  +" ease 5ms";
 
             const j = i * -1 + 8;
-            bbugs[j].style.bottom = "-2vh";
+            bbugs[j].style.bottom = "-1vh";
             bbugs[j].style.left = horizontal + "px";
             bbugs[j].style.transition =
               "all " + Math.floor(100 * Math.random()) + 600 + "ms";
