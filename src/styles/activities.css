@@ -663,3 +663,43 @@
   left: 30vw;
 }
 
+#deep-breathe-modal {
+  background-color: rgb(71, 71, 70, .8);
+  color: whitesmoke;
+  width: 100vw;
+  height: 90vh;
+  font-family: inherit;
+  font-size: 5em;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 35vh;
+  font-family: 'Fredoka One', cursive;
+}
+
+#deep-breathe-modal-two {
+  width: 100vw;
+  height: 89vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: rgb(241, 249, 253);
+  display: flex;
+  flex-direction: column;
+}
+
+#deep-breathe-modal-two > img {
+  width: 60vw;
+  height: 85vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#deep-breathe-modal-two > span > a {
+  font-family: 'Fredoka One', cursive;
+  padding-left: 10px;
+  text-decoration: none;
+}

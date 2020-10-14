@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //EVENT LISTENERS - MAIN PAGE
   //condense these to one liners later??
   const greenCar = document.getElementsByClassName("green-car")[0];
-  greenCar.addEventListener("click", deepBreathing);
+  greenCar.addEventListener("click", selfTalk);
 
   const toolSet = document.getElementsByClassName("tools")[0];
   toolSet.addEventListener("click", repair)
@@ -68,6 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
   deepBreathingIcon.innerHTML = '<i class="fas fa-lungs icon-deep-breathing"></i>';
   deepBreathingIcon.addEventListener("click", deepBreathing);
 
+  const selfTalkIcon = document.createElement("div");
+  selfTalkIcon.innerHTML = '<i class="fas fa-user-plus icon-self-talk"></i>';
+  selfTalkIcon.addEventListener("click", selfTalk);
+
 
   //MAIN COMPONENTS
   function repair(){
@@ -91,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rechargeDiv.append(assertiveCommIcon);
     rechargeDiv.append(iCanControlIcon);
     rechargeDiv.append(deepBreathingIcon);
+    rechargeDiv.append(selfTalkIcon);
   }
 
 
@@ -740,7 +745,7 @@ document.addEventListener("DOMContentLoaded", () => {
       breatheImgTwo.className = "deep-breathe-img-two";
       breatheSecTwo.append(breatheImgTwo);
       deepBreathingWrapper.append(breatheSecTwo);
-      breatheSecTwo.addEventListener("click", count); ///////
+      breatheSecTwo.addEventListener("click", countTwo); ///////
 
     const breatheSecThree = document.createElement("section");
       breatheSecThree.innerHTML = "<div class='deep-breathe-div-three'><span>I blow bubbles.</span><span>1 - 2 - 3 - 4 - 5</span></div>";
@@ -753,7 +758,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function count(){
       const modal = document.createElement("div");
-      const words = ["Ready?", "", "Breathe In: 1", "2", "3", "4", "5", "Hold: 1", "2", "3", "Breathe Out: 1", "2", "3", "4", "5"];
+      modal.id = "deep-breathe-modal";
+      const words = ["Ready?", "", "Breathe In: 1", "2", "3", "4", "5", "Hold: 1", "2", "3", "Breathe Out: 1", "2", "3", "4", "5", "Great Job!"];
       deepBreathingDiv.append(modal);
 
       let counter = 0;
@@ -767,6 +773,30 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }, 1005 );
     }
+
+    function countTwo(){
+      const modalTwo = document.createElement("div");
+      modalTwo.id = "deep-breathe-modal-two";
+      const giphy = document.createElement("img");
+      giphy.src = "https://media.giphy.com/media/zzwt3TRTaULv2/source.gif";
+      modalTwo.append(giphy);
+      
+      const linkToGif = document.createElement("span");
+      linkToGif.innerHTML = '<a href="https://giphy.com/gifs/take-deep-breathe-zzwt3TRTaULv2">via GIPHY</a>'
+      modalTwo.append(linkToGif);
+
+      deepBreathingDiv.append(modalTwo);
+
+      setTimeout(() => deepBreathingDiv.removeChild(modalTwo), 18000);
+    }
+
+    function countThree(){
+    } //TBD
+
+  }
+
+
+  function selfTalk(){
 
   }
 
