@@ -73,12 +73,13 @@ document.addEventListener("DOMContentLoaded", () => {
   selfTalkIcon.addEventListener("click", selfTalk);
 
 
+
   //MAIN COMPONENTS
   function repair(){
     const repairDiv = document.createElement("div");
     repairDiv.setAttribute("id", "repair-div");
     activityDiv.append(repairDiv);
-    repairDiv.append(paintBrushIcon);
+    repairDiv.append(bugsMeIcon);
   }
 
   function recharge(){
@@ -130,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     switch (currTab) {
       case 1:
-        bugDiv.innerHTML = "<h1>Things I Do That Bug Others</h1>";
+        bugDiv.innerHTML = "<h1>Things I Do That May Bug Others</h1>";
         mainBug.src = mainBug.src = "src/images/honeybee.png";
         mainBug.id = "bug-obj";
         bugDiv.append(mainBug);
@@ -797,6 +798,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   function selfTalk(){
+    activityDiv.innerHTML = "";
+    const selfTalkDiv = document.createElement("div");
+    selfTalkDiv.id = "self-talk-div";
+    activityDiv.append(selfTalkDiv);
+
+    const selfTalkLeft = document.createElement("div");
+      selfTalkLeft.innerHTML = "<h1>Positive Self Talk</h1>";
+    selfTalkDiv.append(selfTalkLeft);
+    const talkLeftWrapper = document.createElement("div");
+      talkLeftWrapper.id = "self-talk-left-wrapper";
+      selfTalkLeft.append(talkLeftWrapper);
+
+    const selfTalkRight = document.createElement("nav");
+    // selfTalkRight.append(INSTRUCTINO TEXT)
+
+    const greenPaint = document.createElement("div");
+    greenPaint.innerHTML = '<i class="fas fa-paint-roller" id="self-talk-green"></i>';
+    selfTalkRight.append(greenPaint);
+      greenPaint.addEventListener("click", () => {});
+      
+    const orangePaint = document.createElement("div");
+    orangePaint.innerHTML = '<i class="fas fa-paint-roller" id="self-talk-orange"></i>';
+    selfTalkRight.append(orangePaint);
+      orangePaint.addEventListener("click", () => {});
+
+
 
   }
 

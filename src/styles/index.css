@@ -93,13 +93,19 @@
 #repair-div {
   width: 100vw;
   height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
 }
 
 #recharge-div {
   width: 100vw;
   height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
 }
-
 
 
 /* ACTIVITY ICONS */
@@ -107,9 +113,7 @@
   font-size: 60px;
   color: lightcoral;
   cursor: pointer;
-  /* display: grid; */
   padding: 5px;
-
 }
 
 [class*="icon-"]:hover {
