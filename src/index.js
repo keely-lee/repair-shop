@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     //Tabs
     (currTab <= 0) ? leftArrow.style.display = "none" : leftArrow.style.display = "block";
-    (currTab >= 1) ? rightArrow.style.display = "none" : rightArrow.style.display = "block";
+    (currTab >= 2) ? rightArrow.style.display = "none" : rightArrow.style.display = "block";
 
     leftArrow.addEventListener("click", () => bug("e", currTab -= 1)); 
     rightArrow.addEventListener("click", () => bug("e", currTab += 1)); 
@@ -639,7 +639,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     (currTab <= 0) ? leftArrow.style.display = "none" : leftArrow.style.display = "block";
-    (currTab >= 3) ? rightArrow.style.display = "none" : rightArrow.style.display = "block";
+    (currTab >= 2) ? rightArrow.style.display = "none" : rightArrow.style.display = "block";
 
     leftArrow.addEventListener("click", () => assertiveCommunication("e", currTab -= 1)); 
     rightArrow.addEventListener("click", () => assertiveCommunication("e", currTab += 1)); 
@@ -788,7 +788,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       deepBreathingDiv.append(modalTwo);
 
-      setTimeout(() => deepBreathingDiv.removeChild(modalTwo), 18000);
+      setTimeout(() => deepBreathingDiv.removeChild(modalTwo), 17000);
     }
 
     function countThree(){
@@ -804,13 +804,22 @@ document.addEventListener("DOMContentLoaded", () => {
     activityDiv.append(selfTalkDiv);
 
     const selfTalkLeft = document.createElement("div");
+      selfTalkLeft.id = "self-talk-left";
       selfTalkLeft.innerHTML = "<h1>Positive Self Talk</h1>";
     selfTalkDiv.append(selfTalkLeft);
+
     const talkLeftWrapper = document.createElement("div");
       talkLeftWrapper.id = "self-talk-left-wrapper";
       selfTalkLeft.append(talkLeftWrapper);
+    const selfTalkImg = document.createElement("img");
+      selfTalkImg.src = "src/images/self-talk.jpg";
+      talkLeftWrapper.append(selfTalkImg);
+
+      // scenarios here
 
     const selfTalkRight = document.createElement("nav");
+    selfTalkRight.id = "self-talk-right";
+    selfTalkDiv.append(selfTalkRight);
     // selfTalkRight.append(INSTRUCTINO TEXT)
 
     const greenPaint = document.createElement("div");

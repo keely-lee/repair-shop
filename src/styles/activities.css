@@ -707,3 +707,54 @@
 
 
 /* Self Talk Activity */
+#self-talk-div {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+}
+
+#self-talk-left {
+  width: 85vw;
+  background-color: rgb(255, 247, 152);
+  border: 1px solid blue;
+}
+
+#self-talk-right {
+  width: 15vw;
+  border: 1px solid red;
+}
+
+#self-talk-left-wrapper {
+  display: flex;
+}
+
+#self-talk-left > h1 {
+  font-family: 'Delius', cursive;
+  font-size: 3em;
+  text-align: center;
+  margin: 3vh 0;
+}
+
+#self-talk-left-wrapper > img {
+  width: 30vw;
+  align-self: center;
+}
+
+#self-talk-green {
+  color: green;
+  font-size: 4em;
+}
+
+#self-talk-orange {
+  color: orange;
+  font-size: 4em;
+
+  
+  
+}
+
+#self-talk-green:hover, #self-talk-orange:hover {
+  cursor: pointer;
+  font-size: 4.5em;
+}
+
