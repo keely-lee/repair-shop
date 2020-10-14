@@ -731,6 +731,7 @@ document.addEventListener("DOMContentLoaded", () => {
       breatheImgOne.className = "deep-breathe-img-one";
       breatheSecOne.append(breatheImgOne);
       deepBreathingWrapper.append(breatheSecOne);
+      breatheSecOne.addEventListener("click", count); ///////
 
     const breatheSecTwo = document.createElement("section");
       breatheSecTwo.innerHTML = "<div class='deep-breathe-div-two'><span>I hold my breath.</span><span>1 - 2 - 3</span></div>";
@@ -739,6 +740,7 @@ document.addEventListener("DOMContentLoaded", () => {
       breatheImgTwo.className = "deep-breathe-img-two";
       breatheSecTwo.append(breatheImgTwo);
       deepBreathingWrapper.append(breatheSecTwo);
+      breatheSecTwo.addEventListener("click", count); ///////
 
     const breatheSecThree = document.createElement("section");
       breatheSecThree.innerHTML = "<div class='deep-breathe-div-three'><span>I blow bubbles.</span><span>1 - 2 - 3 - 4 - 5</span></div>";
@@ -747,14 +749,23 @@ document.addEventListener("DOMContentLoaded", () => {
       breatheImgThree.className = "deep-breathe-img-three";
       breatheSecThree.append(breatheImgThree);
       deepBreathingWrapper.append(breatheSecThree);
-
+      breatheSecThree.addEventListener("click", count); ///////
 
     function count(){
       const modal = document.createElement("div");
-      const words = ["Breathe In", "Hold", "Breathe Out"];
+      const words = ["Ready?", "", "Breathe In: 1", "2", "3", "4", "5", "Hold: 1", "2", "3", "Breathe Out: 1", "2", "3", "4", "5"];
+      deepBreathingDiv.append(modal);
 
+      let counter = 0;
+      const iterator = setInterval( () => {
+        modal.innerHTML = words[counter];
+        counter += 1;
 
-      
+        if (counter >= words.length + 1) {
+          clearInterval(iterator);
+          deepBreathingDiv.removeChild(modal);
+        }
+      }, 1005 );
     }
 
   }

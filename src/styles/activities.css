@@ -606,19 +606,19 @@
 #deep-breathe-wrapper > section > img {
   border-radius: 50%;
   border: 2px solid lightslategray;
-  max-width: 30vw;
+  width: 27vw;
   max-height: 40vh;
   position: absolute;
   z-index: 2;
 }
 
 .deep-breathe-img-one {
-  top: 15vh;
+  top: 12vh;
 }
 
 .deep-breathe-img-two {
   right: 5vw;
-  top: 30vh;
+  top: 28vh;
 }
 
 .deep-breathe-img-three {
@@ -634,7 +634,7 @@
   padding: 15px;
   font-size: 1.5em;
   position: absolute;
-  margin-top: -42px;
+  margin-top: -62px;
   text-align: center;
   background-color: white;
 }
@@ -643,7 +643,7 @@
   border: 4px solid #e88873;
   cursor: pointer;
   box-shadow: 0 0 5px -1px #e88873;
-  margin-top: -44px;
+  margin-top: -64px;
   margin-left: -2px;
   margin-right: -2px;
 }
@@ -662,3 +662,4 @@
   top: 66vh;
   left: 30vw;
 }
+
