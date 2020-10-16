@@ -690,7 +690,8 @@ document.addEventListener("DOMContentLoaded", () => {
             data.style.removeProperty('top');
           }, false); 
           
-        const controlItems = ["Other People's Actions", "My Actions", "Other People's Words", "My Words", "Other People's Play", "My Play", "Other People's Behavior", "My Effort", "Other People's Mistakes", "My Mistakes", "Other People's Feelings", "Other People's Ideas", "My Behavior", "scenario1", "scenario2", "scenario3", "scenario4", "scenario5", "scenario6", "scenario7", "scenario8", "scenario9", "scenario10", "scenario11", "scenario12", "scenario13",]
+        const controlItems = ["Other People's Actions", "My Actions", "Other People's Words", "My Words", "Other People's Play", "My Play", "Other People's Behavior", "My Effort", "Other People's Mistakes", "My Mistakes", "Other People's Feelings", "Other People's Ideas", "My Behavior",]
+        // const controlItems = ["Other People's Actions", "My Actions", "Other People's Words", "My Words", "Other People's Play", "My Play", "Other People's Behavior", "My Effort", "Other People's Mistakes", "My Mistakes", "Other People's Feelings", "Other People's Ideas", "My Behavior", "scenario1", "scenario2", "scenario3", "scenario4", "scenario5", "scenario6", "scenario7", "scenario8", "scenario9", "scenario10", "scenario11", "scenario12", "scenario13",]
 
 
         let vertical = 0;

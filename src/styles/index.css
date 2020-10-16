@@ -21,7 +21,7 @@
 }
 
 #home-button:hover {
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   cursor: pointer;
 }
 
