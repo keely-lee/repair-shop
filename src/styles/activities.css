@@ -717,6 +717,7 @@
   width: 85vw;
   background-color: rgb(255, 247, 152);
   border: 1px solid blue;
+  height: 100%;
 }
 
 #self-talk-right {
@@ -726,6 +727,9 @@
 
 #self-talk-left-wrapper {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 #self-talk-left > h1 {
@@ -737,7 +741,6 @@
 
 #self-talk-left-wrapper > img {
   width: 30vw;
-  align-self: center;
 }
 
 #self-talk-green {
