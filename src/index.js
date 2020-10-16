@@ -707,7 +707,7 @@ document.addEventListener("DOMContentLoaded", () => {
             item.draggable = "true";
             item.addEventListener("dragstart", event => data = event.target, false);
         }
-
+ 
     }
     
     (currTab <= 0) ? leftArrow.style.display = "none" : leftArrow.style.display = "block";
