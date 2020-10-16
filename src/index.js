@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
   const home = document.getElementById("home-button");
   const activityDiv = document.getElementById("activity-comp");
 
