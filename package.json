@@ -1,7 +1,7 @@
 {
   "name": "repair-shop",
   "version": "1.0.0",
-  "description": "",
+  "description": "Promote emotional growth in elementary level students through activities designed to meet children at their various emotional levels",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@
   "homepage": "https://github.com/keely-lee/repair-shop#readme",
   "dependencies": {},
   "devDependencies": {
+    "@babel/cli": "^7.12.1",
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "autoprefixer": "^9.8.6",
