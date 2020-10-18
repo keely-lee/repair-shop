@@ -25,6 +25,10 @@
   cursor: pointer;
 }
 
+#home-button:focus {
+  outline: none;
+}
+
 #nav-buttons {
   width: 100%;
   display: flex;
