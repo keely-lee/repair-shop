@@ -476,11 +476,11 @@ window.addEventListener("DOMContentLoaded", () => {
     activityDiv.append(problemSolvingDiv);
 
     const imgLeft = document.createElement("img");
-      imgLeft.src = "src/images/problem-solve-left.jpeg";
+      imgLeft.src = "/src/images/problem-solve-left.jpeg";
       imgLeft.id = "problem-solve-left";
     problemSolvingDiv.append(imgLeft);
     const imgRight = document.createElement("img");
-      imgRight.src = "src/images/problem-solve-right.jpeg";
+      imgRight.src = "/src/images/problem-solve-right.jpeg";
       imgRight.id = "problem-solve-right";
     problemSolvingDiv.append(imgRight);
 
