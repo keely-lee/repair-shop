@@ -74,14 +74,14 @@
   position: relative;
   height: 36vh;
   bottom: 40vh;
-  left: 50vw;
+  left: 38vw;
 }
 
 .tools {
   position: absolute;
   height: 19vh;
   top: 44vh;
-  left: 2vw;
+  left: 0;
   transform: rotate(5deg);
 }
 
