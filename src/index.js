@@ -411,8 +411,7 @@ window.addEventListener("DOMContentLoaded", () => {
         stepTwo.className = "self-control-step-two";
         selfControlWrapper.append(stepTwo);
         const stepTwoImg = document.createElement("img");
-        stepTwoImg.src =
-          "src/images/control-think.png";
+        stepTwoImg.src = "src/images/control-think.png";
         stepTwo.append(stepTwoImg);
         stepTwoDiv = document.createElement("div");
         stepTwoDiv.innerHTML = "<h5>Step 2: THINK</h5>";
@@ -480,7 +479,7 @@ window.addEventListener("DOMContentLoaded", () => {
       imgLeft.id = "problem-solve-left";
     problemSolvingDiv.append(imgLeft);
     const imgRight = document.createElement("img");
-      imgRight.src = "src/images/problem-solve-right.jpeg";
+      imgRight.src = "src/images/problem-solve-right.png";
       imgRight.id = "problem-solve-right";
     problemSolvingDiv.append(imgRight);
 
