@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid gray;
+  background-color: whitesmoke;
 }
 
 #home-button {
@@ -30,9 +31,9 @@
 }
 
 #nav-buttons {
-  width: 100%;
   display: flex;
   margin-left: 10px;
+  /* justify-self: flex-end; */
 }
 
 #nav-buttons > button {
@@ -48,6 +49,15 @@
   color: blue;
   font-size: 3em;
 }
+
+#main-nav h1 {
+  font-family: 'Staatliches', cursive;
+  color: rgb(136, 67, 100);
+  font-size: 3em;
+  margin: 0 20px;
+  cursor: default;
+}
+
 
 #main {
   height: 90vh;
