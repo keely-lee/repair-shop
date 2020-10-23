@@ -109,7 +109,7 @@ window.addEventListener("DOMContentLoaded", () => {
     greenCar.nextSibling.remove();
   });
 
-
+  
 
 
   //ACTIVITIES - REMOVE AND MOVE SOMEWHERE ELSE LATER
