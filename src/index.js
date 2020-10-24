@@ -110,6 +110,11 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   
+  function pointer() {
+    <i class="far fa-hand-pointer"></i>
+  }
+
+
 
 
   //ACTIVITIES - REMOVE AND MOVE SOMEWHERE ELSE LATER
