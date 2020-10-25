@@ -15,8 +15,18 @@ window.addEventListener("DOMContentLoaded", () => {
   })
 
 
+  // Initial hover
+
+  // window.onload( ()
+  function pointer() {
+    <i class="far fa-hand-pointer"></i>
+  }
+
+
+
+
+
   //EVENT LISTENERS - MAIN PAGE
-  //condense these to one liners later??
   const greenCar = document.getElementsByClassName("green-car")[0];
   greenCar.addEventListener("click", selfTalk);
 
@@ -110,9 +120,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   
-  function pointer() {
-    <i class="far fa-hand-pointer"></i>
-  }
+
 
 
 
