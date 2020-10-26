@@ -24,6 +24,10 @@ window.addEventListener("DOMContentLoaded", () => {
     const pointerObjs = document.createElement("div");
     pointerObjs.id = "pointer-div";
     pointerObjs.innerHTML = "<i class='fas fa-hand-pointer point-tools'></i><i class='fas fa-hand-pointer point-car'></i><i class='fas fa-hand-pointer point-fuel'></i>";
+
+    const pointSpan = document.createElement("span");
+    pointSpan.innerHTML = "Click Here";
+    pointerObjs.append(pointSpan);
     
     mainObj.append(pointerObjs);
     setTimeout(() => mainObj.removeChild(pointerObjs), 6500);
