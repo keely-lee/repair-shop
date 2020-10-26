@@ -162,21 +162,24 @@
 }
 
 .point-tools {
-  transform: rotate(-130deg) scaleX(-1);
+  transform: rotate(-140deg) scaleX(-1);
   top: 20vh;
-  left: 20vw;
+  left: 15vw;
+  animation: point-tools 8s;
 }
 
 .point-car {
-  transform: rotate(145deg);
+  transform: rotate(150deg);
   left: 50vw;
-  top: 30vh;
+  top: 35vh;
+  animation: point-car 7s;
 }
 
 .point-fuel {
   transform: rotate(180deg);
   left: 35vw;
-  top: 50vh;
+  top: 55vh;
+  animation: point-fuel 9s;
 }
 
 
@@ -184,13 +187,28 @@
 
 
 
-/* .slide {
-  animation: slide-left-slow 1s;
-  transform: translateX(0px);
-  position: relative;
+
+@keyframes point-tools {
+  0%, 20%, 40%, 60%, 80%, 100% { 
+    top: 20vh;
+    left: 15vw; }
+  10%, 30%, 50%, 70%, 90% { 
+    top: 25vh;
+    left: 12vw; }
 }
 
-@keyframes slide-left-slow {
-  from {left: 40px;}
-  to {left: 0px;}
-} */
+@keyframes point-car {
+  0%, 20%, 40%, 60%, 80%, 100% { 
+    top: 35vh;
+    left: 50vw; }
+  10%, 30%, 50%, 70%, 90% { 
+    top: 40vh;
+    left: 53vw; }
+}
+
+@keyframes point-fuel {
+  0%, 20%, 40%, 60%, 80%, 100% { top: 55vh; }
+  10%, 30%, 50%, 70%, 90% { top: 60vh; }
+  /* 0%, 35%, 70%, 100% { top: 55vh; }
+  15%, 50%, 85% { top: 60vh; } */
+}

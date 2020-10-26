@@ -16,23 +16,17 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
   // Initial hover
-
   window.onload = pointer;
   
   function pointer() {
-    // const pointTools = document.createElement("span");
-    // const pointCar = document.createElement("span");
-    // const pointFuel = document.createElement("span");
+    const mainObj = document.getElementById("main");
     
-    // pointTools.innerHTML = "<i class='far fa-hand-pointer point-tools'></i>";
-    // pointCar.innerHTML = "<i class='far fa-hand-pointer point-car'></i>";
-    // pointFuel.innerHTML = "<i class='far fa-hand-pointer point-fuel'></i>";
-
     const pointerObjs = document.createElement("div");
     pointerObjs.id = "pointer-div";
     pointerObjs.innerHTML = "<i class='fas fa-hand-pointer point-tools'></i><i class='fas fa-hand-pointer point-car'></i><i class='fas fa-hand-pointer point-fuel'></i>";
     
-    document.getElementById("main").append(pointerObjs);
+    mainObj.append(pointerObjs);
+    setTimeout(() => mainObj.removeChild(pointerObjs), 6500);
   }
 
 
