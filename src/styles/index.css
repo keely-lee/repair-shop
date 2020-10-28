@@ -67,7 +67,7 @@
 .background {
   height: 90vh;
   width: 100vw;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 
