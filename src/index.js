@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
+  const mainObj = document.getElementById("main");
   const home = document.getElementById("home-button");
   const activityDiv = document.getElementById("activity-comp");
 
@@ -18,7 +19,6 @@ window.addEventListener("DOMContentLoaded", () => {
   // Initial hover
   window.onload = pointer;
   function pointer() {
-    const mainObj = document.getElementById("main");
     
     const pointerObjs = document.createElement("div");
     pointerObjs.id = "pointer-div";
@@ -39,12 +39,30 @@ window.addEventListener("DOMContentLoaded", () => {
   //EVENT LISTENERS - MAIN PAGE
   const greenCar = document.getElementsByClassName("green-car")[0];
   greenCar.addEventListener("click", selfTalk);
+  greenCar.addEventListener("mouseover", () => {
+    //car smoke animation
+    const smoke = document.createElement("div");
+    smoke.id = "smoke";
+      smoke.innerHTML = "<span class='smoke0'></span><span class='smoke1'></span><span class='smoke2'></span><span class='smoke3'></span><span class='smoke4'></span><span class='smoke5'></span><span class='smoke6'></span><span class='smoke7'></span><span class='smoke8'></span><span class='smoke9'></span>"
+    greenCar.parentNode.insertBefore(smoke, greenCar.nextSibling);
+    hoverDisplay("RETHINK", "Let's Process and solve our problems.");
+
+  });
+  greenCar.addEventListener("mouseleave", () => {
+    removeHover();
+    greenCar.nextSibling.remove();
+  });
 
   const toolSet = document.getElementsByClassName("tools")[0];
-  toolSet.addEventListener("click", repair)
-
+  toolSet.addEventListener("click", repair);
+  toolSet.addEventListener("mouseover", () => hoverDisplay("RESET", "Sometimes we just have to stop and take a break from everything. Let's cool down."));
+  toolSet.addEventListener("mouseleave", removeHover);
+  
   const fuel = document.getElementsByClassName("fuel")[0];
   fuel.addEventListener("click", recharge);
+  fuel.addEventListener("mouseover", () => hoverDisplay("RECHARGE", "Let's give ourselves the tools we need to be successful using tools that work best for us."));
+  fuel.addEventListener("mouseleave", removeHover);
+
 
 
 
@@ -117,17 +135,6 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  //car smoke animation
-  greenCar.addEventListener("mouseover", () => {
-    const smoke = document.createElement("div");
-    smoke.id = "smoke";
-      smoke.innerHTML = "<span class='smoke0'></span><span class='smoke1'></span><span class='smoke2'></span><span class='smoke3'></span><span class='smoke4'></span><span class='smoke5'></span><span class='smoke6'></span><span class='smoke7'></span><span class='smoke8'></span><span class='smoke9'></span>"
-    greenCar.parentNode.insertBefore(smoke, greenCar.nextSibling);
-  });
-
-  greenCar.addEventListener("mouseleave", () => {
-    greenCar.nextSibling.remove();
-  });
 
   
 
@@ -162,6 +169,25 @@ window.addEventListener("DOMContentLoaded", () => {
         }
 
         return array;
+      }
+
+      function hoverDisplay(text, subText) {
+        const hoverDiv = document.createElement("div");
+        hoverDiv.id = "hover-text";
+
+        const hoverText = document.createElement("p");
+        hoverText.innerHTML = text;
+        hoverDiv.append(hoverText);
+        
+        const hoverSub = document.createElement("p");
+        hoverSub.innerHTML = subText;
+        hoverDiv.append(hoverSub);
+        
+        mainObj.append(hoverDiv);
+      }
+
+      function removeHover() {
+        mainObj.removeChild(mainObj.lastChild);
       }
 
 

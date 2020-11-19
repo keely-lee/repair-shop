@@ -102,6 +102,28 @@
   left: 31vw;
 }
 
+#hover-text > p:first-child {
+  font-family: 'Staatliches', cursive;
+  font-size: 3.5em;
+  /* font-weight: bold; */
+  position: absolute;
+  text-align: center;
+  z-index: 10;
+  top: 15vh;
+  width: 100vw;
+}
+
+#hover-text > p:last-of-type {
+  font-family: 'Staatliches', cursive;
+  font-size: 2em;
+  font-weight: 200;
+  position: relative;
+  text-align: center;
+  z-index: 10;
+  top: -110vh;
+  width: 90vw;
+}
+
 
 /* MAIN CLICK DIVS */
 #repair-div {
