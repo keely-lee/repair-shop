@@ -743,6 +743,30 @@
   width: 30vw;
 }
 
+#self-talk-left-wrapper > span {
+  position: relative;
+  /* width: ;
+  height: ;
+  font-family: ;
+  border: ; */
+
+}
+
+#self-talk-left-wrapper > span:first-of-type { top: -40vh; left: -23vw; }
+#self-talk-left-wrapper > span:nth-of-type(2) { top: -35vh; left: -20vw; }
+#self-talk-left-wrapper > span:nth-of-type(3) { top: -35vh; left: -20vw; }
+#self-talk-left-wrapper > span:nth-of-type(4) { top: -35vh; left: -20vw; }
+#self-talk-left-wrapper > span:nth-of-type(5) { top: -35vh; left: -20vw; }
+#self-talk-left-wrapper > span:nth-of-type(6) { top: -35vh; left: -20vw; }
+#self-talk-left-wrapper > span:nth-of-type(7) { top: -35vh; left: -20vw; }
+#self-talk-left-wrapper > span:nth-of-type(8) { top: -35vh; left: -20vw; }
+#self-talk-left-wrapper > span:nth-of-type(8) { top: -35vh; left: -20vw; }
+#self-talk-left-wrapper > span:nth-of-type(10) { top: -35vh; left: -20vw; }
+#self-talk-left-wrapper > span:nth-of-type(11) { top: -35vh; left: -20vw; }
+#self-talk-left-wrapper > span:last-of-type { top: -35vh; left: -20vw; }
+
+
+
 #self-talk-green {
   color: green;
   font-size: 4em;

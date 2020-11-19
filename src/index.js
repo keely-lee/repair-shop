@@ -17,7 +17,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Initial hover
   window.onload = pointer;
-  
   function pointer() {
     const mainObj = document.getElementById("main");
     
@@ -30,7 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
     pointerObjs.append(pointSpan);
     
     mainObj.append(pointerObjs);
-    setTimeout(() => mainObj.removeChild(pointerObjs), 6500);
+    setTimeout(() => mainObj.removeChild(pointerObjs), 6000);
   }
 
 
@@ -140,6 +139,30 @@ window.addEventListener("DOMContentLoaded", () => {
   function paint(){
     activityDiv.innerHTML = '<object id="paint-obj" type="text/html" data="paint.html" ></object>';
   }
+
+
+
+
+  //Functions for use:
+      //shuffle scenarios with Fisher-Yates (Knuth) Shuffle
+      function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+          // Pick a remaining element...
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+
+          // And swap it with the current element.
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+      }
 
 
 
@@ -836,7 +859,19 @@ window.addEventListener("DOMContentLoaded", () => {
       selfTalkImg.src = "src/images/self-talk.jpg";
       talkLeftWrapper.append(selfTalkImg);
 
-      // scenarios here
+    // scenarios here
+    const scenarios = [
+      "Just let it go. It's not a big deal!", "This ALWAYS happens to me! It's not fair!", "She just makes me so mad. I should hit her.", "Be the bigger person and walk away.", "No one - and I mean NO ONE - talks to me that way!!!", "I don't want to do or say something I'll regret. Let me try to calm down!", "They're just trying to make me mad. It's not going to work!", "Think about what the consequences will be!", "I can't let them get away with it! They have to pay!", "As long as I stay calm, I'm in control.", "If he says one more thing, I'm going to explode!", "The last time this happened, I got in trouble. Let me do something different."
+    ]
+    shuffle(scenarios)
+
+
+    for(let i = 0; i < scenarios.length; i++) {
+      const scenarioItem = document.createElement("span");
+      scenarioItem.innerHTML = scenarios[i];
+      talkLeftWrapper.append(scenarioItem);
+    }
+
 
     const selfTalkRight = document.createElement("nav");
     selfTalkRight.id = "self-talk-right";
