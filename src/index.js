@@ -885,36 +885,63 @@ window.addEventListener("DOMContentLoaded", () => {
       selfTalkImg.src = "src/images/self-talk.jpg";
       talkLeftWrapper.append(selfTalkImg);
 
+    let selectedColor = "green";
+    let currColor;
+    let clicked = false;
+
     // scenarios here
     const scenarios = [
       "Just let it go. It's not a big deal!", "This ALWAYS happens to me! It's not fair!", "They just makes me so mad. I should hit them.", "Be the bigger person and walk away.", "No one - and I mean NO ONE - talks to me that way!!!", "I don't want to do or say something I'll regret. Let me try to calm down!", "They're just trying to make me mad. It's not going to work!", "Think about what the consequences will be!", "I can't let them get away with it! They have to pay!", "As long as I stay calm, I'm in control.", "If he says one more thing, I'm going to explode!", "The last time this happened, I got in trouble. Let me do something different."
     ]
     shuffle(scenarios)
 
-
     for(let i = 0; i < scenarios.length; i++) {
       const scenarioItem = document.createElement("span");
       scenarioItem.innerHTML = scenarios[i];
       talkLeftWrapper.append(scenarioItem);
+      scenarioItem.addEventListener("mouseover", highlightColor);
+      scenarioItem.addEventListener("mouseleave", removeHighlight);
+      scenarioItem.addEventListener("click", paintColor);
     }
-
 
     const selfTalkRight = document.createElement("nav");
     selfTalkRight.id = "self-talk-right";
     selfTalkDiv.append(selfTalkRight);
-    // selfTalkRight.append(INSTRUCTINO TEXT)
+    // selfTalkRight.append(INSTRUCTION TEXT)
 
     const greenPaint = document.createElement("div");
     greenPaint.innerHTML = '<i class="fas fa-paint-roller" id="self-talk-green"></i>';
     selfTalkRight.append(greenPaint);
-      greenPaint.addEventListener("click", () => {});
+      greenPaint.addEventListener("click", () => {}), false;
       
     const orangePaint = document.createElement("div");
     orangePaint.innerHTML = '<i class="fas fa-paint-roller" id="self-talk-orange"></i>';
     selfTalkRight.append(orangePaint);
-      orangePaint.addEventListener("click", () => {});
+      orangePaint.addEventListener("click", () => {}, false);
 
+      //functions for paint
+      function highlightColor(e) {
+        if(selectedColor) {
+          console.log("HIGHLIGHT")
+          currColor = e.target.style.backgroundColor;
+          e.target.style.backgroundColor = selectedColor;
+        }
+      }
 
+      function removeHighlight(e) {
+        if (clicked) clicked = false;
+        else {
+          console.log("REMOVE")
+          console.log(currColor)
+          e.target.style.backgroundColor = currColor;
+          clicked = false;
+        }
+      }
+
+      function paintColor(e) {
+        e.target.style.backgroundColor = "red";
+        clicked = true;
+      }
 
   }
 
