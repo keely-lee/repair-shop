@@ -740,30 +740,34 @@
 }
 
 #self-talk-left-wrapper > img {
+  position: relative;
   width: 30vw;
+  top: -10vh;
 }
 
 #self-talk-left-wrapper > span {
-  position: relative;
-  /* width: ;
-  height: ;
-  font-family: ;
-  border: ; */
-
+  position: absolute;
+  width: 15vw;
+  padding: 2em 1em;
+  font-family: 'Delius', cursive;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: whitesmoke;
 }
 
-#self-talk-left-wrapper > span:first-of-type { top: -40vh; left: -23vw; }
-#self-talk-left-wrapper > span:nth-of-type(2) { top: -35vh; left: -20vw; }
-#self-talk-left-wrapper > span:nth-of-type(3) { top: -35vh; left: -20vw; }
-#self-talk-left-wrapper > span:nth-of-type(4) { top: -35vh; left: -20vw; }
-#self-talk-left-wrapper > span:nth-of-type(5) { top: -35vh; left: -20vw; }
-#self-talk-left-wrapper > span:nth-of-type(6) { top: -35vh; left: -20vw; }
-#self-talk-left-wrapper > span:nth-of-type(7) { top: -35vh; left: -20vw; }
-#self-talk-left-wrapper > span:nth-of-type(8) { top: -35vh; left: -20vw; }
-#self-talk-left-wrapper > span:nth-of-type(8) { top: -35vh; left: -20vw; }
-#self-talk-left-wrapper > span:nth-of-type(10) { top: -35vh; left: -20vw; }
-#self-talk-left-wrapper > span:nth-of-type(11) { top: -35vh; left: -20vw; }
-#self-talk-left-wrapper > span:last-of-type { top: -35vh; left: -20vw; }
+#self-talk-left-wrapper > span:first-of-type { top: 5vh; left: 5vw; }
+#self-talk-left-wrapper > span:nth-of-type(2) { top: 20vh; left: 19vw; }
+#self-talk-left-wrapper > span:nth-of-type(3) { top: 15vh; left: 39vw; }
+#self-talk-left-wrapper > span:nth-of-type(4) { top: 23vh; left: 57vw; }
+#self-talk-left-wrapper > span:nth-of-type(5) { top: 5vh; left: 66vw; }
+#self-talk-left-wrapper > span:nth-of-type(6) { top: 38vh; left: 6vw; }
+#self-talk-left-wrapper > span:nth-of-type(7) { top: 40vh; left: 62vw; }
+#self-talk-left-wrapper > span:nth-of-type(8) { top: 70vh; left: 3vw; }
+#self-talk-left-wrapper > span:nth-of-type(9) { top: 57vh; left: 19vw; }
+#self-talk-left-wrapper > span:nth-of-type(10) { top: 71vh; left: 35vw; }
+#self-talk-left-wrapper > span:nth-of-type(11) { top: 56vh; left: 56vw; }
+#self-talk-left-wrapper > span:last-of-type { top: 71vh; left: 67vw; }
 
 
 

@@ -17,20 +17,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
   // Initial hover
-  window.onload = pointer;
-  function pointer() {
+  // window.onload = pointer;
+  // function pointer() {
     
-    const pointerObjs = document.createElement("div");
-    pointerObjs.id = "pointer-div";
-    pointerObjs.innerHTML = "<i class='fas fa-hand-pointer point-tools'></i><i class='fas fa-hand-pointer point-car'></i><i class='fas fa-hand-pointer point-fuel'></i>";
+  //   const pointerObjs = document.createElement("div");
+  //   pointerObjs.id = "pointer-div";
+  //   pointerObjs.innerHTML = "<i class='fas fa-hand-pointer point-tools'></i><i class='fas fa-hand-pointer point-car'></i><i class='fas fa-hand-pointer point-fuel'></i>";
 
-    const pointSpan = document.createElement("span");
-    pointSpan.innerHTML = "Click Here";
-    pointerObjs.append(pointSpan);
+  //   const pointSpan = document.createElement("span");
+  //   pointSpan.innerHTML = "Click Here";
+  //   pointerObjs.append(pointSpan);
     
-    mainObj.append(pointerObjs);
-    setTimeout(() => mainObj.removeChild(pointerObjs), 6000);
-  }
+  //   mainObj.append(pointerObjs);
+  //   setTimeout(() => mainObj.removeChild(pointerObjs), 6000);
+  // }
 
 
 
@@ -887,7 +887,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // scenarios here
     const scenarios = [
-      "Just let it go. It's not a big deal!", "This ALWAYS happens to me! It's not fair!", "She just makes me so mad. I should hit her.", "Be the bigger person and walk away.", "No one - and I mean NO ONE - talks to me that way!!!", "I don't want to do or say something I'll regret. Let me try to calm down!", "They're just trying to make me mad. It's not going to work!", "Think about what the consequences will be!", "I can't let them get away with it! They have to pay!", "As long as I stay calm, I'm in control.", "If he says one more thing, I'm going to explode!", "The last time this happened, I got in trouble. Let me do something different."
+      "Just let it go. It's not a big deal!", "This ALWAYS happens to me! It's not fair!", "They just makes me so mad. I should hit them.", "Be the bigger person and walk away.", "No one - and I mean NO ONE - talks to me that way!!!", "I don't want to do or say something I'll regret. Let me try to calm down!", "They're just trying to make me mad. It's not going to work!", "Think about what the consequences will be!", "I can't let them get away with it! They have to pay!", "As long as I stay calm, I'm in control.", "If he says one more thing, I'm going to explode!", "The last time this happened, I got in trouble. Let me do something different."
     ]
     shuffle(scenarios)
 
