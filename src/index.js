@@ -907,7 +907,11 @@ window.addEventListener("DOMContentLoaded", () => {
     const selfTalkRight = document.createElement("nav");
     selfTalkRight.id = "self-talk-right";
     selfTalkDiv.append(selfTalkRight);
-    // selfTalkRight.append(INSTRUCTION TEXT)
+
+    const instructions = document.createElement("div");
+    instructions.id = "self-talk-instructions"
+    instructions.innerHTML = "<span>Positive self-talk is when you say positive things to yourself that can help calm you down rather than make you angrier. Look at the examples below. Color the examples of Positive Self-Talk </span><span id='self-talk-green'>GREEN</span><span> and Negative Self-Talk </span><span id='self-talk-orange'>ORANGE</span>!";
+    selfTalkRight.append(instructions)
 
     const greenPaint = document.createElement("div");
     greenPaint.innerHTML = '<i class="fas fa-paint-roller" id="self-talk-green"></i>';
