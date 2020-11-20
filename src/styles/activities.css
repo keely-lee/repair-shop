@@ -756,6 +756,10 @@
   background-color: whitesmoke;
 }
 
+#self-talk-left-wrapper > span:hover {
+  cursor: pointer;
+}
+
 #self-talk-left-wrapper > span:first-of-type { top: 5vh; left: 5vw; }
 #self-talk-left-wrapper > span:nth-of-type(2) { top: 20vh; left: 19vw; }
 #self-talk-left-wrapper > span:nth-of-type(3) { top: 15vh; left: 39vw; }
@@ -769,8 +773,6 @@
 #self-talk-left-wrapper > span:nth-of-type(11) { top: 56vh; left: 56vw; }
 #self-talk-left-wrapper > span:last-of-type { top: 71vh; left: 67vw; }
 
-
-
 #self-talk-green {
   color: green;
   font-size: 4em;
@@ -779,9 +781,6 @@
 #self-talk-orange {
   color: orange;
   font-size: 4em;
-
-  
-  
 }
 
 #self-talk-green:hover, #self-talk-orange:hover {
@@ -789,3 +788,6 @@
   font-size: 4.5em;
 }
 
+.selfTalkChosen > :first-child {
+  border: 2px solid black;
+}

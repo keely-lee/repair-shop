@@ -911,18 +911,26 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const greenPaint = document.createElement("div");
     greenPaint.innerHTML = '<i class="fas fa-paint-roller" id="self-talk-green"></i>';
+    greenPaint.className = "selfTalkChosen";
     selfTalkRight.append(greenPaint);
-      greenPaint.addEventListener("click", () => {}), false;
+      greenPaint.addEventListener("click", () => {
+        selectedColor = "green"; 
+        greenPaint.className = "selfTalkChosen";
+        orangePaint.className = "";
+      }), false;
       
     const orangePaint = document.createElement("div");
     orangePaint.innerHTML = '<i class="fas fa-paint-roller" id="self-talk-orange"></i>';
     selfTalkRight.append(orangePaint);
-      orangePaint.addEventListener("click", () => {}, false);
+      orangePaint.addEventListener("click", () => {
+        selectedColor = "orange";
+        orangePaint.className = "selfTalkChosen";
+        greenPaint.className = "";
+      }, false);
 
       //functions for paint
       function highlightColor(e) {
         if(selectedColor) {
-          console.log("HIGHLIGHT")
           currColor = e.target.style.backgroundColor;
           e.target.style.backgroundColor = selectedColor;
         }
@@ -931,15 +939,13 @@ window.addEventListener("DOMContentLoaded", () => {
       function removeHighlight(e) {
         if (clicked) clicked = false;
         else {
-          console.log("REMOVE")
-          console.log(currColor)
           e.target.style.backgroundColor = currColor;
           clicked = false;
         }
       }
 
       function paintColor(e) {
-        e.target.style.backgroundColor = "red";
+        e.target.style.backgroundColor = selectedColor;
         clicked = true;
       }
 
