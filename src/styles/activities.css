@@ -711,18 +711,19 @@
   width: 100vw;
   height: 90vh;
   display: flex;
+  border: 1px solid black;
 }
 
 #self-talk-left {
   width: 85vw;
   background-color: rgb(255, 247, 152);
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   height: 100%;
 }
 
 #self-talk-right {
   width: 15vw;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 #self-talk-left-wrapper {
@@ -772,6 +773,18 @@
 #self-talk-left-wrapper > span:nth-of-type(10) { top: 71vh; left: 35vw; }
 #self-talk-left-wrapper > span:nth-of-type(11) { top: 56vh; left: 56vw; }
 #self-talk-left-wrapper > span:last-of-type { top: 71vh; left: 67vw; }
+
+#self-talk-instructions {
+  margin: 5px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+#self-talk-instructions span {
+  font-family: 'Delius', cursive;
+  font-size: 1em;
+}
 
 #self-talk-green {
   color: green;
