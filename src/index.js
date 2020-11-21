@@ -17,20 +17,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
   // Initial hover
-  window.onload = pointer;
-  function pointer() {
+  // window.onload = pointer;
+  // function pointer() {
     
-    const pointerObjs = document.createElement("div");
-    pointerObjs.id = "pointer-div";
-    pointerObjs.innerHTML = "<i class='fas fa-hand-pointer point-tools'></i><i class='fas fa-hand-pointer point-car'></i><i class='fas fa-hand-pointer point-fuel'></i>";
+  //   const pointerObjs = document.createElement("div");
+  //   pointerObjs.id = "pointer-div";
+  //   pointerObjs.innerHTML = "<i class='fas fa-hand-pointer point-tools'></i><i class='fas fa-hand-pointer point-car'></i><i class='fas fa-hand-pointer point-fuel'></i>";
 
-    const pointSpan = document.createElement("span");
-    pointSpan.innerHTML = "Click Here";
-    pointerObjs.append(pointSpan);
+  //   const pointSpan = document.createElement("span");
+  //   pointSpan.innerHTML = "Click Here";
+  //   pointerObjs.append(pointSpan);
     
-    mainObj.append(pointerObjs);
-    setTimeout(() => mainObj.removeChild(pointerObjs), 5000);
-  }
+  //   mainObj.append(pointerObjs);
+  //   setTimeout(() => mainObj.removeChild(pointerObjs), 5000);
+  // }
 
 
 
@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   //EVENT LISTENERS - MAIN PAGE
   const greenCar = document.getElementsByClassName("green-car")[0];
-  greenCar.addEventListener("click", selfTalk);
+  greenCar.addEventListener("click", selfControl);
   greenCar.addEventListener("mouseover", () => {
     //car smoke animation
     const smoke = document.createElement("div");
