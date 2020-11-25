@@ -105,7 +105,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const selfTalkIcon = document.createElement("div");
   selfTalkIcon.innerHTML = '<i class="fas fa-user-plus icon-self-talk"></i>';
-  selfTalkIcon.addEventListener("click", selfTalk);
+  selfTalkIcon.addEventListener("click", selfTalk); 
 
 
 
