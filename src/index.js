@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   //EVENT LISTENERS - MAIN PAGE
   const greenCar = document.getElementsByClassName("green-car")[0];
-  greenCar.addEventListener("click", selfControl);
+  greenCar.addEventListener("click", coolDownFold);
   greenCar.addEventListener("mouseover", () => {
     //car smoke animation
     const smoke = document.createElement("div");
@@ -952,7 +952,10 @@ window.addEventListener("DOMContentLoaded", () => {
         e.target.style.backgroundColor = selectedColor;
         clicked = true;
       }
+  }
 
+  function coolDownFold(e) {
+    
   }
 
 })
