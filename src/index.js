@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   //EVENT LISTENERS - MAIN PAGE
   const greenCar = document.getElementsByClassName("green-car")[0];
-  greenCar.addEventListener("click", coolDownFold);
+  greenCar.addEventListener("click", tacoBoutIt);
   greenCar.addEventListener("mouseover", () => {
     //car smoke animation
     const smoke = document.createElement("div");
@@ -955,7 +955,15 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function coolDownFold(e) {
-    
+
+  }
+
+  function tacoBoutIt(e) {
+    activityDiv.innerHTML = "";
+    const selfTalkDiv = document.createElement("div");
+    selfTalkDiv.id = "self-talk-div";
+    activityDiv.append(selfTalkDiv);
+
   }
 
 })
