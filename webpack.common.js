@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const outputDir = "./dist";
 
 module.exports = {
-  entry: path.resolve(__dirname, "src", "index.js"), //
+  entry: path.resolve(__dirname, "src", "index.js"),
   output: {
     path: path.join(__dirname, outputDir),
     filename: "[name].js",
@@ -37,8 +37,30 @@ module.exports = {
               hmr: process.env.NODE_ENV === "development"
             }
           },
+          MiniCssExtractPlugin.loader,
           "css-loader",
           "postcss-loader"
+        ]
+      },
+      {
+        test: /\.scss/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              // you can specify a publicPath here
+              // by default it uses publicPath in webpackOptions.output
+              publicPath: "../",
+              hmr: process.env.NODE_ENV === "development"
+            }
+          },
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader",
+          {
+            loader: "postcss-loader",
+            options: {plugins: function() {return [require('autoprefixer')];}}
+          },
         ]
       },
       {
@@ -56,23 +78,6 @@ module.exports = {
           }
         ]
       },
-      {
-        test: /\.scss/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              // you can specify a publicPath here
-              // by default it uses publicPath in webpackOptions.output
-              publicPath: "../",
-              hmr: process.env.NODE_ENV === "development"
-            }
-          },
-          "css-loader",
-          "sass-loader",
-          "postcss-loader"
-        ]
-      }
     ]
   },
   plugins: [
